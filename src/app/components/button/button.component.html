@@ -1,0 +1,9 @@
+<div class="com-button" [ngStyle]="setStyle()" halo [halo]="data?.currentState?.animation?.animationOnID" [ficker1]="data?.currentState?.animation?.animationOnID"
+  [ficker2]="data?.currentState?.animation?.animationOnID" *ngIf="!(data.currentStyle?.display==='none')">
+
+  <ng-template [ngIf]="!data?.textArray">
+    <span *ngFor="let item of data?.currentState?.textArray" [ngStyle]="setTextStyle(item)">
+      <br *ngIf="item?.isLF">{{item?.content}}</span>
+  </ng-template>
+  <!--<span *ngFor="let item of data?.textArray" [ngStyle]="setTextStyle(item)"><br *ngIf="item?.isLF">{{item?.content}}</span>-->
+</div>

@@ -1,0 +1,168 @@
+<div class="sceneBody">
+    <div *ngIf="this.appService.progressData.describeFlag===1" class="describe">
+        <table border="1" class="tab">
+            <caption>维修工单</caption>
+            <tr>
+                <th>进厂日期</th>
+                <td>2015.8.16</td>
+                <th>维修顾问</th>
+                <td>虞城</td>
+                <th>车型</th>
+                <td>北汽 EV160</td>
+            </tr>
+            <tr>
+                <th>进厂时间</th>
+                <td>10：12</td>
+                <th>托修人</th>
+                <td>秦岚</td>
+                <th>行驶里程</th>
+                <td>42223km</td>
+            </tr>
+            <tr>
+                <th>出厂时间</th>
+                <td>14：31</td>
+                <th>VIN</th>
+                <td colspan="3">XXXSCB3F5BD002653</td>
+            </tr>
+            <tr style="height: .5rem">
+                <th>客户描述</th>
+                <td colspan="5" style="text-align: left;padding: 0 .1rem">
+                    <p>1.仪表不显示挡位；</p>
+                    <p>2.车辆不能行驶。</p>
+                </td>
+            </tr>
+            <tr style="height: .5rem">
+                <th>维修任务</th>
+                <td colspan="5" style="text-align: left;padding: 0 .1rem">维修测量换挡开关不能挂挡故障。</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 故障 -->
+    <!-- <div *ngIf="this.appService.progressData.describeFlag===2" style="height: 100%;overflow: hidden;position:relative"> -->
+    <!-- <div id="videos" style="height: 100%;overflow: hidden;position:relative">
+            <video id="jin" src="./assets/video/IMG_0545.MOV" loop width="100%" style="position: absolute;top: -180px"></video>
+            <video id="tui" src="./assets/video/IMG_0547.MOV" loop width="100%" style="display: none;position: absolute;top: -180px"></video>
+        </div> -->
+    <div class="fault" *ngIf="this.appService.progressData.describeFlag===2">
+        <img src="./assets/images/skill/bg.png" />
+
+        <!--<div class="faultTitle">
+          故障验证
+        </div>-->
+        <!--<img src="./assets/images/scene/4.jpg" alt="">-->
+        <!-- 提示框 -->
+        <!-- <div class="promptBox">
+          <span>
+            请点击右侧隐藏按钮，选择控制中心，选择仪表与点火开关,档位控制，启动车辆企图加速，同时选择工具箱选择常用工具，选择诊断仪，读取故障码，尝试清除故障码。
+          </span>
+        </div> -->
+    </div>
+    <!-- </div> -->
+    <!-- 课程 -->
+    <div *ngIf="this.appService.progressData.describeFlag===3" class="renwu">
+        <img src="./assets/images/skill/mubiao.png" alt="">
+        <div class="renwu1Div">
+            <h2>通过本任务的学习，学生应能达到以下任务目标：</h2>
+            <ul>
+                <li>
+                    <i></i>
+                    <span> 实车进行电机总成拆装；</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车进行电机绕组电阻和绝缘性能检测；</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车进行电机控制模块的拆装；</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别电机控制模块插头针脚定义并能进行测量；</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车使用诊断仪读取分析驱动电机系统的数据流；</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别电机转速位置传感器的安装位置，并能使用设备对其进行检测;</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别电机温度传感器的安装位置，并能使用设备对其进行检测;</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别整车控制模块的安装位置，并能使用设备对其进行检测;</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别加速踏板位置传感器的安装位置，并能使用设备对其进行检测;</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别制动踏板行程传感器的安装位置，并能使用设备对其进行检测;</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别制动开关的安装位置，并能使用设备对其进行检测;</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span> 实车识别档位开关的安装位置，并能使用设备对其进行检测;</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div class="renwu" *ngIf="this.appService.progressData.describeFlag===3">
+        <img src="./assets/images/skill/mubiao.png" alt="">
+        <div class="renwu1Div">
+            <h2>通过本任务的学习，学生应能达到以下任务目标：</h2>
+            <ul>
+                <li>
+                    <i></i>
+                    <span>能够解释热敏电阻的原理，特性</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span>能够对电机温度传感器有关的故障进行诊断</span>
+                </li>
+                <li>
+                    <i></i>
+                    <span>能够规范执行驱动电机总成的拆装</span>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- 左侧点击箭头 -->
+    <!-- <div (click)='sceneLeftNavShow()' class="arrowL">
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div> -->
+    <!-- 左侧点击箭头出现的内容 -->
+    <div *ngIf='true' [@flyIn]="sceneLeftNavAnimation" class="scene-left-nav">
+        <!-- <span (click)='closeSceneLeftNav()' class="close-scene-left-nav">
+      x
+    </span> -->
+        <ul>
+            <li (click)="pageShow(1)">
+                <span [ngClass]="{'clickShow':this.appService.progressData.describeFlag===1}">维修工单</span>
+            </li>
+            <li (click)="pageShow(2)">
+                <span [ngClass]="{'clickShow':this.appService.progressData.describeFlag===2}">故障验证</span>
+            </li>
+            <li (click)="pageShow(3)">
+                <span [ngClass]="{'clickShow':this.appService.progressData.describeFlag===3}">课程目标</span>
+            </li>
+        </ul>
+    </div>
+
+</div>

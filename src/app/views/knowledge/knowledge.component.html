@@ -1,0 +1,173 @@
+<div class='knowledge-body'>
+    <!-- 诊断流程 -->
+    <div class='gaishu' *ngIf='4===this.appService.progressData.describeFlag'>
+        <div class="gaishu-div1">
+            <div>
+                <p class="gaishu-p1">常见故障的诊断流程：</p>
+                <ul>
+                    <li>一、确认故障现象</li>
+                    <li>二、用诊断仪读取故障码或数据流</li>
+                    <li>三、分析故障原因</li>
+                    <li>四、查找相关资料</li>
+                    <li>五、确认检测对象</li>
+                    <li>六、检测维修</li>
+                    <li>七、结果验证</li>
+                </ul>
+            </div>
+            <img src="./assets/images//knowledge/img3.png" alt="" srcset="" style="width: 324px;height: 393px;margin-top: 87px;">
+        </div>
+    </div>
+    <!-- 故障原因 -->
+    <div class='gaishu' *ngIf='5===this.appService.progressData.describeFlag'>
+        <div class="gaishu-div1" style="align-items: center;">
+            <div>
+                <p class="gaishu-p1">导致驱动电机不工作的故障原因：</p>
+                <ul class="gaishu-ul1">
+                    <li>动力电池供电系统故障；</li>
+                    <li>高压分配盒故障；</li>
+                    <li>驱动电机控制模块故障；</li>
+                    <li>驱动电机故障；</li>
+                    <li>整车控制模块故障；</li>
+                    <li>网络故障；</li>
+                    <li>与驱动电机系统相关的高压线路故障</li>
+                    <li>电机温度传感器故障；</li>
+                    <li>电机转速位置传感器故障；</li>
+                    <li>点火开关故障；</li>
+                    <li>档位开关故障；</li>
+                    <li>制动开关故障；</li>
+                    <li>高压绝缘故障；</li>
+                </ul>
+            </div>
+            <img src="./assets/images//knowledge/img4.png" alt="" srcset="" style="width: 350px;height: 330px;">
+        </div>
+    </div>
+    <!-- 诊断方法 -->
+    <div class='gaishu' *ngIf='6===this.appService.progressData.describeFlag'>
+        <div class="gaishu-div1" style="margin-top:150px;">
+            <div style="width: 45%;">
+                <p class="gaishu-p2">供电系统故障：</p>
+                <p style="text-indent: 0;width: 100%;">供电系统故障的诊断在前面的章节已经介绍过，请参考“点火开关转到ON档时整车不能上电”的故障分析内容。</p>
+            </div>
+            <img src="./assets/images//knowledge/img17.png" alt="" srcset="" style="width: 46%;height: 330px;">
+        </div>
+    </div>
+    <div class='gaishu' *ngIf='7===this.appService.progressData.describeFlag'>
+        <div class="gaishu-div1" style="margin-top: 150px;">
+            <div style="width: 45%;">
+                <p class="gaishu-p2" style="margin-bottom: 0;">高压盒故障：</p>
+                <p style="text-indent: 0;width: 100%;">通过检查分配盒内的保险和线路是否正常来判断。</p>
+            </div>
+            <img src="./assets/images//knowledge/img5.png" alt="" srcset="" style="width: 242px;height: 471px;margin-right:79px;">
+        </div>
+    </div>
+    <div class='gaishu' *ngIf='8===this.appService.progressData.describeFlag'>
+        <div class="gaishu-div1" style="margin-top: 150px;">
+            <div style="width: 45%;">
+                <p class="gaishu-p2">驱动电机控制模块故障：</p>
+                <p style="text-indent: 0;width: 100%;">首先用诊断仪查看其通讯情况，如有相关故障码，按照故障码引导进行诊断，并用万用表检查其电源和接地电路。</p>
+            </div>
+            <img src="./assets/images//knowledge/img6.png" alt="" srcset="" style="width: 350px;height: 400px;">
+        </div>
+    </div>
+    <div class='gaishu' *ngIf='9===this.appService.progressData.describeFlag'>
+        <p style="font-weight: bold;width: 100%;text-indent: 0;height: 0;margin-top: 90px;">驱动电机故障：</p>
+        <p style="text-indent: 0;">检查电机内部线圈的阻值，以及线圈与外壳的绝缘阻值是否正常。</p>
+        <div style="display: flex;margin-top: 20px;">
+            <img src="./assets/images//knowledge/img7.png" alt="" srcset="" style="width: 350px;height: 382px;margin-left: 50px;">
+            <img src="./assets/images//knowledge/img8.png" alt="" srcset="" style="width: 382px;height: 382px;margin-left: 50px;">
+        </div>
+    </div>
+    <div class='gaishu' *ngIf='10===this.appService.progressData.describeFlag'>
+        <div class="gaishu-div1" style="margin-top: 150px;">
+            <div style="width: 45%;">
+                <p class="gaishu-p2" style="margin-bottom: 30px;">整车控制模块故障：</p>
+                <p style="text-indent: 0;width: 100%;">首先用诊断仪查看其通讯情况，如有相关故障码，按照故障码引导进行诊断，并用万用表检查其电源和接地电路。</p>
+            </div>
+            <img src="./assets/images//knowledge/img9.png" alt="" srcset="" style="width: 382px;height: 344px;margin: auto;">
+        </div>
+    </div>
+    <div class='gaishu' *ngIf='11===this.appService.progressData.describeFlag'>
+    	<p style="font-weight: bold;width: 100%;text-indent: 0;height: 0;margin-top: 90px;">网络通讯故障———单个模块不能通讯：</p>
+    	<p style="text-indent: 0;">检查模块的电源、接地、与模块相关的网络分支以及模块本身。</p>
+    	<div style="display: flex;margin-top: 20px;">
+    		<img src="./assets/images//knowledge/img10.png" alt="" srcset="" style="width: 625px;height: 235px;margin: auto;margin-top: 40px;">
+    	</div>
+    </div>
+	
+    <div class='gaishu' *ngIf='12===this.appService.progressData.describeFlag'>
+    	<p style="font-weight: bold;width: 100%;text-indent: 0;height: 0;margin: 90px 0 70px 0;">网络通讯故障———多个模块不能通讯：</p>
+    	<p style="text-indent: 0;">检查多个模块公用的电源、接地以及线路是否存在异常；在电路工作情况下，通过测量电压判断线路是否正常；在断电情况下，通过测量终端电阻判断线路是否正常，最后通过插拔单个模块，观察电路的电压和电阻值是否恢复正常，来判断该模块是否正常。</p>
+    	<div style="display: flex;margin-top: 20px;">
+    		<img src="./assets/images//knowledge/img10.png" alt="" srcset="" style="width: 625px;height: 235px;margin: auto;margin-top: 40px;">
+    	</div>
+    </div>
+    <div class='gaishu' *ngIf='13===this.appService.progressData.describeFlag'>
+    	<div class="gaishu-div1" style="margin-top: 150px;">
+    		<div style="width: 45%;">
+    			<p class="gaishu-p2" style="margin-bottom: 100px;">高压线束故障：</p>
+    			<p style="text-indent: 0;width: 100%;">通过检查与驱动电机系统相关的高压线路是否存在断路、短路以及接触不良等情况。</p>
+    		</div>
+    		<img src="./assets/images//knowledge/img11.png" alt="" srcset="" style="width: 390px;">
+    	</div>
+    </div>
+    <div class='gaishu' *ngIf='14===this.appService.progressData.describeFlag'>
+    	<div class="gaishu-div1" style="margin-top: 150px;">
+    		<div style="width: 45%;">
+    			<p class="gaishu-p2">电机温度传感器：</p>
+    			<p style="text-indent: 0;width: 100%;">用诊断仪检查电机温度传感器是否存在故障，然后用万用表检查传感器线圈是否有短路或断路故障。</p>
+    		</div>
+    		<img src="./assets/images//knowledge/img12.png" alt="" srcset="" style="width: 346px;height: 300px;">
+    	</div>
+    </div>
+	<div class='gaishu' *ngIf='15===this.appService.progressData.describeFlag'>
+		<div class="gaishu-div1" style="margin-top: 150px;">
+			<div style="width: 45%;">
+				<p class="gaishu-p2">点火开关故障：</p>
+				<p style="text-indent: 0;width: 100%;">打开点火开关，通过观察仪表指示灯的点亮情况来判断，也可以用万用表对点火开关的线束进行检查。</p>
+			</div>
+			<img src="./assets/images//knowledge/img13.png" alt="" srcset="" style="width: 346px;height: 370px;">
+		</div>
+	</div>
+	<div class='gaishu' *ngIf='16===this.appService.progressData.describeFlag'>
+		<div class="gaishu-div1" style="margin-top: 150px;">
+			<div style="width: 45%;">
+				<p class="gaishu-p2">档位开关故障：</p>
+				<p style="text-indent: 0;width: 100%;">通过观察诊断仪数据流或者仪表档位指示的方法来判断，也可以用万用表测量其相关线束进行诊断。</p>
+			</div>
+			<img src="./assets/images//knowledge/img14.png" alt="" srcset="" style="width: 346px;height: 370px;">
+		</div>
+	</div>
+	<div class='gaishu' *ngIf='17===this.appService.progressData.describeFlag'>
+		<div class="gaishu-div1" style="margin-top: 150px;">
+			<div style="width: 45%;">
+				<p class="gaishu-p2">制动开关故障：</p>
+				<p style="text-indent: 0;width: 100%;">踩下制动踏板，观察制动灯是否工作来判断其是否正常，也可以通过诊断仪的数据流功能来判断其是否正常。</p>
+			</div>
+			<img src="./assets/images//knowledge/img15.png" alt="" srcset="" style="width: 346px;height: 370px;">
+		</div>
+	</div>
+	<div class='gaishu' *ngIf='18===this.appService.progressData.describeFlag'>
+		<div class="gaishu-div1" style="margin-top: 150px;">
+			<div style="width: 45%;">
+				<p class="gaishu-p2">高压绝缘故障：</p>
+				<p style="text-indent: 0;width: 100%;">用绝缘表检测高压元件和线路的绝缘性</p>
+			</div>
+			<img src="./assets/images//knowledge/img16.png" alt="" srcset="" style="width: 440px;height: 200px;">
+		</div>
+	</div>
+    <!-- 左侧点击箭头出现的内容 -->
+    <div *ngIf='true' [@flyIn]="sceneLeftNavAnimation " class="scene-left-nav ">
+        <ul>
+            <li [ngClass]="{ 'clickShow':this.appService.progressData.describeFlag===4}" (click)="pageShow(4) ">
+                <span>诊断流程</span>
+            </li>
+            <li [ngClass]="{ 'clickShow':this.appService.progressData.describeFlag===5} " (click)="pageShow(5) ">
+                <span>故障原因</span>
+            </li>
+            <li [ngClass]="{ 'clickShow':this.appService.progressData.describeFlag>=6&&this.appService.progressData.describeFlag<=18} "
+                (click)="pageShow(6) ">
+                <span>诊断方法</span>
+            </li>
+        </ul>
+    </div>
+</div>

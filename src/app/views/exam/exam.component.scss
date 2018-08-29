@@ -1,0 +1,969 @@
+@mixin positionArg($left, $top, $width, $height) {
+    position: absolute;
+    left: $left;
+    top: $top;
+    width: $width;
+    height: $height;
+}
+
+.exam-body {
+    width: 100%;
+    height: 95%;
+    margin-top: 0.31rem;
+    .moni5 {
+        .imgBG {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .fault {
+        width: 100%;
+        height: 586px;
+        position: absolute;
+        top: 48px;
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+        }
+    }
+    .yanzheng {
+        background: url('./');
+    }
+    .weixiu {
+        #sub {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            font-size: .28rem;
+            width: 1.66rem;
+            height: .52rem;
+            border: .02rem solid #5593d1;
+            box-sizing: border-box;
+            background-color: #8dc050;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul {
+            margin: 0 auto;
+            width: 18rem;
+            height: 6rem;
+            margin-top: 6%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li {
+                width: 45%;
+                height: 14%;
+                margin-bottom: 2%;
+                font-size: .36rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                border: .02rem solid #485a7e;
+                padding-left: .36rem;
+                color: #485a7e;
+            }
+        }
+        // .p1 {
+        //     display: none;
+        //     width: 3.56rem;
+        //     height: 1.32rem;
+        //     font-size: .28rem;
+        //     background: red;
+        //     position: absolute;
+        // }
+        .p1 {
+            display: none;
+            width: .8rem;
+            height: .32rem;
+            text-align: center;
+            line-height: .32rem;
+            font-size: 0.1rem;
+            background: red;
+            position: absolute;
+            top: 1.3rem;
+            left: 2.2rem;
+        }
+    }
+    .renwu {
+        img {
+            width: 2.76rem;
+            height: .78rem;
+            position: absolute;
+            top: 1.1rem;
+            left: .7rem;
+        }
+        .renwu1Div {
+            width: 100%;
+            height: 1000px;
+            position: absolute;
+            top: 2rem;
+            h2 {
+                width: 92%;
+                font-size: .32rem;
+                margin: .2rem auto;
+                font-weight: bold;
+                color: #5a6a8b;
+            }
+            ul {
+                width: 92%;
+                margin: 0 auto;
+                li {
+                    height: .96rem;
+                    padding-bottom: .16rem;
+                    i {
+                        width: .18rem;
+                        height: 100%;
+                        margin-right: .24rem;
+                        background-color: #5a6a8b;
+                        float: left;
+                    }
+                    span {
+                        height: 100%;
+                        background-color: #5a6a8b;
+                        float: left;
+                        font-size: .32rem;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        padding-left: .36rem;
+                    }
+                    p {
+                        width: 8.28rem;
+                        height: 2.48rem;
+                        float: left;
+                        background-color: #5a6a8b;
+                        span {
+                            width: 7.3rem;
+                            float: none;
+                            display: block;
+                            height: 33.3%;
+                            line-height: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tab {
+        width: 80%;
+        margin: 0.1rem auto 0;
+        border-collapse: collapse;
+        font-size: .1rem;
+        caption {
+            height: .4rem;
+            line-height: 0.3rem;
+            border: 0.01rem solid #292c33;
+            text-align: center;
+            font-weight: bold;
+            background-color: #c1e6ee;
+            color: #000;
+            box-sizing: border-box;
+        }
+        th,
+        td {
+            border: 2px solid #292c33;
+            text-align: center;
+            height: 0.3rem;
+        }
+        th {
+            background-color: #f5fbf1;
+        }
+    }
+    .skill-circuit {
+        position: absolute;
+        top: 230px;
+        width: 100%;
+        height: 82%;
+    }
+}
+
+.exam-title {
+    display: block;
+    background-color: #ddffff;
+    background: linear-gradient(to right, rgba(156, 198, 127, 0.7), #fff);
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.preservation,
+.submit {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 60px;
+    height: 34px;
+    color: #fff;
+    font-size: 15px;
+    background: rgb(22, 155, 223);
+    border-radius: 4px;
+    &:hover {
+        background: rgba(0, 0, 0, .5);
+    }
+}
+
+.preservation {
+    right: 100px;
+}
+
+.monixunlian1 {
+    width: 100%;
+    height: 390px;
+    .monixunlian1-guzhangyanzheng01,
+    .monixunlian1-jieguojianyan01 {
+        height: 370px;
+    }
+    .monixunlian1-weixiufangan01 {
+        width: 100%;
+        height: 340px;
+        padding: 20px 0px 0 60px;
+        background-color: #ccc;
+        box-sizing: border-box;
+        position: relative;
+        form {
+            width: 650px;
+            input {
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 30px;
+                cursor: pointer;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+                background-color: #fff;
+                width: 590px;
+                padding: 10px 10px;
+                margin-left: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+        button {
+            border: none;
+            background-color: rgb(0, 207, 226);
+            cursor: pointer;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 14px;
+            width: 100px;
+            height: 30px;
+            &:hover {
+                background: rgba(0, 0, 0, .5);
+            }
+        }
+        .monixunlian1-weixiufangan01-operator {
+            width: 100%;
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    >ul {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >li {
+            position: relative;
+            flex: 1;
+            height: 30px;
+            font-size: 10px;
+            color: #000;
+            font-weight: bold;
+            .colorGreen {
+                color: green;
+                border-bottom-color: green;
+            }
+            span {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                line-height: 30px;
+                border-bottom: 2px solid #505050;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.monixunlian2 {
+    width: 2400px;
+    height: 1230px;
+    margin: 160px auto 0;
+    .monixunlian1-guzhangyanzheng01,
+    .monixunlian1-jieguojianyan01 {
+        height: 1300px;
+    }
+    .monixunlian1-weixiufangan01 {
+        width: 100%;
+        height: 1300px;
+        padding: 300px 200px 0 300px;
+        background-color: #ccc;
+        box-sizing: border-box;
+        form {
+            input {
+                display: inline-block;
+                vertical-align: middle;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 30px;
+                background-color: #fff;
+                width: 1500px;
+                padding: 10px 10px;
+                margin-left: 40px;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+        button {
+            border: none;
+            padding: 10px 120px;
+            background-color: rgb(0, 207, 226);
+            cursor: pointer;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 40px;
+            &:hover {
+                background: rgba(0, 0, 0, .5);
+            }
+        }
+        .monixunlian1-weixiufangan01-operator {
+            width: 100%;
+            position: absolute;
+            bottom: 90px;
+            left: -10px;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+    >ul {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >li {
+            position: relative;
+            flex: 1;
+            height: 50px;
+            font-size: 30px;
+            color: #000;
+            font-weight: bold;
+            .colorGreen {
+                color: green;
+                border-bottom-color: green;
+            }
+            span {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                line-height: 50px;
+                border-bottom: 2px solid #505050;
+                height: 50px;
+            }
+        }
+    }
+}
+
+.zhishi {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 10px auto 0;
+    .shicaogongdanpage02 {
+        height: 100%;
+        padding-left: 30px;
+        overflow: auto;
+        .skill-question01-title {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 16px;
+        }
+        .question-title {
+            display: block;
+            font-size: 15px;
+        }
+        form {
+            padding-left: 10px;
+            label {
+                display: block;
+                margin: 15px 0;
+                input {
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                }
+                span {
+                    font-size: 14px;
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+    .shicaogongdanpage03 {
+        height: 100%;
+        padding-left: 30px;
+        overflow: auto;
+        .skill-question01-title {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .question-title {
+            display: block;
+            font-size: 14px;
+        }
+        form {
+            padding-left: 10px;
+            label {
+                display: block;
+                margin: 15px 0;
+                input {
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                }
+                span {
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.shicaogongdan-prev {
+    border: none;
+    background-color: orange;
+    padding: 6px 20px;
+    font-size: 10px;
+    position: absolute;
+    right: 100px;
+    bottom: 0px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.shicaogongdan-next {
+    border: none;
+    background-color: orange;
+    padding: 6px 20px;
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.exam-gray {
+    background-color: #ccc;
+} // 左侧导航  
+.arrowL {
+    position: absolute;
+    top: 180px;
+    left: -40px;
+    cursor: pointer;
+    div {
+        span {
+            position: absolute;
+            &:nth-child(1) {
+                top: 10px;
+                left: 48px;
+                width: 14px;
+                height: 14px;
+                transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                border-right: 4px rgb(139, 233, 255) solid;
+                border-top: 4px rgb(139, 233, 255) solid;
+            }
+            &:nth-child(2) {
+                top: 10px;
+                left: 38px;
+                width: 14px;
+                height: 14px;
+                transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                border-right: 4px rgb(0, 181, 226) solid;
+                border-top: 4px rgb(0, 181, 226) solid;
+            }
+            &:nth-child(3) {
+                top: 1px;
+                left: 38px;
+                width: 20px;
+                height: 9px;
+                background: #fff;
+            }
+            &:nth-child(4) {
+                top: 24px;
+                left: 37px;
+                width: 20px;
+                height: 9px;
+                background: #fff;
+            }
+        }
+    }
+} // 左侧导航诶荣
+.scene-left-nav {
+    position: absolute;
+    top: -0.01rem;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 101;
+    height: 0.25rem;
+    box-sizing: border-box;
+    border-bottom: 0.01rem solid rgba(65, 69, 79, 0.25);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .close-scene-left-nav {
+        position: absolute;
+        top: -20px;
+        left: 100px;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        line-height: 19px;
+        background: #aaa;
+        border: 1px blue solid;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    }
+    ul {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        .clickShow {
+            span {
+                color: #eb4e3d;
+                border: solid 0.01rem #eb4e3d;
+            }
+        }
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            span {
+                display: inline-block;
+                /* width: 1.14rem; */
+                /* height: 0.38rem; */
+                padding: 0 .04rem;
+                background-color: #ffffff;
+                border-radius: 0.03rem;
+                border: solid 1px #292c33;
+                font-size: 0.12rem;
+                transform: scale(.8);
+                /* line-height: 0.1rem; */
+                text-align: center;
+                &:hover {
+                    cursor: pointer; // background: rgba(0, 0, 0, .7);
+                }
+            }
+        }
+    }
+}
+
+.oscilloscope-circuit {
+    position: absolute;
+    left: 0.72rem;
+    bottom: 0.7rem;
+    width: 0.2rem;
+    height: 0.36rem;
+    z-index: 14;
+    a {
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.01rem solid red;
+    }
+}
+
+.V-body {
+    width: 600px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: 80px; // background-color: yellow;
+}
+
+.V-install {
+    width: 0.69rem;
+    height: 0.06rem;
+    position: relative;
+    left: 2.63rem;
+    top: 1.08rem;
+    z-index: 60;
+    div {
+        width: 0.69rem;
+        height: 0.06rem;
+        position: absolute;
+        left: 0rem;
+        top: 0rem;
+        z-index: 60;
+        background: #000;
+    }
+    a {
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.01rem solid red;
+        z-index: 60;
+    }
+}
+
+.V-uninstall {
+    width: 0.69rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.63rem;
+    top: 1.12rem;
+    z-index: 60;
+    div {
+        width: 0.69rem;
+        height: 0.06rem;
+        position: absolute;
+        left: 0rem;
+        top: 0rem;
+        z-index: 60;
+        background: #000;
+    }
+    a {
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.01rem solid red;
+        font-size: 0.18rem;
+        z-index: 60;
+    }
+}
+
+.B-IGN {
+    width: 105px;
+    height: 26px;
+    position: absolute;
+    left: 257px;
+    top: 135px;
+    z-index: 60; // background: orchid;
+    a {
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.01rem solid red;
+    }
+    .B1 {
+        left: 0.04rem;
+    }
+    .B2 {
+        left: 0.324rem;
+    }
+}
+
+.T6-body {
+    width: 377px;
+    height: 45px;
+    position: absolute;
+    left: 255px;
+    bottom: 88px;
+    z-index: 60; // background: green;
+    a {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 2px solid red;
+    }
+}
+
+.T6-install {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.63rem;
+    bottom: 0.934rem;
+    z-index: 60;
+    div {
+        width: 1.08rem;
+        height: 0.06rem;
+        position: absolute;
+        left: 0rem;
+        top: 0rem;
+        z-index: 60;
+        background: #000;
+    }
+    a {
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.01rem solid red;
+        z-index: 60;
+    }
+}
+
+.T6-uninstall {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.63rem;
+    bottom: 0.973rem;
+    z-index: 60;
+    div {
+        width: 1.08rem;
+        height: 0.06rem;
+        position: absolute;
+        left: 0rem;
+        top: 0rem;
+        z-index: 60;
+        background: #000;
+    }
+    a {
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.01rem solid red;
+        z-index: 60;
+    }
+}
+
+.breakNo {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 0.67rem;
+    bottom: 1.48rem;
+    z-index: 60;
+    a {
+        width: 0.1rem;
+        height: 0.1rem;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.01rem solid red;
+    }
+}
+
+.batt-positive {
+    left: 0.046rem;
+    top: -0.05rem;
+}
+
+.bgpic-circuit {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: 82%;
+    background-size: 78%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 13;
+}
+
+.skill-circuit4 {
+    position: absolute;
+    top: 230px;
+    width: 100%;
+    height: 82%;
+    .V-install {
+        width: 1.04rem;
+        height: 0.06rem;
+        position: relative;
+        left: 1.38rem;
+        top: 1.08rem;
+        div {
+            width: 1.04rem;
+            height: 0.06rem;
+            position: relative;
+            left: 0rem;
+            top: 0rem;
+        }
+    }
+    .V-uninstall {
+        width: 1.04rem;
+        height: 0.06rem;
+        position: relative;
+        left: 1.38rem;
+        top: 1.12rem;
+        div {
+            width: 1.04rem;
+            height: 0.06rem;
+            position: relative;
+            left: 0rem;
+            top: 0rem;
+        }
+    }
+    .T6-install {
+        width: 1.08rem;
+        height: 0.06rem;
+        position: absolute;
+        left: 1.38rem;
+        bottom: 0.934rem;
+        div {
+            width: 1.08rem;
+            height: 0.06rem;
+            position: absolute;
+            left: 0rem;
+            bottom: 0rem;
+        }
+    }
+    .T6-uninstall {
+        width: 1.08rem;
+        height: 0.06rem;
+        position: absolute;
+        left: 1.38rem;
+        bottom: 0.972rem;
+        div {
+            width: 1.08rem;
+            height: 0.06rem;
+            position: absolute;
+            left: 0rem;
+            bottom: 0rem;
+        }
+    }
+    .GND {
+        left: 0.04rem;
+        top: 0.2rem;
+    }
+    .N90 {
+        left: 0rem;
+        top: -0.07rem;
+    }
+    .N95 {
+        left: 0.19rem;
+        top: -0.07rem;
+    }
+    .N80 {
+        left: 0.38rem;
+        top: -0.07rem;
+    }
+    .V90 {
+        left: 0rem;
+        top: -0.07rem;
+    }
+    .V95 {
+        left: 0.28rem;
+        top: -0.07rem;
+    }
+    .V80 {
+        left: -0.02rem;
+        top: -0.03rem;
+    }
+    .V1 {
+        left: 0.18rem;
+        top: -0.03rem;
+    }
+    .V2 {
+        left: 0.37rem;
+        top: -0.03rem;
+    }
+    .V3 {
+        left: 0.57rem;
+        top: -0.03rem;
+    }
+    .V4 {
+        left: 0.74rem;
+        top: -0.03rem;
+    }
+    .V5 {
+        left: 187px;
+        top: -0.03rem;
+    }
+    .V6 {
+        left: 2.29rem;
+        top: -0.03rem;
+    }
+    .T6-Pin-1 {
+        left: -.02rem;
+        bottom: -0.03rem;
+    }
+    .T6-Pin-2 {
+        left: .17rem;
+        bottom: -0.03rem;
+    }
+    .T6-Pin-3 {
+        left: 0.37rem;
+        bottom: -0.03rem;
+    }
+    .T6-Pin-4 {
+        left: 0.56rem;
+        bottom: -0.03rem;
+    }
+    .T6-Pin-5 {
+        left: 0.75rem;
+        bottom: -0.03rem;
+    }
+    .T6-Pin-6 {
+        left: 0.94rem;
+        bottom: -0.03rem;
+    }
+    .T6-Body-1 {
+        left: 16px;
+        bottom: 37px;
+    }
+    .T6-Body-2 {
+        left: 75px;
+        bottom: 37px;
+    }
+    .T6-Body-3 {
+        left: 147px;
+        bottom: 37px;
+    }
+    .T6-Body-4 {
+        left: 209px;
+        bottom: 37px;
+    }
+    .T6-Body-5 {
+        left: 282px;
+        bottom: 37px;
+    }
+    .T6-Body-6 {
+        left: 342px;
+        bottom: 37px;
+    }
+}

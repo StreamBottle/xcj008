@@ -1,0 +1,22 @@
+.com-jump {
+    position: absolute;
+    // width: 200px;
+    // height: 200px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    span {
+        letter-spacing: normal;
+    }
+    div {
+        display: none;
+    }
+}

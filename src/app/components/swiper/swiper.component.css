@@ -1,0 +1,40 @@
+@media screen and (min-width: 1670px) {
+  .bannerPicList {
+    padding: 0;
+    position: relative;
+  }
+  .bannerPicList li {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bannerPicList li.active {
+    display: block;
+    padding: 10px 0px 20px;
+  }
+  .bannerPicList li img {
+    width: 1200px;
+    height: 680px;
+  }
+}
+
+@media screen and (max-width: 1670px) {
+  .bannerPicList {
+    padding: 0;
+    position: relative;
+  }
+  .bannerPicList li {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bannerPicList li.active {
+    display: block;
+    padding: 10px 0px 20px;
+  }
+  .bannerPicList li img {
+    width: 944px;
+    height: 516px;
+  }
+}
+/*# sourceMappingURL=swiper.component.css.map */

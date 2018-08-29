@@ -1,0 +1,57 @@
+<div class="skill-treeStructure">
+  <div class="left-drop-area">
+    <ng-template ngFor let-item let-itemIndex=index [ngForOf]="leftDropAreaList.oneTitle">
+      <div class="first-title">
+        <p class="first-content">
+          <span id='{{item.id}}' [attr.oldId]='item.id+"a"'>{{item.content}}</span>
+        </p>
+        <span></span>
+        <span [ngStyle]='{"display":leftDropAreaList.twoTitle.length!==2?"block":"none"}'></span>
+        <span [ngStyle]='{"display":leftDropAreaList.twoTitle.length!==1?"block":"none"}'></span>
+      </div>
+    </ng-template>
+    <ng-template ngFor let-item let-itemIndex=index [ngForOf]="leftDropAreaList.twoTitle">
+      <div [changeElePosition]='[leftDropAreaList,itemIndex]'>
+        <p class="second-content">
+          <span id='{{item.id}}' [attr.oldId]='item.id+"a"'>{{item.content}}</span>
+        </p>
+        <ul>
+          <ng-template ngFor let-param let-paramIndex=index [ngForOf]="leftDropAreaList.threeTitle">
+            <li *ngIf='param.parentId==item.id'>
+              <p>
+                <span id='{{param.id}}' [attr.oldId]='param.id+"a"'>{{param.content}}</span>
+              </p>
+            </li>
+          </ng-template>
+        </ul>
+      </div>
+    </ng-template>
+  </div>
+
+
+  <div class="right-drag-area">
+    <ul class="drag-list">
+      <ng-template ngFor let-item let-itemIndex=index [ngForOf]='rightDragAreaList '>
+        <li>
+          <span class="right-area" id='{{item.id}}'>{{item.content}}</span>
+        </li>
+      </ng-template>
+
+
+    </ul>
+  </div>
+
+  <div class="submit">
+    <p>注：拖动修改</p>
+    <button class="button-submit" (click)='submitClick()' [ngStyle]='{"background-color" : faultDiagnosisService[chapter].isSubmit ? "gray" : "#8dc050"}'>提交</button>
+    <button class="button-answer" (click)='showAnswer()' [ngStyle]='{"background-color" : !faultDiagnosisService[chapter].isSubmit ? "gray" : !faultDiagnosisService[chapter].isShowAnswer ? "#8dc050" : "gray" }'>答案</button>
+  </div>
+
+
+  <div class="right-answer-wrap">
+    <div class="right-answer-content">
+      <span class="close-fault-fiagnosis-wrap" (click)='closeFaultDiagnosisWrap($event.target)'>X</span>
+      <img src="" [changeImgPath]='[rightAnswer[0],rightAnswer[1]]' alt="">
+    </div>
+  </div>
+</div>

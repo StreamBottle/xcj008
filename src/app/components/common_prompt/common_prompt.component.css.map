@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AAAA,AAAA,mBAAmB,CAAC;EAClB,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,MAAM;EACd,QAAQ,EAAE,QAAQ;EAClB,SAAS,EAAE,MAAM;EACjB,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;EACT,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,OAAgB;EAClC,0LAA0L;EAC1L,iCAAiC;EACjC,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,OAAgB;EAClC,aAAa,EAAE,MAAM;CACtB",
+    "sources": [
+        "common_prompt.component.scss"
+    ],
+    "names": [],
+    "file": "common_prompt.component.css"
+}

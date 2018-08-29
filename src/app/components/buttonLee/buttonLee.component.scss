@@ -1,0 +1,95 @@
+@media screen and (min-width:1670px) {
+  .com-button {
+    position: relative; // width: 200px;
+    // height: 200px;
+    line-height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    span {
+      letter-spacing: normal;
+    }
+    div {
+      display: none;
+    }
+  }
+  .allowRotate-parent {
+    span {
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      &:hover {
+        transform-origin: center center;
+        -webkit-transform-origin: center center;
+        -moz-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        -moz-transform: scale(1.1, 1.1);
+      }
+    }
+  }
+  .unallowRotate-parent {
+    span {
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+}
+
+@media screen and (max-width:1670px) {
+  .com-button {
+    position: relative; // width: 200px;
+    // height: 200px;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    span {
+      letter-spacing: normal;
+    }
+    div {
+      display: none;
+    }
+  }
+  .allowRotate-parent {
+    span {
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      &:hover {
+        transform-origin: center center;
+        -webkit-transform-origin: center center;
+        -moz-transform-origin: center center;
+        -ms-transform-origin: center center;
+        transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        -moz-transform: scale(1.1, 1.1);
+      }
+    }
+  }
+  .unallowRotate-parent {
+    span {
+      cursor: pointer;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+}

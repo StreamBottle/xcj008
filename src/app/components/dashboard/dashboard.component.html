@@ -1,0 +1,78 @@
+<!-- <script src="../../../../../../006/RM_BQ_EV200_006/src/app/components/double_charge_switch/double_charge_switch.component.ts"> -->
+
+
+<!-- </script> -->
+
+<!-- <div class="ignition-switch cursor-pointer" (click)="dashboardShowOrHide(1)" >
+    <div class="ignition"></div>
+</div> -->
+
+
+<div class="dashboard-body">
+    <span *ngIf='this.dashboardService.Mint.In1NER_IgnKey_ON_x_x == "1"&&
+  (this.appService.progressData.describeFlag===10
+  ||this.appService.progressData.describeFlag===11
+  ||this.appService.progressData.describeFlag===14
+  ||this.appService.progressData.describeFlag===15
+  ||this.appService.progressData.describeFlag===18
+  ||this.appService.progressData.describeFlag===19
+  ||this.appService.progressData.describeFlag===25
+  ||this.appService.progressData.describeFlag===24||
+  (this.appService.progressData.describeFlag == 13 && this.appService.skillFault01IsGood == "0") || 
+  (this.appService.progressData.describeFlag == 17 && this.appService.skillFault02IsGood == "0") || 
+  (this.appService.progressData.describeFlag == 21 && this.appService.skillFault03IsGood == "0") || 
+  (this.appService.progressData.describeFlag == 27 && this.appService.examFault01IsGood == "0"))' class="tips-currentFault">
+    驱动电机故障
+  </span>
+
+    <div class="close cursor-pointer" (click)="dashboardShowOrHide('dashboard')">X</div>
+    <div class="pointer-left"></div>
+    <div class="pointer-right"></div>
+    <div class="ignition"></div>
+    <!-- <div *ngIf='true' class="datashow">0</div> -->
+
+    <div class="datashow" name='show'>{{dashboardService.Mout.Out1DrMotor_x_VehSpeed_x_x | number:'.0-0' }}</div>
+    <div [halo]="this.dashboardService.gearStallsHalo" class="gear-stalls">N</div>
+    <div class="dashborad-screen"></div>
+
+    <div class="lock-stalls cursor-pointer" (click)="stallsAngle(1)"></div>
+    <div class="on-stalls cursor-pointer" (click)="stallsAngle(2)"></div>
+
+    <div class="lamp">
+        <span class="abs"></span>
+        <span class="anQuanQiNang"></span>
+        <span class="shouSha"></span>
+        <span class="zhiDongGuzhang"></span>
+        <span class="ready">READY</span>
+    </div>
+    <div class="faultLight">
+        <span class="djFault"></span>
+        <span class="jyFault"></span>
+        <span class="bxFault"></span>
+    </div>
+    <div class="faultText"></div>
+
+    <div class="light">
+        <div class="abs" *ngIf="(dashboardService.Mout.Out1NER_x_LED_ABS_Jud=='1')"></div>
+        <div class="airbag" *ngIf="(dashboardService.Mout.Out1NER_x_LED_SafeBag_Jud=='1')"></div>
+        <div class="parking" *ngIf="(dashboardService.Mout.Out1NER_x_LED_BrakLamp_Jud=='1')"></div>
+
+        <!-- <div class="qudianjifault" *ngIf='this.dashboardService.Mint.In1NER_IgnKey_ON_x_x == "1"&&
+    (this.appService.progressData.describeFlag===10
+    ||this.appService.progressData.describeFlag===11
+    ||this.appService.progressData.describeFlag===14
+    ||this.appService.progressData.describeFlag===15
+    ||this.appService.progressData.describeFlag===18
+    ||this.appService.progressData.describeFlag===19
+    ||this.appService.progressData.describeFlag===25
+    ||this.appService.progressData.describeFlag===24||
+    (this.appService.progressData.describeFlag === 13 && this.appService.skillFault01IsGood == "0") || 
+    (this.appService.progressData.describeFlag == 17 && this.appService.skillFault02IsGood == "0") || 
+    (this.appService.progressData.describeFlag == 21 && this.appService.skillFault03IsGood == "0") || 
+    (this.appService.progressData.describeFlag == 27 && this.appService.examFault01IsGood == "0"))'></div> -->
+
+        <!-- <div class="resfault" *ngIf='this.dashboardService.Mint.In1NER_IgnKey_ON_x_x == "1"&&
+    ((this.appService.progressData.describeFlag===16||this.appService.progressData.describeFlag===15||this.appService.progressData.describeFlag===17)||
+    (this.appService.progressData.describeFlag == 18 && this.appService.skillFault02IsGood == "0"))'></div> -->
+    </div>
+</div>

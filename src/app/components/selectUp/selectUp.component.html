@@ -1,0 +1,14 @@
+<div class="dropup">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false">
+    <span #text>select</span>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <ng-template ngFor let-item let-index="index" [ngForOf]="contentData">
+      <li>
+        <a (click)='select($event.target,text)'>{{item}}</a>
+      </li>
+    </ng-template>
+  </ul>
+</div>

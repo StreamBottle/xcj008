@@ -1,0 +1,106 @@
+<!--/**
+* @createDate   2015-08-4 下午05:28:38
+* @author       hao liqiang
+* @email        lq.hao@xiaochejiang.com
+* @version      1.0
+*万用表表身
+*/-->
+<div class="multimeter-contain">
+  <!-- <div class="multimeter-contain"> -->
+
+  <div id="mask-multimeter">
+    <div class="bgx" [ngStyle]="{'property': expression}">
+      <!-- <div class="multimeter-topUnit" name='o' *ngIf='multimeterService.Mdata.modelOrself=="self"' style="top: 51px;
+      right: 3px;">{{multimeterServiceMdata.multimeterScreenUnitSelf}}</div>
+      <div class="multimeter-rightUnit" name='er'>{{multimeterServiceMdata.multimeterScreenrightUnit}}</div> -->
+
+      <!-- <div class="multimeter-top" id="multimeterShowData" align="left" [ngSwitch]='multimeterService.Mdata.modelOrself' *ngIf="multimeterServiceMdata.multimeterScreenStatus"
+        style="width: 100%;height: 100%;top: 0;left: 0">
+        <span style="position: absolute;top: 4px;" *ngSwitchCase="'model'">{{multimeterServiceMout.Out1NER_Multi_ToScreen_x_x}}</span>
+        <span style="position: absolute;top: 4px;" *ngSwitchCase="'self'">{{multimeterServiceMdata.wybShow}}</span>
+        <span style="position: absolute;top: 4px;" *ngSwitchDefault>{{multimeterServiceMout.Out1NER_Multi_ToScreen_x_x}}</span>
+      </div>
+      <div class="showDateUnit" *ngIf="multimeterServiceMdata.multimeterScreenStatus">{{multimeterServiceMdata.multimetershowDateUnit}}</div>
+      <div class="multimeter-topHot" id="multimeter-topHot"></div> -->
+    </div>
+    <div class="multimeter" id="hehhe">
+      <div class="multimeter-container" [ngStyle]='{"height":packupMultimeter ? "0px" : "442px"}'>
+        <div class="multimeter-bg"></div>
+
+
+
+        <div class="clickcircle cursor-pointer"></div>
+        <div class="circleinfobox" (mouseover)="onMouseover()" (mouseout)="onMouseout()"></div>
+        <div class="multimeter-hotarea" (click)="multimeterCircle()" (mouseover)="change2pointer()" (mouseout)="change2default()"
+          [halo]='this.halo'></div>
+        <div id="multimeter-bottom" class="multimeter-bottom"></div>
+
+
+        <div class="multimeter-off cursor-pointer" (click)="multimeteroff();"></div>
+        <div class="multimeter-vv cursor-pointer" (click)="multimetervv();"></div>
+        <div class="multimeter-v cursor-pointer" (click)="multimeterv();"></div>
+        <div class="multimeter-mv cursor-pointer" (click)="multimetermv();"></div>
+
+        <div class="multimeter-k cursor-pointer" (click)="multimeterk();"></div>
+
+
+        <!--<div class="multimeter-nofine cursor-pointer" (click)="multimeternofine();"></div>-->
+        <div class="multimeter-AA cursor-pointer" (click)="multimeterAA();"></div>
+        <div class="multimeter-A cursor-pointer" (click)="multimeterA();"></div>
+        <div class="multimeter-mA cursor-pointer" (click)="multimetermA();"></div>
+        <div class="multimeter-res cursor-pointer" (click)="multimeterres();"></div>
+
+
+        <div class="multimeter-Red" [ngStyle]='{"display":packupMultimeter ? "none" : "block"}'></div>
+        <div class="multimeter-black" [ngStyle]='{"display":packupMultimeter ? "none" : "block"}'></div>
+        <div class="multimeter-coe close cursor-pointer" style='cursor:pointer;' (click)="closemultimeter();">X</div>
+      </div>
+      <div class="multimeter-topUnit" name='o' *ngIf='multimeterService.Mdata.modelOrself=="self"'>{{multimeterServiceMdata.multimeterScreenUnitSelf}}</div>
+      <div class="multimeter-rightUnit" name='er'>{{multimeterServiceMdata.multimeterScreenrightUnit}}</div>
+
+      <div class="multimeter-top" id="multimeterShowData" align="left" [ngSwitch]='multimeterService.Mdata.modelOrself' *ngIf="multimeterServiceMdata.multimeterScreenStatus&&multimeterServiceMint.In1NER_Multi_Insulate_Ohm_x === '0'">
+        <span *ngSwitchCase="'model'">{{multimeterServiceMout.Out1NER_Multi_ToScreen_x_x}}</span>
+        <span *ngSwitchCase="'self'">{{multimeterServiceMdata.wybShow}}</span>
+        <span *ngSwitchDefault>{{multimeterServiceMout.Out1NER_Multi_ToScreen_x_x}}</span>
+      </div>
+      <div class="showDateUnit" *ngIf="multimeterServiceMdata.multimeterScreenStatus">{{multimeterServiceMdata.multimetershowDateUnit}}</div>
+      <div *ngIf='multimeterServiceMint.In1NER_Multi_Insulate_Ohm_x === "1"&&multimeterServiceMdata.multimeterScreenUnitSelf === "525"'
+        class="multimeter-topHot" id="multimeter-topHot">
+        {{multimeterServiceMdata.multimeterresdw}}
+      </div>
+      <div *ngIf='multimeterServiceMint.In1NER_Multi_Insulate_Ohm_x === "1"' class="resShow">
+        {{multimeterServiceMdata.resShow}}
+      </div>
+    </div>
+    <span class="packup-multimeter" (click)='hideMultimeterOperator()' [halo]='"halo"'></span>
+  </div>
+  <div id="hhjmultimeterRed-hotspot" class="hhjmultimeterRed-hotspot ui-draggable" *ngIf="multimeterServiceMdata.SvgRedStatus"></div>
+  <div id="hhjmultimeterRed" class="multimeterRed" *ngIf="multimeterServiceMdata.SvgRedStatus"></div>
+  <div id="hhjmultimeterBlack-hotspot" class="hhjmultimeterBlack-hotspot ui-draggable" *ngIf="multimeterServiceMdata.SvgBlackStatus"></div>
+  <div id="hhjmultimeterBlack" class="multimeterBlack" *ngIf="multimeterServiceMdata.SvgBlackStatus"></div>
+
+
+
+</div>
+<!-- <div id="mask-svg" style="overflow:hidden" *ngIf="multimeterServiceMdata.SvgStatus"> -->
+<div id="mask-svg" style="overflow:hidden" *ngIf="true">
+  <svg width='1024px' height='700px' version='1.1' xmlns='http://www.w3.org/2000/svg' id='svg'>
+    <!-- <path d='M440 35 383 100' style='fill:none;stroke:#d83747;stroke-width:5' id='path_Red' *ngIf="true"
+    />
+    <path d='M222 35 306 100' style='fill:none;stroke:#656261;stroke-width:5' id='path_black' *ngIf="true"
+    /> -->
+    <path d='M440 35 C440 35 420 37 383 100' style='fill:none;stroke:#d83747;stroke-width:5' id='path_Red' *ngIf="multimeterServiceMdata.SvgRedStatus"
+    />
+    <path d='M222 35 C222 35 302 37 306 100 ' style='fill:none;stroke:#656261;stroke-width:5' id='path_black' *ngIf="multimeterServiceMdata.SvgBlackStatus"
+    />
+  </svg>
+</div>
+<div class="falseconnect" *ngIf="multimeterServiceMdata.falseconnectStatus">
+  <div class="falseconnectbox">
+    <div class="header">提示</div>
+    <div class="main-tip">
+      <p>绝缘电阻档不能测试低压电路</p>
+      <button (click)="removefalseConnect()">确定</button>
+    </div>
+  </div>
+</div>

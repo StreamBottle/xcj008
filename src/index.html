@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+
+    <style>
+    </style>
+    <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+
+
+
+    <!-- base url -->
+    <!--<base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">-->
+
+
+    <script src="./assets/js/jquery-3.1.1.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="./assets/js/jquery.nicescroll.min.js"></script>
+    <script src="./assets/js/perfect_scrollbar/perfect-scrollbar.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/js/bootstrap/bootstrap.min.css">
+    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/js/dashboard.js"></script>
+
+    <script>
+        // window['adaptive'].desinWidth = 854;
+        // window['adaptive'].baseFont = 12;
+        // window['adaptive'].init();
+
+        // console.log(window.getComputedStyle(document.body).fontSize)
+        //字体大小：默认值是16px，每一个浏览器有可能不一样的
+        var dw = 2048; //设计稿的宽
+        //在移动端就直接这样写就可以
+        $('html').css('fontSize', dw / (document.documentElement.clientWidth || document.body.clientWidth) *
+            100 + "px")
+        //在PC端的时候加上屏幕大小改变的问题
+        // window.onresize = function () {
+        //   $('html').css('fontSize', 100 / (dw / (document.documentElement.clientWidth || document.body.clientWidth)) +
+        //     "px")
+        // }
+    </script>
+
+    <!--[if IE]>
+        <script src="./assets/js/shims_for_IE.prod.js"></script>
+    <![endif]-->
+    <script src="./assets/js/web-animations.min.js"></script>
+    <!-- 平台通信  -->
+    <script src="./assets/js/APIFunctions.js"></script>
+    <script src="./assets/js/APIWrapper.js"></script>
+    <!-- <script src="./assets/js/socket.io.js"></script> -->
+
+
+    <script src='./assets/js/common.js'></script>
+
+</head>
+
+<body style='height:700px;'>
+
+    <!-- <button style='position: absolute;left: 0;top: 260px;font-size: 18px;z-index: 100;background: red;' id="prev">prev</button>
+    <button style='position: absolute;left: 0;top: 480px;font-size: 18px;z-index: 100;background: red;' id="next">next</button>
+
+    <button style='position: absolute;left: 0px;top: 300px;font-size: 18px;z-index: 100;background: red;' id="dashboardTool">dashboardTool</button>
+    <button style='position: absolute;left: 0px;top: 400px;font-size: 18px;z-index: 100;background: red;' id="measureTool">measureTool</button> -->
+
+    <support-app>
+        <img src="./assets/images/index.jpg">
+    </support-app>
+
+
+
+    <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+        <!-- Webpack Dev Server reload -->
+        <script src="/webpack-dev-server.js"></script>
+        <% } %>
+
+</body>
+<script>
+    document.oncontextmenu = function (e) {
+        e.preventDefault();
+    };
+
+    // const prev = document.getElementById('prev');
+    // const next = document.getElementById('next');
+    // const dashboardTool = document.getElementById('dashboardTool');
+    // const measureTool = document.getElementById('measureTool');
+    // prev.onclick = function () {
+    //     window.leftFlip();
+    // }
+    // next.onclick = function () {
+    //     window.rightFlip();
+    // }
+    // dashboardTool.onclick = function () {
+    //     window.dashboardTool();
+    // }
+    // measureTool.onclick = function () {
+    //     window.measureTool();
+    // }
+</script>
+
+
+</html>

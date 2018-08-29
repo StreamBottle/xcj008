@@ -1,0 +1,493 @@
+@charset "utf-8";
+@font-face {
+  font-family: "UnidreamLED";
+  src: local("UnidreamLED"), local("UnidreamLED"), url("font/UnidreamLED.ttf") format("truetype"), url("font/UnidreamLED.svg#UnidreamLED") format("svg"), url("font/UnidreamLED.ttf") format("truetype"), url("font/UnidreamLED.woff") format("woff");
+}
+
+.multimeter-contain {
+  position: absolute; // width: 100%;
+  // height: 100%;
+  top: 0;
+  left: 0; // overflow: hidden;
+}
+
+#mask-multimeter {
+  position: absolute; // width: 424px;
+  // height: 810px;
+  width: 126px;
+  height: 230px;
+  top: 80px;
+  left: 290px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+#hehhe {
+  >div {
+    // background-color: red;
+    z-index: 999999;
+  }
+}
+
+.multimeter {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  background: url(./images/multimeter.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.multimeterRed {
+  position: absolute;
+  width: 20px;
+  height: 200px;
+  top: 97px;
+  left: 415px;
+  z-index: 100;
+  background: url(./images/3670412.png) no-repeat 0 0;
+  background-size: 100% 97%;
+}
+
+.multimeterBlack {
+  position: absolute;
+  width: 20px;
+  height: 200px;
+  top: 97px;
+  left: 275px;
+  z-index: 100;
+  background: url(./images/36704121.png) no-repeat 0 0; // overflow: hidden;
+  background-size: 100% 97%;
+}
+
+.multimeterjiaziRed {
+  position: absolute;
+  width: 28px;
+  height: 195px;
+  top: 97px;
+  left: 407px;
+  z-index: 11;
+  background: url(./images/clip_r.png) no-repeat 0 0;
+  background-size: 100% 97%;
+}
+
+.multimeterjiaziBlack {
+  position: absolute;
+  width: 28px;
+  height: 195px;
+  top: 97px;
+  left: 269px;
+  z-index: 11;
+  background: url(./images/clip_b.png) no-repeat 0 0;
+  overflow: hidden;
+  background-size: 100% 97%;
+}
+
+.opacitybox {
+  width: 25px;
+  height: 25px;
+  background: #f00;
+  opacity: 0.5;
+  position: absolute;
+  left: 96px;
+  top: 175px;
+  display: block;
+}
+
+.multimeter-top {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 25px;
+  left: 25px;
+  line-height: 34px;
+  overflow: hidden;
+  text-align: left;
+  color: #454545;
+  font-size: 18px;
+  font-family: "UnidreamLED";
+  text-align: center;
+}
+
+.showDateUnit {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  top: 108px;
+  left: 254px;
+  line-height: 44px;
+  overflow: hidden;
+  text-align: center;
+  color: #454545;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: "Microsoft YaHei";
+}
+
+.circleinfobox {
+  width: 36px;
+  height: 11px;
+  border-radius: 6px;
+  position: absolute;
+  left: 45px;
+  top: 93px;
+  background: #f00;
+  display: none;
+  opacity: 0.3;
+}
+
+.multimeter-hotarea {
+  width: 36px;
+  height: 11px;
+  border-radius: 6px;
+  position: absolute;
+  left: 45px;
+  top: 93px;
+  z-index: 6;
+}
+
+
+/* 郝立强 2015 05 17 */
+
+.multimeter-topUnit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 48px;
+  right: 25px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: right;
+  color: #454545;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Microsoft YaHei";
+}
+
+.multimeter-rightUnit {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  top: 51px;
+  right: 55px;
+  line-height: 20px;
+  overflow: hidden;
+  text-align: right;
+  color: #454545;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Microsoft YaHei";
+}
+
+.multimeter-off {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 132px;
+  right: 82px;
+  background: #000;
+  opacity: 0;
+}
+
+.multimeter-vv {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 161px;
+  right: 99px;
+  background: #000;
+  opacity: 0;
+}
+
+.multimeter-v {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 144px;
+  right: 90px;
+  background: #000;
+  opacity: 0;
+}
+
+.multimeter-mv {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 134px;
+  right: 73px;
+  background: #000;
+  opacity: 0;
+}
+
+.multimeter-k {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 105px;
+  right: 44px;
+  background: #000;
+  opacity: 0;
+}
+
+.multimeter-nofine {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 145px;
+  right: 37px;
+  background: #000;
+  opacity: 0;
+}
+
+
+/*.multimeter-AA{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:145px;
+    right:37px;
+    background: #000;
+    opacity: 0;
+}*/
+
+.multimeter-mA {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 160px;
+  right: 28px;
+  background: #000;
+  opacity: 0;
+}
+
+.multimeter-res {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 130px;
+  right: 21px;
+  background: #000;
+  opacity: 0;
+}
+
+
+/* 郝立强 2015 05 17  end */
+
+.multimeter-bottom {
+  opacity: 0.5;
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  top: 103px;
+  left: 30px;
+  overflow: hidden;
+  background: url(./images/multimeter_zz.png) no-repeat 0 0;
+  transform-origin: center;
+  background-size: 100% 100%;
+}
+
+.multimeter-Red {
+  position: absolute;
+  width: 14px;
+  height: 40px;
+  bottom: 23px;
+  right: 19px;
+  transform: rotate(-30deg);
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  background: url(./images/multimeter_r.png) no-repeat 0 0;
+  transform-origin: center;
+  background-size: 100% 100%;
+}
+
+.multimeter-black {
+  position: absolute;
+  width: 14px;
+  height: 40px;
+  bottom: -1px;
+  right: 28px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  background: url(./images/multimeter_b.png) no-repeat 0 0;
+  transform-origin: center;
+  background-size: 100% 100%;
+}
+
+.multimeter-coe {
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  width: 30px;
+  right: -2px;
+  font-size: 25px;
+  color: orange;
+  height: 30px;
+  line-height: 30px;
+}
+
+.close {
+  opacity: 1;
+}
+
+#mask-svg {
+  position: absolute;
+  top: 71px;
+  left: 63px;
+  z-index: 5;
+}
+
+.hhjmultimeterBlack-hotspot {
+  position: absolute;
+  top: 250px;
+  left: 272px;
+  width: 20px;
+  height: 40px;
+  background: #000;
+  opacity: 0;
+  cursor: move;
+  z-index: 101;
+}
+
+.hhjmultimeterRed-hotspot {
+  position: absolute;
+  top: 245px;
+  left: 414px;
+  width: 20px;
+  height: 40px;
+  background: #000;
+  opacity: 0;
+  cursor: move;
+  z-index: 101;
+}
+
+.voltageflash {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f00;
+  opacity: 0.5;
+  position: absolute;
+  left: 41px;
+  top: 148px;
+}
+
+.ohmflash {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f00;
+  opacity: 0.5;
+  position: absolute;
+  left: 103px;
+  top: 179px;
+}
+
+.clickcircle {
+  width: 35px;
+  height: 15px;
+  border-radius: 16px;
+  position: absolute;
+  left: 46px;
+  top: 92px;
+  opacity: 0.6;
+  background: url(./images/multimeter_button.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+.buttonflash {
+  width: 41px;
+  height: 16px;
+  /*border-radius:16px;*/
+  position: absolute;
+  left: 51px;
+  top: 120px;
+  background: #f00;
+  opacity: 0.5;
+}
+
+.multimeter-arrow1 {
+  display: none;
+  width: 15px;
+  height: 18px;
+  position: absolute;
+  left: 73px;
+  top: 126px;
+  background: url(./images/arrow.png) no-repeat 0 0;
+}
+
+.multimeter-arrow2 {
+  display: none;
+  width: 15px;
+  height: 18px;
+  position: absolute;
+  left: 103px;
+  top: 167px;
+  background: url(./images/arrow.png) no-repeat 0 0;
+}
+
+.falseconnect {
+  width: 897px;
+  height: 450px;
+  position: absolute;
+  left: 64px;
+  top: 72px;
+  z-index: 12;
+  .falseconnectbox {
+    width: 260px;
+    height: 180px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 1;
+    z-index: 9999;
+    border: 1px solid #fff;
+    .header {
+      height: 35px;
+      width: 260px;
+      background-color: #525353;
+      line-height: 35px;
+      text-align: center;
+      color: #fff;
+      opacity: 1;
+      font-size: 16px;
+      letter-spacing: 8px;
+      cursor: default;
+    }
+    .main-tip {
+      width: 260px;
+      height: 145px;
+      background-color: #c4c6c6;
+      opacity: 1;
+      top: -47px; // margin-top: 35px;
+      cursor: default;
+      position: relative;
+      p {
+        color: #000;
+        margin: 47px 60px;
+        position: relative;
+        top: 40px;
+      }
+      button {
+        width: 70px;
+        height: 24px;
+        background-color: #525353;
+        border-radius: 2px;
+        margin-left: 91px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        top: 20px;
+      }
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

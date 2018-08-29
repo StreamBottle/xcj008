@@ -1,0 +1,17 @@
+<div class="sideBar-tool" >
+    <button class="sideBar-tool-button cursor-pointer z-index-99" (click)="sideToolToggle($event.target);" [ngClass]="{'sideBar-tool-button-out': tool_btn_bg_out,'sideBar-tool-button-in': ! tool_btn_bg_out }" name="0"></button>
+    <div class="sideBar-tool-panel z-index-99">
+        <ul>
+            <li><button class="radius cursor-pointer right-diagnostic"  (click)="obdscan()"></button></li> <!--ng-controller="obdscanCtrl"-->
+            <li><button class="radius cursor-pointer right-multimeter"  (click)="multimeter();"></button></li>
+            <li><button class="radius right-vacuumPump"></button></li>
+            <li><button class="radius right-airGun"></button></li>
+            <li><button class="radius right-wireCutter"></button></li>
+            <li><button class="radius right-pinchClamp"></button></li>
+            <li><button class="radius right-cylinderPressure"></button></li>
+            <li><button class="radius right-fuelPressure"></button></li>
+        </ul>
+    </div>
+</div>
+<obdscan ></obdscan>
+<multimeter ></multimeter>

@@ -1,0 +1,89 @@
+.com-img {
+    position: absolute;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // width: 200px;
+    // height: 200px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(222, 222, 222, .5);
+  .modal-dialog {
+      position: relative;
+
+      margin: 268px auto;
+      border-radius: 5px;
+      width: 598px;
+      height: 172px;
+
+      text-align: center;
+
+      background-color: #fff;
+      background-repeat: no-repeat;
+      // border: 1px #2c2c2c solid;
+
+      box-shadow: 0 0 2px 0;
+      h5 {
+          margin-left: 10px;
+          height: 42px;
+
+          font-size: 20px;
+          font-weight: normal;
+          font-style: normal;
+          line-height: 42px;
+          text-align: left;
+
+          color: #fff;
+      }
+      p {
+          padding: 40px 20px 35px 20px;
+          // padding-top: 40px;
+          // padding-bottom: 35px;
+
+          font-size: 16px;
+      }
+      hr {
+          margin: 0 10px;
+      }
+      button {
+          position: absolute;
+          right: 20px;
+          bottom: 10px;
+
+          width: 78px;
+          height: 34px;
+
+          background-repeat: no-repeat;
+          background-position: center;
+
+          cursor: pointer;
+
+          &:first-of-type {
+              right: 260px;
+
+              background-image: url("./images/dialog_bt1.png");
+              &:hover {
+                  background-image: url("./images/dialog_bt1_act.png") !important;
+              }
+          }
+          &:last-of-type {
+              color: #fff;
+              background-image: url("./images/dialog_bt2.png");
+              &:hover {
+                  background-image: url("./images/dialog_bt2_act.png") !important;
+              }
+          }
+      }
+  }
+}

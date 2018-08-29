@@ -1,0 +1,375 @@
+<!-- <div id='mask-obdscan' class="obdscanabs obdscan" *ngIf="obdscanServiceZdata.obdscanStatus "> -->
+<div id='mask-obdscan' class="obdscanabs obdscan">
+    <!-- {{obdscanServiceZdata.obdscanObj.dataStream[1].data}}asdflaksdjflaksjdf -->
+    <div class="mask-obdscan obdscanabs"></div>
+    <div class="close" (click)="closedobdscan('instrument')">X</div>
+    <div class="is-off" *ngIf="this.obdscanService.Zdata.isPower"></div>
+    <div class="obdscanInclude">
+        <ul class="obdscan-menu" *ngIf='this.obdscanService.Zdata.pageRecord==="0"'>
+            <li class="active">
+                <span class="car spanbg" (click)="changeTemplate('carDiagnosis01','modelsData',true,null,'汽车诊断')"></span>
+            </li>
+            <li class="inactive">
+                <span class="set"></span>
+            </li>
+            <li class="inactive">
+                <span class="wxzd"></span>
+            </li>
+            <li class="inactive">
+                <span class="sby"></span>
+            </li>
+            <li class="inactive">
+                <span class="help"></span>
+            </li>
+        </ul>
+        <div class="obdscanContent" *ngIf='this.obdscanService.Zdata.pageRecord!=="0"'>
+            <div class="header1">小车匠诊断仪</div>
+            <div class="header2" *ngIf='obdscanService.Zdata.pageRecord=="modelsData"'>汽车诊断/品牌</div>
+            <div class="header2" *ngIf='obdscanService.Zdata.pageRecord!="modelsData"'>{{obdscanService.Zdata.navName}}</div>
+
+            <ul class="fast-test obdscan-content" style="height: 0.74rem;" [ngStyle]='{"height": obdscanService.Zdata.pageRecord=="faultCodeData" ? "0.74rem" : "0.74rem"}'>
+                <!-- 前边的页面 -->
+                <li *ngIf='obdscanService.Zdata.pageRecord=="carBrandData"||obdscanService.Zdata.pageRecord=="modelsData"||obdscanService.Zdata.pageRecord=="carSelect"||obdscanService.Zdata.pageRecord=="systemSelect"'>
+                    <ng-template ngFor let-item let-itemIndex='index' [ngForOf]='obdscanService.Zdata.obdscanObj[obdscanService.Zdata.currentShowPage]'>
+                        <div style="margin-bottom: 2px;" *ngIf='item.isShow' (click)='changeTemplate(item.id,item.next,item.isClick,item?.parentId,item.name)'>{{item.name}}</div>
+                    </ng-template>
+                </li>
+                <li *ngIf='obdscanService.Zdata.pageRecord=="faultData"'>
+                    <ng-template ngFor let-item let-itemIndex='index' [ngForOf]='obdscanService.Zdata.obdscanObj[obdscanService.Zdata.currentShowPage]'>
+                        <div style="margin-bottom: 2px;" (click)='changeTemplate(item.id,item.next,item.isClick,item?.parentId,item.name)'>{{item.name}}</div>
+                    </ng-template>
+                </li>
+
+                <!-- 快速测试和系统测试页面 -->
+                <li *ngIf='obdscanService.Zdata.pageRecord=="systemData"'>
+                    <div *ngIf='this.obdscanService.Zdata.xtORks=="systemSelect01"' style="margin-bottom: 2px;">
+                        <span>名称</span>
+                        <span>当前值</span>
+                    </div>
+                    <ng-template ngFor let-item let-itemIndex='index' [ngForOf]='obdscanService.Zdata.obdscanObj[obdscanService.Zdata.currentShowPage]'>
+                        <div style="margin-bottom: 2px;" *ngIf='item.isShow&&item.isOk' (click)='changeTemplate(item.id,item.next,item.isClick,item?.parentId,item.name)'>
+                            <span style="float: left;">{{item.name}}</span>
+                            <span style="position: absolute;
+                            width: 2px;
+                            height: 150px;
+                            background: #fff;
+                            left: 240px;
+                            top: 68px;"></span>
+                            <span style="float: right;">{{item.isOk}}</span>
+                        </div>
+                        <div style="margin-bottom: 2px;" *ngIf='item.isShow&&!item.isOk' (click)='changeTemplate(item.id,item.next,item.isClick,item?.parentId,item.name)'>{{item.name}}</div>
+                    </ng-template>
+                </li>
+
+                <!-- 故障码页面 -->
+                <li *ngIf='obdscanService.Zdata.pageRecord=="faultCodeData"'>
+                    <ng-template ngFor let-item let-itemIndex='index' [ngForOf]='obdscanService.Zdata.obdscanObj[obdscanService.Zdata.currentShowPage]'>
+                        <div style="margin-bottom: 2px;" *ngIf='(item.isShow&&!item.isClear)'>
+                            <span style="float: left;margin-right: .02rem;font-weight: bold;font-size: .07rem;">{{item.faultCode}}</span>
+                            <span style="float:left;font-weight:bold;font-size: .07rem;">{{item.faultMean}}</span>
+                            <span style="font-size:.12rem;float: right;margin-right: 0rem;font-size: .07rem;" *ngIf='!item.history'>当前</span>
+                            <span style='font-size:.12rem;float: right;margin-right: 0rem;font-size: .07rem; ' *ngIf='item.history'>历史</span>
+                        </div>
+                    </ng-template>
+                    <div class="faultCode-cleared">故障码已清除</div>
+                    <div class="system-normal">系统正常</div>
+
+                </li>
+
+                <!-- 数据流页面 -->
+                <li *ngIf='obdscanService.Zdata.pageRecord=="dataStream"' class="dataStream">
+
+                    <!-- 踏板数据流模版 -->
+                    <ng-template ngFor let-item let-itemIndex='index' [ngForOf]='obdscanService.Zdata.obdscanObj[obdscanService.Zdata.currentShowPage]'>
+                        <div style="margin-bottom: 2px;" *ngIf='item.template=="dataStream01"&&item.isShow'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 13||this.appService.progressData.describeFlag == 15||(this.appService.progressData.describeFlag == 17&&!this.appService.moni1IsOk)'>
+
+                        <div style="margin-bottom: 2px;">
+                            <span>项目</span>
+                            <span>数据</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>档位信号</span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 17&&this.appService.moni1IsOk'>
+                        <div style="margin-bottom: 2px;">
+                            <span>名称</span>
+                            <span>当前值</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>档位信号</span>
+                            <span>{{this.gearPanelService.currentStallText}}</span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 19||this.appService.progressData.describeFlag == 21||(this.appService.progressData.describeFlag == 23&&!this.appService.moni2IsOk)'>
+
+                        <div style="margin-bottom: 2px;">
+                            <span>项目</span>
+                            <span>数据</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>驱动电机转速</span>
+                            <span>0</span>
+                            <span>rpm</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>驱动电机转子角度</span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电机位置初始角度</span>
+                            <span>339.0°</span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 23&&this.appService.moni2IsOk'>
+                        <div style="margin-bottom: 2px;">
+                            <span>项目</span>
+                            <span>数据</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>驱动电机转速</span>
+                            <span>{{this.obdscanService.Zdata.motorSpeed}}</span>
+                            <span>rpm</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>驱动电机转子角度</span>
+                            <span>{{ this.obdscanService.Zdata.rotorAngle}}°</span>
+                            <span></span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电机位置初始角度</span>
+                            <span>339.0°</span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+
+
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 25||(this.appService.progressData.describeFlag == 29&&!this.appService.moni3IsOk)'>
+
+                        <div style="margin-bottom: 2px;">
+                            <span>数据</span>
+                            <span>数值</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>正极对地绝缘电阻</span>
+                            <span>1.00</span>
+                            <span>MΩ</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>负极对地绝缘电阻</span>
+                            <span>1.00</span>
+                            <span>MΩ</span>
+                        </div>
+                    </ng-template>
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 27'>
+                        <div style="margin-bottom: 2px;">
+                            <span>数据</span>
+                            <span>数值</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>正极对地绝缘电阻</span>
+                            <span>{{this.obdscanService.Zdata.negativePole}}</span>
+                            <span>MΩ</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>负极对地绝缘电阻</span>
+                            <span>{{this.obdscanService.Zdata.collectionData}}</span>
+                            <span>MΩ</span>
+                        </div>
+                    </ng-template>
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 29&&this.appService.moni3IsOk'>
+
+                        <div style="margin-bottom: 2px;">
+                            <span>数据</span>
+                            <span>数值</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>正极对地绝缘电阻</span>
+                            <span>20.00</span>
+                            <span>MΩ</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>负极对地绝缘电阻</span>
+                            <span>20.00</span>
+                            <span>MΩ</span>
+                        </div>
+                    </ng-template>
+
+
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 31||this.appService.progressData.describeFlag == 33||(this.appService.progressData.describeFlag == 35&&!this.appService.moni4IsOk)'>
+
+                        <div style="margin-bottom: 2px;">
+                            <span>项目</span>
+                            <span>数据</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>制动信号</span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 35&&this.appService.moni4IsOk'>
+                        <div style="margin-bottom: 2px;">
+                            <span>名称</span>
+                            <span>当前值</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>制动信号</span>
+                            <span>{{this.gearPanelService.pedalIsDown}}</span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+
+
+
+
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 37||this.appService.progressData.describeFlag == 39||(this.appService.progressData.describeFlag == 41&&!this.appService.moni5IsOk)'>
+
+                        <div style="margin-bottom: 2px;">
+                            <span>项目</span>
+                            <span>数据</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>1#油门踏板位置</span>
+                            <span>0</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>2#油门踏板位置</span>
+                            <span>{{this.appService.VCUB}}</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>油门踏板位置</span>
+                            <span>{{this.obdscanService.Zdata.acceleratorPedalPosition}}%</span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+                    <ng-template [ngIf]='this.appService.progressData.describeFlag == 41&&this.appService.moni5IsOk'>
+                        <div style="margin-bottom: 2px;">
+                            <span>名称</span>
+                            <span>当前值</span>
+                            <span>单位</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>电源电压(B+)</span>
+                            <span>13.8</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>1#油门踏板位置</span>
+                            <span>{{this.appService.VCUA}}</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>2#油门踏板位置</span>
+                            <span>{{this.appService.VCUB}}</span>
+                            <span>V</span>
+                        </div>
+                        <div style="margin-bottom: 2px;">
+                            <span>油门踏板位置</span>
+                            <span>{{this.obdscanService.Zdata.acceleratorPedalPosition}}%</span>
+                            <span></span>
+                        </div>
+                    </ng-template>
+
+
+
+
+                    <div class="faultCode-cleared">故障码已清除</div>
+                </li>
+
+                <!-- 故障页面 -->
+                <li *ngIf='obdscanService.Zdata.pageRecord=="noCommunication"'>
+                    <div style="width:100%;height: .74rem;background: #eee;padding: 0px 21px;font-size: .rem;">
+                        <p style="margin-top:-3px">
+                            与汽车ECU通讯故障。 请确认:
+                        </p>
+                        <p style="margin-top:-3px">
+                            1.该汽车是否装备此系统
+                        </p>
+                        <p style="margin-top:-3px">
+                            2.此系统是否为电控系统
+                        </p>
+                        <p style="margin-top:-3px">
+                            3.诊断接头连接是否正确
+                        </p>
+                        <p style="margin-top:-3px">
+                            4.点火钥匙是否打开
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="button-wrap-clearfaultcode" *ngIf='obdscanService.Zdata.pageRecord=="faultCodeData"'>
+                <button class="button-clearcode" (click)="clearFaultCode()">清除故障码</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="power" (click)="obdscanPower()"></div>
+    <div class="obdscan-return" (click)="obdscanReturn()"></div>
+</div>

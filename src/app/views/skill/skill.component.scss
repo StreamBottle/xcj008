@@ -1,0 +1,1679 @@
+@mixin positionArg($left, $top, $width, $height) {
+  position: absolute;
+  left: $left;
+  top: $top;
+  width: $width;
+  height: $height;
+}
+
+.tishi {
+  display: none;
+  width: 300px;
+  height: 150px;
+  font-size: 18px;
+  background: red;
+  z-index: 999;
+}
+
+.skill-body {
+  // position: absolute;
+  // left: 0;
+  width: 100%;
+  height: 95%;
+  margin-top: 0.31rem;
+  .fault-select {
+    width: 700px;
+    height: 300px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -350px;
+    line-height: 50px;
+    padding: 0 60px;
+    p {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .simulated-training-title {
+      color: #6ec117;
+    }
+    .simulated-training-one,
+    .simulated-training-two,
+    .simulated-training-three {
+      border: 1px solid rgba(49, 83, 141, 1);
+      background-color: rgba(242, 242, 242, 1);
+      border-radius: 5px;
+      color: #000;
+    }
+  }
+  .skill-title {
+    display: block;
+    background-color: #ddffff;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 6px;
+  }
+  .preservation,
+  .submit {
+    width: 60px;
+    height: 35px;
+    background: #169bdf;
+    position: absolute;
+    right: 21px;
+    top: 10px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .preservation {
+    right: 100px;
+  } // 技能-模拟
+  @for $i from 1 through 4 {
+    .moni#{$i} {
+      @extend %monid;
+    }
+  }
+  %monid {
+    width: 100%;
+    height: 100%;
+  } // 表单样式
+  .tab {
+    width: 80%;
+    margin: 0.1rem auto 0;
+    border-collapse: collapse;
+    font-size: 0.1rem;
+    caption {
+      height: 0.4rem;
+      line-height: 0.3rem;
+      border: 0.01rem solid #292c33;
+      text-align: center;
+      font-weight: bold;
+      background-color: #c1e6ee;
+      color: #000;
+      box-sizing: border-box;
+    }
+    th,
+    td {
+      border: 2px solid #292c33;
+      text-align: center;
+      height: 0.3rem;
+      width: 1rem;
+    }
+    th {
+      background-color: #f5fbf1;
+    }
+  }
+  .moni1,
+  .moni2,
+  .moni3,
+  .moni4,
+  .moni5 {
+    .imgBG {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .fault {
+    width: 100%;
+    height: 586px;
+    position: absolute;
+    top: 48px;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+    }
+  }
+  .weixiu {
+    #sub {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      font-size: 0.28rem;
+      width: 1.66rem;
+      height: 0.52rem;
+      border: 0.02rem solid #5593d1;
+      box-sizing: border-box;
+      background-color: #8dc050;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    ul {
+      margin: 0 auto;
+      width: 18rem;
+      height: 6rem;
+      margin-top: 6%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li {
+        width: 45%;
+        height: 14%;
+        margin-bottom: 2%;
+        font-size: 0.36rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 0.02rem solid #485a7e;
+        padding-left: 0.36rem;
+        color: #485a7e;
+      }
+    }
+    .p1 {
+      display: none;
+      width: 0.8rem;
+      height: 0.32rem;
+      text-align: center;
+      line-height: 0.32rem;
+      font-size: 0.1rem;
+      background: red;
+      position: absolute;
+      top: 1.3rem;
+      left: 2.2rem;
+    }
+  }
+  .renwu {
+    height: 500px;
+    overflow: auto;
+    position: relative;
+    img {
+      width: 1rem;
+      height: 0.24rem;
+      position: absolute;
+      top: -0.01rem;
+      left: 0.2rem;
+    }
+    .renwu1Div {
+      width: 100%; // height: 1000px;
+      position: absolute;
+      top: 0.29rem;
+      h2 {
+        width: 92%;
+        font-size: 0.1rem;
+        /* margin: 0.1rem auto; */
+        font-weight: bold;
+        color: #5a6a8b;
+        padding: 0 0 0.04rem 0.34rem;
+      }
+      ul {
+        width: 92%;
+        margin: 0 auto;
+        li {
+          height: 0.25rem;
+          margin-top: 0.03rem;
+          i {
+            width: 0.05rem;
+            height: 100%;
+            margin-right: 0.09rem;
+            background-color: #5a6a8b;
+            float: left;
+          }
+          span {
+            width: 3.4rem;
+            height: 100%;
+            background-color: #5a6a8b;
+            float: left;
+            font-size: 0.1rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding-left: 0.1rem;
+            padding-right: 0.1rem;
+          }
+          p {
+            width: 8.28rem;
+            height: 2.48rem;
+            float: left;
+            background-color: #5a6a8b;
+            span {
+              width: 7.3rem;
+              float: none;
+              display: block;
+              height: 33.3%;
+              line-height: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  } // .renwu {
+  //   font-size: 0.1rem;
+  //   height: 530px;
+  //   width: 1010px;
+  //   margin: 0 auto;
+  //   overflow: auto;
+  //   padding: 40px;
+  //   box-sizing: border-box;
+  //   img {
+  //     width: 1rem;
+  //     height: 0.24rem;
+  //     position: absolute;
+  //     top: 0.4rem;
+  //     left: 0.2rem;
+  //   }
+  //   .next{
+  // 		width: 120px;
+  // 		height: 40px;
+  // 		position: fixed;
+  // 		left: 80%;
+  // 		top: 88%;
+  // 	}
+  // 	.up{
+  // 		width: 120px;
+  // 		height: 40px;
+  // 		position: fixed;
+  // 		left: 65%;
+  // 		top: 88%;
+  // 	}
+  // 	.ipt{
+  // 		width: 120px;
+  // 		border-bottom: 1px solid;
+  // 		font-size: 20px;
+  // 		padding-left: 10px;
+  // 	}
+  // 	.save{
+  // 		width: 120px;
+  // 		height: 40px;
+  // 		position: fixed;
+  // 		left: 66%;
+  // 		top: 18%;
+  // 	}
+  // 	.submit{
+  // 		width: 120px;
+  // 		height: 40px;
+  // 		position: fixed;
+  // 		left: 80%;
+  // 		top: 18%;
+  // 	}
+  // 	.renwu1{
+  // 		width: 90%;
+  // 		margin: auto;
+  // 		.renwu1-div1{
+  // 			.renwu1-p1{
+  // 				font-size: 23px;
+  // 				font-weight: bold;
+  // 				margin: 0px 0 30px 0;
+  // 			}
+  // 			.renwu1-p2{
+  // 				font-size: 20px;
+  // 			}
+  // 			ul{
+  // 				text-indent: 1em;
+  // 				font-size: 20px;
+  // 				margin-left: 20px;
+  // 				li{
+  // 					list-style: disc;
+  // 					margin-top: 10px;
+  // 				}
+  // 			}
+  // 		}
+  // 	}
+  // 	.renwu2{
+  // 		width: 90%;
+  // 		margin: auto;
+  // 		.renwu2-div1{
+  // 			.renwu2-p1{
+  // 				font-size: 23px;
+  // 				font-weight: bold;	
+  // 			}
+  // 			.renwu2-p2{
+  // 				font-size: 20px;
+  // 				font-weight: bold;
+  // 				margin-top: 30px;
+  // 			}
+  // 			ol{
+  // 				text-indent: 1em;
+  // 				font-size: 20px;
+  // 				margin-left: 20px;
+  // 				li{
+  // 					list-style: decimal;
+  // 					margin-top: 10px;
+  // 				}
+  // 			}
+  // 			ul{
+  // 				text-indent: 1em;
+  // 				font-size: 20px;
+  // 				margin-left: 20px;
+  // 				li{
+  // 					list-style: disc;
+  // 					margin-top: 10px;
+  // 				}
+  // 			}
+  // 		}
+  // 		.renwu2-ul1{
+  // 			width: 80%;
+  // 			margin: auto;
+  // 			display: flex;
+  // 			flex-wrap: wrap;
+  // 			margin-top: 20px;
+  // 			li{
+  // 				width: 33%;
+  // 				height: 40px;
+  // 				line-height: 40px;
+  // 				font-size: 20px;
+  // 				padding-left: 10px;
+  // 				input{
+  // 					width: 100%;
+  // 					height: 100%;
+  // 					font-size: 20px;
+  // 				}
+  // 			}
+  // 			.renwu2-ul1-li1{
+  // 				background: #4472C4;
+  // 				color: white;
+  // 			}
+  // 			.renwu2-ul1-li2{
+  // 				background: #CFD5EA;
+  // 				color: black;
+  // 			}
+  // 			.renwu2-ul1-li3{
+  // 				background: #E9EBF5;
+  // 				color: black;
+  // 			}
+  // 		}
+  // 		.renwu2-ul2{
+  // 			width: 100%;
+  // 			margin: auto;
+  // 			display: flex;
+  // 			flex-wrap: wrap;
+  // 			margin-top: 20px;
+  // 			li{
+  // 				width: 20%;
+  // 				height: 40px;
+  // 				line-height: 40px;
+  // 				font-size: 20px;
+  // 				padding-left: 10px;
+  // 				input{
+  // 					width: 100%;
+  // 					height: 100%;
+  // 					font-size: 20px;
+  // 				}
+  // 			}
+  // 			.renwu2-ul2-li1{
+  // 				background: #4472C4;
+  // 				color: white;
+  // 			}
+  // 			.renwu2-ul2-li2{
+  // 				background: #CFD5EA;
+  // 				color: black;
+  // 			}
+  // 			.renwu2-ul2-li3{
+  // 				background: #E9EBF5;
+  // 				color: black;
+  // 			}
+  // 		}
+  // 		.renwu2-p3{
+  // 			font-size: 20px;
+  // 			margin-top: 20px;
+  // 		}
+  // 	}
+  // }
+  .shicaogongdan {
+    width: 760px;
+    height: 400px;
+    position: relative;
+    .shicaogongdanpage01 {
+      width: 100%;
+      height: 100%;
+      padding-left: 0px;
+      padding-top: 30px;
+      box-sizing: border-box;
+      ul {
+        padding-left: 20px;
+        margin: 8px 0 20px 0;
+        font-size: 14px;
+        li {
+          list-style-type: disc;
+        }
+      }
+    }
+    .shicaogongdanpage02 {
+      height: 92%;
+      padding-left: 30px;
+      overflow: auto;
+      margin-top: 0px;
+      padding-top: 20px;
+      .skill-question01-title {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .question-title {
+        display: block;
+        font-size: 15px;
+      }
+      form {
+        padding-left: 20px;
+        label {
+          display: block;
+          margin: 15px 0;
+          input {
+            width: 15px;
+            height: 15px;
+          }
+          span {
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .shicaogongdanpage03 {
+      height: 92%;
+      padding-left: 30px;
+      overflow: auto;
+      margin-top: 0px;
+      padding-top: 20px;
+      .skill-question01-title {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .question-title {
+        display: block;
+        font-size: 15px;
+      }
+      form {
+        padding-left: 20px;
+        label {
+          display: block;
+          margin: 15px 0;
+          input {
+            width: 15px;
+            height: 15px;
+          }
+          span {
+            font-size: 14px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .shicaogongdanpage04 {
+      height: 100%;
+      padding-left: 40px;
+      padding-top: 10px;
+      overflow: auto;
+      .skill-question01-title {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 30px;
+      }
+      .notice {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 20px;
+        color: red;
+      }
+      ul {
+        padding-left: 30px;
+        li {
+          list-style-type: disc;
+          margin: 2px 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .shicaogongdan-prev {
+    border: none;
+    background-color: orange;
+    padding: 6px 20px;
+    font-size: 10px;
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+  }
+  .shicaogongdan-next {
+    border: none;
+    background-color: orange;
+    padding: 6px 20px;
+    font-size: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+  } // 左侧导航
+  .skill-gray {
+    background-color: #ccc;
+  }
+  .arrowL {
+    position: absolute;
+    top: 180px;
+    left: -40px;
+    cursor: pointer;
+    div {
+      span {
+        position: absolute;
+        &:nth-child(1) {
+          top: 10px;
+          left: 48px;
+          width: 14px;
+          height: 14px;
+          transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          border-right: 4px rgb(139, 233, 255) solid;
+          border-top: 4px rgb(139, 233, 255) solid;
+        }
+        &:nth-child(2) {
+          top: 10px;
+          left: 38px;
+          width: 14px;
+          height: 14px;
+          transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          border-right: 4px rgb(0, 181, 226) solid;
+          border-top: 4px rgb(0, 181, 226) solid;
+        }
+        &:nth-child(3) {
+          top: 1px;
+          left: 38px;
+          width: 20px;
+          height: 9px;
+          background: #fff;
+        }
+        &:nth-child(4) {
+          top: 24px;
+          left: 37px;
+          width: 20px;
+          height: 9px;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .scene-left-nav {
+    position: absolute;
+    top: -0.01rem;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 101;
+    height: 0.25rem;
+    box-sizing: border-box;
+    border-bottom: 0.01rem solid rgba(65, 69, 79, 0.25);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    span {
+      // width: 1.6rem;
+      font-size: 0.12rem;
+      /* font-weight: bold; */
+      margin-left: 0.1rem;
+      transform: scale(0.8);
+    }
+    i {
+      width: 0.02rem;
+      height: 0.12rem;
+      background-color: rgba(72, 79, 94, 0.5);
+      opacity: 0.5;
+      margin-left: 0.1rem;
+    }
+    .close-scene-left-nav {
+      position: absolute;
+      top: -20px;
+      left: 100px;
+      width: 22px;
+      height: 22px;
+      text-align: center;
+      line-height: 19px;
+      background: #aaa;
+      border: 1px blue solid;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
+    ul {
+      // width: 100%;
+      height: 100%;
+      .clickShow {
+        span {
+          color: #eb4e3d;
+          border-color: #eb4e3d;
+        }
+      }
+      li {
+        height: 100%;
+        width: 90px;
+        float: left;
+        span {
+          display: inline-block;
+          padding: 0rem 0.04rem;
+          background-color: #ffffff;
+          border-radius: 0.03rem;
+          font-size: 0.1rem;
+          transform: scale(0.8);
+          border: solid 1px #292c33; // line-height: 0.36rem;
+          text-align: center;
+          margin-left: 0rem;
+          font-weight: 500;
+          &:hover {
+            cursor: pointer; // background: rgba(0, 0, 0, .7);
+          }
+        }
+      }
+    }
+  }
+  .oscilloscope-circuit {
+    position: absolute;
+    left: 0.72rem;
+    bottom: 0.7rem;
+    width: 0.2rem;
+    height: 0.36rem;
+    z-index: 14;
+    a {
+      width: 0.1rem;
+      height: 0.1rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 0.01rem solid red;
+    }
+  }
+  .V-body {
+    width: 600px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: 80px; // background-color: yellow;
+  }
+  .V-install {
+    width: 0.69rem;
+    height: 0.06rem;
+    position: relative;
+    left: 2.63rem;
+    top: 1.08rem;
+    z-index: 60;
+    div {
+      width: 0.69rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0rem;
+      z-index: 60;
+      background: #000;
+    }
+    a {
+      width: 0.1rem;
+      height: 0.1rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 0.01rem solid red;
+      z-index: 60;
+    }
+  }
+  .V-uninstall {
+    width: 0.69rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.63rem;
+    top: 1.12rem;
+    z-index: 60;
+    div {
+      width: 0.69rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0rem;
+      z-index: 60;
+      background: #000;
+    }
+    a {
+      width: 0.1rem;
+      height: 0.1rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 0.01rem solid red;
+      font-size: 0.18rem;
+      z-index: 60;
+    }
+  }
+  .B-IGN {
+    width: 105px;
+    height: 26px;
+    position: absolute;
+    left: 257px;
+    top: 135px;
+    z-index: 60; // background: orchid;
+    a {
+      width: 0.1rem;
+      height: 0.1rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 0.01rem solid red;
+    }
+    .B1 {
+      left: 0.04rem;
+    }
+    .B2 {
+      left: 0.324rem;
+    }
+  }
+  .T6-body {
+    width: 377px;
+    height: 45px;
+    position: absolute;
+    left: 255px;
+    bottom: 88px;
+    z-index: 60; // background: green;
+    a {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 2px solid red;
+    }
+  }
+  .T6-install {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.63rem;
+    bottom: 0.934rem;
+    z-index: 60;
+    div {
+      width: 1.08rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0rem;
+      z-index: 60;
+      background: #000;
+    }
+    a {
+      width: 0.1rem;
+      height: 0.1rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 0.01rem solid red;
+      z-index: 60;
+    }
+  }
+  .T6-uninstall {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.63rem;
+    bottom: 0.973rem;
+    z-index: 60;
+    div {
+      width: 1.08rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0rem;
+      z-index: 60;
+      background: #000;
+    }
+    a {
+      width: 0.1rem;
+      height: 0.1rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 0.01rem solid red;
+      z-index: 60;
+    }
+  }
+  .breakNo {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 0.67rem;
+    bottom: 1.48rem;
+    z-index: 60;
+    a {
+      width: 0.1rem;
+      height: 0.1rem;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 0.01rem solid red;
+    }
+  }
+  .batt-positive {
+    left: 0.046rem;
+    top: -0.05rem;
+  }
+}
+
+.bgpic-circuit {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  height: 82%;
+  background-size: 78%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 13;
+}
+
+.skill-circuit {
+  position: absolute;
+  top: 230px;
+  width: 100%;
+  height: 82%;
+  .GND {
+    left: 0.04rem;
+    top: 0.2rem;
+  }
+  .N90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .N95 {
+    left: 0.19rem;
+    top: -0.07rem;
+  }
+  .N80 {
+    left: 0.38rem;
+    top: -0.07rem;
+  }
+  .V90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .V95 {
+    left: 0.28rem;
+    top: -0.07rem;
+  }
+  .V80 {
+    left: 0rem;
+    top: -0.03rem;
+  }
+  .V1 {
+    left: 0.18rem;
+    top: -0.03rem;
+  }
+  .V2 {
+    left: 0.37rem;
+    top: -0.03rem;
+  }
+  .V3 {
+    left: 0.57rem;
+    top: -0.03rem;
+  }
+  .V4 {
+    left: 1.78rem;
+    top: -0.07rem;
+  }
+  .V5 {
+    left: 407px;
+    top: -0.07rem;
+  }
+  .V6 {
+    left: 2.29rem;
+    top: -0.07rem;
+  }
+  .T6-Pin-1 {
+    left: 0rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-2 {
+    left: 0.18rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-3 {
+    left: 0.37rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-4 {
+    left: 0.56rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-5 {
+    left: 0.75rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-6 {
+    left: 0.94rem;
+    bottom: -0.03rem;
+  }
+  .T6-Body-1 {
+    left: 16px;
+    bottom: 37px;
+  }
+  .T6-Body-2 {
+    left: 75px;
+    bottom: 37px;
+  }
+  .T6-Body-3 {
+    left: 147px;
+    bottom: 37px;
+  }
+  .T6-Body-4 {
+    left: 209px;
+    bottom: 37px;
+  }
+  .T6-Body-5 {
+    left: 282px;
+    bottom: 37px;
+  }
+  .T6-Body-6 {
+    left: 342px;
+    bottom: 37px;
+  }
+}
+
+.skill-circuit1 {
+  position: absolute;
+  top: 230px;
+  width: 100%;
+  height: 82%;
+  .breakNo {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 1.56rem;
+    bottom: 2.11rem;
+  }
+  .V-install {
+    width: 1.07rem;
+    height: 0.06rem;
+    position: relative;
+    left: 2.05rem;
+    top: 64px;
+    div {
+      width: 1.07rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0rem;
+      z-index: 60;
+    }
+  }
+  .T6-install {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.05rem;
+    bottom: 558px;
+    div {
+      width: 1.08rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0px;
+    }
+  }
+  .V-uninstall {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.06rem;
+    top: 55px;
+    div {
+      width: 1.08rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0px;
+    }
+  }
+  .T6-uninstall {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 2.06rem;
+    bottom: 550px;
+    div {
+      width: 1.08rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0px;
+    }
+  }
+  .GND {
+    left: 0.04rem;
+    top: 0.2rem;
+  }
+  .N90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .N95 {
+    left: 0.19rem;
+    top: -0.07rem;
+  }
+  .N80 {
+    left: 0.38rem;
+    top: -0.07rem;
+  }
+  .V90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .V95 {
+    left: 0.28rem;
+    top: -0.07rem;
+  }
+  .V80 {
+    left: 0rem;
+    top: -0.01rem;
+  }
+  .V1 {
+    left: 0.18rem;
+    top: -0.01rem;
+  }
+  .V2 {
+    left: 0.37rem;
+    top: -0.01rem;
+  }
+  .V3 {
+    left: 0.57rem;
+    top: -0.01rem;
+  }
+  .V4 {
+    left: 0.76rem;
+    top: -0.01rem;
+  }
+  .V5 {
+    left: 190px;
+    top: -0.01rem;
+  }
+  .V6 {
+    left: 2.29rem;
+    top: -0.01rem;
+  }
+  .T6-Pin-1 {
+    left: 0.02rem;
+    bottom: -0.02rem;
+  }
+  .T6-Pin-2 {
+    left: 0.18rem;
+    bottom: -0.02rem;
+  }
+  .T6-Pin-3 {
+    left: 0.37rem;
+    bottom: -0.02rem;
+  }
+  .T6-Pin-4 {
+    left: 0.56rem;
+    bottom: -0.02rem;
+  }
+  .T6-Pin-5 {
+    left: 0.75rem;
+    bottom: -0.02rem;
+  }
+  .T6-Pin-6 {
+    left: 0.94rem;
+    bottom: -0.02rem;
+  }
+  .T6-Pin-7 {
+    left: 0.02rem;
+    bottom: 0.07rem;
+  }
+  .T6-Pin-8 {
+    left: 0.18rem;
+    bottom: 0.07rem;
+  }
+  .T6-Pin-9 {
+    left: 0.37rem;
+    bottom: 0.07rem;
+  }
+  .T6-Pin-10 {
+    left: 0.56rem;
+    bottom: 0.07rem;
+  }
+  .T6-Pin-11 {
+    left: 0.75rem;
+    bottom: 0.07rem;
+  }
+  .T6-Pin-12 {
+    left: 0.94rem;
+    bottom: 0.07rem;
+  }
+  .T6-Body-1 {
+    left: 16px;
+    bottom: 37px;
+  }
+  .T6-Body-2 {
+    left: 75px;
+    bottom: 37px;
+  }
+  .T6-Body-3 {
+    left: 147px;
+    bottom: 37px;
+  }
+  .T6-Body-4 {
+    left: 209px;
+    bottom: 37px;
+  }
+  .T6-Body-5 {
+    left: 282px;
+    bottom: 37px;
+  }
+  .T6-Body-6 {
+    left: 342px;
+    bottom: 37px;
+  }
+}
+
+.skill-circuit2 {
+  position: absolute;
+  top: 230px;
+  width: 100%;
+  height: 82%;
+  .breakNo {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 1.66rem;
+    bottom: 2.46rem;
+  }
+  .V-install {
+    width: 0.46rem;
+    height: 0.06rem;
+    position: relative;
+    left: 3.27rem;
+    top: 0.32rem;
+    div {
+      width: 0.46rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0px;
+    }
+  }
+  .T6-install {
+    width: 0.27rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 3.85rem;
+    bottom: 2.22rem;
+    div {
+      width: 0.27rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0rem;
+    }
+  }
+  .V-uninstall {
+    width: 0.46rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 3.27rem;
+    top: 0.28rem;
+    div {
+      width: 0.46rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0rem;
+    }
+  }
+  .T6-uninstall {
+    width: 0.27rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 3.85rem;
+    bottom: 2.26rem;
+    div {
+      width: 0.27rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0rem;
+    }
+  }
+  .GND {
+    left: 0.044rem;
+    top: 0.23rem;
+  }
+  .N90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .N95 {
+    left: 0.19rem;
+    top: -0.07rem;
+  }
+  .N80 {
+    left: 0.38rem;
+    top: -0.07rem;
+  }
+  .V90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .V95 {
+    left: 0.28rem;
+    top: -0.07rem;
+  }
+  .V80 {
+    left: -0.02rem;
+    top: .03rem;
+  }
+  .V1 {
+    left: 0.17rem;
+    top: .03rem;
+  }
+  .V2 {
+    left: 0.36rem;
+    top: .03rem;
+  }
+  .V3 {
+    left: -0.02rem;
+    top: -0.03rem;
+  }
+  .V4 {
+    left: 0.17rem;
+    top: -0.03rem;
+  }
+  .V5 {
+    left: 0.36rem;
+    top: -0.03rem;
+  }
+  .V6 {
+    left: 2.29rem;
+    top: -0.07rem;
+  }
+  .T6-Pin-1 {
+    left: -0.02rem;
+    bottom: -.07rem;
+  }
+  .T6-Pin-2 {
+    left: 0.17rem;
+    bottom: -.07rem;
+  }
+  .T6-Pin-3 {
+    left: -0.021rem;
+    bottom: -0.01rem;
+  }
+  .T6-Pin-4 {
+    left: 0.164rem;
+    bottom: -0.01rem;
+  }
+  .T6-Pin-5 {
+    left: 0.75rem;
+    bottom: -0.09rem;
+  }
+  .T6-Pin-6 {
+    left: 0.94rem;
+    bottom: -0.09rem;
+  }
+  .T6-Body-1 {
+    left: 16px;
+    bottom: 37px;
+  }
+  .T6-Body-2 {
+    left: 75px;
+    bottom: 37px;
+  }
+  .T6-Body-3 {
+    left: 147px;
+    bottom: 37px;
+  }
+  .T6-Body-4 {
+    left: 209px;
+    bottom: 37px;
+  }
+  .T6-Body-5 {
+    left: 282px;
+    bottom: 37px;
+  }
+  .T6-Body-6 {
+    left: 342px;
+    bottom: 37px;
+  }
+}
+
+.skill-circuit3 {
+  position: absolute;
+  top: 230px;
+  width: 100%;
+  height: 82%;
+  .breakNo {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 4.18rem;
+    bottom: 2.36rem;
+  }
+  .V-install {
+    width: 0.28rem;
+    height: 0.06rem;
+    position: relative;
+    left: 4.18rem;
+    top: 0.33rem;
+    div {
+      width: 0.28rem;
+      height: 0.06rem;
+      position: relative;
+      left: 0rem;
+      top: 0rem;
+    }
+  }
+  .V-uninstall {
+    width: 0.28rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 4.18rem;
+    top: 0.37rem;
+    div {
+      width: 0.28rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      top: 0rem;
+    }
+  }
+  .T6-install {
+    width: 0.3rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 4.18rem;
+    bottom: 1.756rem;
+    div {
+      width: 0.3rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0rem;
+    }
+  }
+  .T6-uninstall {
+    width: 0.3rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 4.18rem;
+    bottom: 1.8rem;
+    div {
+      width: 0.3rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0rem;
+    }
+  }
+  .GND {
+    left: 0.04rem;
+    top: 0.2rem;
+  }
+  .N90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .N95 {
+    left: 0.19rem;
+    top: -0.07rem;
+  }
+  .N80 {
+    left: 0.38rem;
+    top: -0.07rem;
+  }
+  .V90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .V95 {
+    left: 0.28rem;
+    top: -0.07rem;
+  }
+  .V80 {
+    left: 0rem;
+    top: 0rem;
+  }
+  .V1 {
+    left: 0.18rem;
+    top: 0rem;
+  }
+  .V2 {
+    left: 0rem;
+    top: -0.09rem;
+  }
+  .V3 {
+    left: 0.18rem;
+    top: -0.09rem;
+  }
+  .V4 {
+    left: 1.78rem;
+    top: -0.07rem;
+  }
+  .V5 {
+    left: 407px;
+    top: -0.07rem;
+  }
+  .V6 {
+    left: 2.29rem;
+    top: -0.07rem;
+  }
+  .T6-Pin-1 {
+    left: -0.02rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-2 {
+    left: 0.18rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-3 {
+    left: 0.37rem;
+    bottom: -0.09rem;
+  }
+  .T6-Pin-4 {
+    left: 0.56rem;
+    bottom: -0.09rem;
+  }
+  .T6-Pin-5 {
+    left: 0.75rem;
+    bottom: -0.09rem;
+  }
+  .T6-Pin-6 {
+    left: 0.94rem;
+    bottom: -0.09rem;
+  }
+  .T6-Body-1 {
+    left: 16px;
+    bottom: 37px;
+  }
+  .T6-Body-2 {
+    left: 75px;
+    bottom: 37px;
+  }
+  .T6-Body-3 {
+    left: 147px;
+    bottom: 37px;
+  }
+  .T6-Body-4 {
+    left: 209px;
+    bottom: 37px;
+  }
+  .T6-Body-5 {
+    left: 282px;
+    bottom: 37px;
+  }
+  .T6-Body-6 {
+    left: 342px;
+    bottom: 37px;
+  }
+}
+
+.skill-circuit4 {
+  position: absolute;
+  top: 230px;
+  width: 100%;
+  height: 82%;
+  .V-install {
+    width: 1.04rem;
+    height: 0.06rem;
+    position: relative;
+    left: 1.38rem;
+    top: 1.08rem;
+    div {
+      width: 1.04rem;
+      height: 0.06rem;
+      position: relative;
+      left: 0rem;
+      top: 0rem;
+    }
+  }
+  .V-uninstall {
+    width: 1.04rem;
+    height: 0.06rem;
+    position: relative;
+    left: 1.38rem;
+    top: 1.12rem;
+    div {
+      width: 1.04rem;
+      height: 0.06rem;
+      position: relative;
+      left: 0rem;
+      top: 0rem;
+    }
+  }
+  .T6-install {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 1.38rem;
+    bottom: 0.934rem;
+    div {
+      width: 1.08rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0rem;
+    }
+  }
+  .T6-uninstall {
+    width: 1.08rem;
+    height: 0.06rem;
+    position: absolute;
+    left: 1.38rem;
+    bottom: 0.972rem;
+    div {
+      width: 1.08rem;
+      height: 0.06rem;
+      position: absolute;
+      left: 0rem;
+      bottom: 0rem;
+    }
+  }
+  .GND {
+    left: 0.04rem;
+    top: 0.2rem;
+  }
+  .N90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .N95 {
+    left: 0.19rem;
+    top: -0.07rem;
+  }
+  .N80 {
+    left: 0.38rem;
+    top: -0.07rem;
+  }
+  .V90 {
+    left: 0rem;
+    top: -0.07rem;
+  }
+  .V95 {
+    left: 0.28rem;
+    top: -0.07rem;
+  }
+  .V80 {
+    left: -0.02rem;
+    top: -0.03rem;
+  }
+  .V1 {
+    left: 0.18rem;
+    top: -0.03rem;
+  }
+  .V2 {
+    left: 0.37rem;
+    top: -0.03rem;
+  }
+  .V3 {
+    left: 0.57rem;
+    top: -0.03rem;
+  }
+  .V4 {
+    left: 0.74rem;
+    top: -0.03rem;
+  }
+  .V5 {
+    left: 187px;
+    top: -0.03rem;
+  }
+  .V6 {
+    left: 2.29rem;
+    top: -0.03rem;
+  }
+  .T6-Pin-1 {
+    left: -.02rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-2 {
+    left: .17rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-3 {
+    left: 0.37rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-4 {
+    left: 0.56rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-5 {
+    left: 0.75rem;
+    bottom: -0.03rem;
+  }
+  .T6-Pin-6 {
+    left: 0.94rem;
+    bottom: -0.03rem;
+  }
+  .T6-Body-1 {
+    left: 16px;
+    bottom: 37px;
+  }
+  .T6-Body-2 {
+    left: 75px;
+    bottom: 37px;
+  }
+  .T6-Body-3 {
+    left: 147px;
+    bottom: 37px;
+  }
+  .T6-Body-4 {
+    left: 209px;
+    bottom: 37px;
+  }
+  .T6-Body-5 {
+    left: 282px;
+    bottom: 37px;
+  }
+  .T6-Body-6 {
+    left: 342px;
+    bottom: 37px;
+  }
+}

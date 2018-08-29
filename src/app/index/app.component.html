@@ -1,0 +1,26 @@
+<!-- <div style="position:absolute;top:0;left:0;z-index:1000;">
+  {{this.appService.progressData.describeFlag}}
+</div>   -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<handle-error></handle-error>
+<!-- <dashboard [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}" class="dashboard"></dashboard>
+<gear-panel [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}" class="pedal"></gear-panel>
+<obdscan [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}" class="instrument"></obdscan>
+<multimeter class="appinmultimeter" [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}"></multimeter>
+<oscilloscope *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus'></oscilloscope>
+<common-prompt></common-prompt> -->
+
+
+<dashboard *ngIf='this.dashboardService.dashboardShowFlag' [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}"
+  class="dashboard"></dashboard>
+<gear-panel *ngIf='this.gearPanelService.pedalShowFlag' [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}"
+  class="pedal"></gear-panel>
+<obdscan *ngIf='this.obdscanService.Zdata.obdscanStatus' [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}"
+  class="instrument"></obdscan>
+<multimeter class="appinmultimeter" [ngStyle]="{'display':(this.router.url).includes('courseprepare') ? 'block':'none'}"
+  *ngIf='this.multimeterService.Mdata.multimeterStatus'></multimeter>
+<oscilloscope *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus'></oscilloscope>
+<common-prompt></common-prompt>

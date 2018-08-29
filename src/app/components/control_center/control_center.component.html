@@ -1,0 +1,11 @@
+<!--操作面板======================================================-->
+<div class="center-control" id="step3" >
+    <button class="center-control-button radius cursor-pointer z-index-99"  (click)="bottomLockToggle($event.target);"  [ngClass]="{'center-control-button-down': controlCenterService.center_control_button_down,'center-control-button-up': ! controlCenterService.center_control_button_down }"></button>
+   
+    <div class="center-control-panel z-index-99">
+        <ul>
+            <li><button class="radius cursor-pointer door-switch" (click)="openSwitchPanel();"></button></li>
+        </ul>
+    </div>
+</div>
+<gear-panel ></gear-panel>

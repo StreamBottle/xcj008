@@ -1,0 +1,17 @@
+<div class="com-img" [ngStyle]="setStyle()" *ngIf="!(data.currentStyle?.display==='none')" halo [@halo]="data?.currentState?.animation?.animationOnID"
+  [@flyIn]="data?.currentState?.animation?.animationInID" [ficker1]="data?.currentState?.animation?.animationOnID">
+
+</div>
+
+
+
+<!--弹窗-->
+<div class="modal" *ngIf="modal">
+  <div class="modal-dialog">
+    <p>
+      您是否已经对【启动授权】的工作原理掌握的非常娴熟了呢？如果存有疑惑您可以点击下拉菜单中八个文字内容的任意一个进行单独的学习
+    </p>
+    <hr>
+    <button (click)="ready()">单独点击</button>
+  </div>
+</div>

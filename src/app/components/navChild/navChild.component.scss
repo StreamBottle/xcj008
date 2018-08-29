@@ -1,0 +1,42 @@
+#navBox {
+    display: flex;
+    justify-content: center;
+    z-index: 60;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 779px;
+    li {
+        /* text-align: center; */
+        /* background: none; */
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        border: 2px solid transparent;
+        /* width: 108px; */
+        padding: 4px;
+        span {
+            // display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .01rem .06rem;
+            font-size: 0.1rem;
+            transform: scale(0.8);
+            color: #fff;
+            background-color: rgb(2, 133, 181);
+            box-sizing: border-box;
+            z-index:60;
+        }
+    }
+}
+
+.colorGreen {
+    border: 2px solid rgba(40, 169, 217, 1) !important;
+}
+
+.spanColicGreen {
+    background-color: rgba(40, 169, 217, 1) !important;
+}

@@ -1,0 +1,15 @@
+.dropup button {
+  width: 100%;
+}
+
+.dropup ul li a:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.caret {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.1rem;
+}
+/*# sourceMappingURL=selectUp.component.css.map */

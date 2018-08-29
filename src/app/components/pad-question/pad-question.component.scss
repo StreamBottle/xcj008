@@ -1,0 +1,348 @@
+.title_btn {
+    width: 100%;
+    /* height: .4rem; */
+    position: relative;
+    margin-bottom: 0px;
+    .submit-question {
+        cursor: pointer; // font-size: 0.28rem;
+        float: right;
+        background-color: #8dc050;
+        color: #fff;
+        padding: 10px 40px;
+        position: relative;
+        right: .2rem;
+    }
+    .save-question {
+        right: .4rem;
+    }
+}
+
+// .pad-question-body {
+//     position: relative;
+//     top: -0.45rem;
+// }
+.pad-question {
+    font-size: 0.08rem;
+    overflow: auto;
+    height: 2.53rem;
+    width: 100%;
+    padding-left: .2rem;
+    padding-right: .3rem; // 填空选择题
+    .tiaokong-select-question {
+        padding: 0.1rem 0;
+        color: #5a6a8b;
+        border-bottom: 1px solid #cacfd9;
+        padding-bottom: 0.1rem;
+        .tiankong-quesiton,
+        .select-question {
+            color: #5a6a8b;
+        }
+    } // 表格和选择题
+    .table-select-question {
+        border-bottom: 1px solid #cacfd9;
+        padding-bottom: 0.1rem;
+    }
+    .table-select-question,
+    .table-question {
+        padding: 0.1rem 0;
+        color: #5a6a8b;
+        font-size: .08rem;
+        .table-question {
+            table {
+                border: 1px solid red;
+                border-collapse: collapse;
+                td {
+                    padding: 5px 0px;
+                }
+                /*关键代码*/
+                thead {
+                    tr {
+                        td {
+                            background-color: rgba(72, 90, 126, 1);
+                            color: #fff;
+                            text-align: center;
+                            text-align: center;
+                            border: 1px solid green;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            text-align: center;
+                            border: 1px solid #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .draggable-question {
+        width: 100%;
+        border-bottom: 1px solid #cacfd9;
+        padding-bottom: 0.1rem;
+        &>span.title {
+            color: #000;
+            clear: both;
+            width: 100%;
+            float: left;
+        }
+        .left {
+            height: 100%;
+            float: left;
+            &>div {
+                float: left;
+                width: 3rem;
+                &>span.img-description {
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+                    margin-bottom: 0.3rem;
+                }
+                &>div.img-wrap {
+                    text-align: center;
+                    line-height: 4rem;
+                    &>img {
+                        vertical-align: middle;
+                        display: inline-block;
+                    }
+                }
+                &>div.text-wrap {
+                    display: table;
+                    vertical-align: middle;
+                    height: 1.5rem;
+                    width: 2rem;
+                    border: 1px solid #000;
+                    margin: 0 auto;
+                    &>span {
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                        width: 2rem;
+                    }
+                }
+            }
+            &>div:nth-child(2n) {
+                margin: 0 .5rem;
+            }
+        }
+        .right {
+            width: 3rem;
+            height: 6rem;
+            float: left;
+            margin-left: 2rem;
+            border: 1px solid #000;
+            padding: 45px 50px;
+            &>div {
+                display: table;
+                vertical-align: middle;
+                height: 1.2rem;
+                width: 2rem;
+                border: 1px solid #000;
+                margin: 0 auto;
+                margin-bottom: .1rem;
+                span {
+                    text-align: center;
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 2rem;
+                }
+            }
+            &>div:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .ligature-question {
+        padding: 0.1rem 0;
+        color: #5a6a8b;
+        position: relative;
+        border-bottom: 1px solid #cacfd9;
+        padding-bottom: 0.1rem;
+        table {
+            border-collapse: collapse;
+            td {
+                border: 1px solid #000; // position: relative;
+                input {
+                    width: 0; // height: 90%;
+                    // position: absolute;
+                    opacity: 0;
+                    background-color: rgba(255, 255, 255, 0);
+                    &+span {
+                        // float: left;
+                        border: 1px solid #fe6d32;
+                        display: inline-block;
+                        width: 0.1rem;
+                        height: 0.1rem;
+                        margin-right: .09rem;
+                        vertical-align: middle;
+                        position: relative;
+                    }
+                }
+            }
+            .line-area {
+                width: 0.6rem;
+                border: none;
+            }
+            tr {
+                td:nth-child(1) {
+                    text-align: left;
+                }
+                td:nth-child(2) {
+                    text-align: center; // padding-left: .2rem;
+                }
+                td:nth-child(3) {
+                    text-align: center; // padding-right: .2rem;
+                }
+                td:nth-child(4) {
+                    text-align: left;
+                }
+            }
+            tr:first-child {
+                td {
+                    padding: 0;
+                    text-align: center;
+                }
+            }
+            tr:last-child {
+                td {
+                    border-bottom: 1px solid #000;
+                }
+            }
+        }
+    }
+    .short-answer-question {
+        width: 100%;
+        text-align: left;
+        margin-top: 0.1rem;
+        border-bottom: 1px solid #cacfd9;
+        padding-bottom: 0.1rem;
+        span.title {
+            color: #5a6a8b;
+            display: block;
+        }
+        textarea {
+            border: 1px solid #000;
+        }
+    }
+    &>.select-question {
+        color: #5a6a8b;
+        padding: .1rem;
+        box-sizing: border-box;
+        padding-left: 0;
+        border-bottom: 1px solid #cacfd9;
+        padding-bottom: 0.1rem;
+        .way1 {
+            width: 0.15rem;
+            line-height: .1rem;
+            display: block;
+            margin: 0 auto;
+            border: 2.5px solid lightgray;
+            box-sizing: border-box;
+            color: yellow;
+            background-color: gray;
+            text-align: center;
+            padding: 4px;
+        }
+        .isHasImg {
+            float: left;
+            margin-left: 50px;
+            width: auto;
+        }
+    }
+    form {
+        width: 100%;
+        ul {
+            li {
+                // height: 0.2rem;
+                // line-height: .2rem;
+            }
+        }
+    }
+    li {
+        position: relative;
+        label {
+            font-weight: normal;
+            width: 98%;
+            display: inline-block;
+            input {
+                width: 100%;
+                height: 90%;
+                position: absolute;
+                top: -0.04rem;
+                opacity: 0;
+                background-color: rgba(255, 255, 255, 0);
+                &+span {
+                    float: left;
+                    border: 1px solid #fe6d32;
+                    display: inline-block;
+                    width: 0.1rem;
+                    height: 0.1rem;
+                    margin-right: .09rem;
+                    vertical-align: middle;
+                    position: relative;
+                }
+            }
+        }
+    }
+    /*设置选中的input的样式*/
+    /* + 是兄弟选择器,获取选中后的label元素*/
+    input[ischeck="true"]+span {
+        background-color: #fe6d32;
+        border: 1px solid #fe6d32;
+    }
+    input[ischeck="true"]+span::after {
+        position: absolute;
+        content: "";
+        width: 13px;
+        height: 21px;
+        top: -5px;
+        left: 4px;
+        border: 2px solid #fff;
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg);
+    }
+    .animate01 {
+        border-bottom: 1px solid #cacfd9;
+        padding-bottom: 0.1rem;
+        .dragRight {
+            ul {
+                li {
+                    width: 150px;
+                    height: 30px;
+                    border-radius: 0.1rem;
+                    background-color: #b3b3b3;
+                    text-align: center;
+                    font-size: 0.08rem;
+                    line-height: 0.15rem;
+                    color: #fff;
+                    margin: 0.1rem;
+                }
+            }
+        }
+    }
+}
+
+// 最后一道题不要底边框
+.skillabc>div:first-child {
+    border-bottom: 0;
+}
+
+.pad-question>div:last-child {
+    border-bottom: 0;
+}
+
+.tipBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: red;
+    color: #fff;
+    padding: 0.1rem 0.25rem;
+    border-radius: 0.05rem;
+    font-size: 0.1rem;
+    z-index: 999999999999999999999999999999;
+}

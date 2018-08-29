@@ -1,0 +1,5 @@
+<div class="com-input" [ngStyle]="setStyle()" *ngIf="!(data.currentStyle?.display==='none')">
+    <ng-template [ngIf]="!data?.textArray">
+        <input type="{{item.type}}" *ngFor="let item of data?.currentState?.textArray" [ngStyle]="setTextStyle(item)"  placeholder="{{item.placeholder}}" [inputFofus] (change)="changeHandler($event)">
+    </ng-template>
+</div>

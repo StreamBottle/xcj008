@@ -1,0 +1,51 @@
+.arrow {
+  width: 90px;
+  height: 80px;
+  position: absolute;
+  top: 500px;
+  cursor: pointer;
+  right: 0;
+}
+
+.arrow span {
+  position: absolute;
+}
+
+.arrow span:nth-child(1) {
+  top: 10px;
+  left: 38px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  border-left: 10px #00b5e2 solid;
+  border-top: 10px #00b5e2 solid;
+}
+
+.arrow span:nth-child(2) {
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  border-left: 10px #8be9ff solid;
+  border-top: 10px #8be9ff solid;
+}
+
+.arrow span:nth-child(3) {
+  top: -2px;
+  left: 12px;
+  width: 90px;
+  height: 12px;
+  background: #fff;
+}
+
+.arrow span:nth-child(4) {
+  top: 40px;
+  left: 16px;
+  width: 90px;
+  height: 12px;
+  background: #fff;
+}
+/*# sourceMappingURL=arrow.component.css.map */

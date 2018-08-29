@@ -1,0 +1,168 @@
+<div class='courseprepare-body' style='position:absolute;'>
+    <div class="navBox">
+        <ul class="nav" style='position:relative;z-index:1;'>
+            <li (click)="routeNav('courseprepare/scene')">
+                <span class='scene'>情景</span>
+            </li>
+            <li (click)="routeNav('courseprepare/knowledge')">
+                <span class='knowledge'>知识</span>
+            </li>
+            <li (click)="routeNav('courseprepare/skill')">
+                <span class='skill'>技能</span>
+            </li>
+            <li (click)="routeNav('courseprepare/examination')">
+                <span class='examination'>测评</span>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="main-content">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- 右侧箭头 -->
+        <!-- <div (click)='rightNavShow()' class="arrowR">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div> -->
+        <!-- 点击右侧箭头出现的内容 -->
+        <div [@flyIn]="rightNavAnimation" *ngIf='rightNavIsShow' class="right-nav">
+            <span (click)='closeRightNav()' class="close-right-nav">X</span>
+            <!-- <span class="help">帮助</span> -->
+            <!-- <span class="ancellation">退出</span> -->
+            <!-- <span class="mute"></span>
+      <span class="line1"></span>
+      <span class="line2"></span> -->
+            <ul>
+                <li>用户：张晓龙</li>
+                <li>用户：******</li>
+                <li (click)='platformRouterTurn("courseselect")'>课程目录</li>
+                <li (click)='platformRouterTurn("informationPush")'>信息推送</li>
+                <li (click)='platformRouterTurn("intelligentHardware")'>智能硬件</li>
+                <li (click)='platformRouterTurn("activityPush")'>技术资料</li>
+                <li>教学设计</li>
+                <!-- <li style='position:relative;' (click)='informationRemind()'>消息提醒
+          <div class='remind-content' *ngIf='remindContentShow'>
+            <span>信息提示</span>
+            <ul>
+              <li>
+                <span class='remind-text'>系统消息</span>
+                <span class='remind-number'>(1)</span>
+              </li>
+              <li>
+                <span class='remind-text'>测评 - 高级课程讯后测试</span>
+                <span class='remind-number'>(1)</span>
+              </li>
+              <li>
+                <span class='remind-text'>SBT- 发动机无法启动</span>
+                <span class='remind-number'>(1)</span>
+              </li>
+              <li>
+                <span class='remind-text'>WBT- 点火系统概述</span>
+                <span class='remind-number'>(1)</span>
+              </li>
+              <li>
+                <span class='remind-text'>PDF- 宝骏730维修手册</span>
+                <span class='remind-number'>(1)</span>
+              </li>
+
+            </ul>
+          </div>
+        </li> -->
+
+            </ul>
+        </div>
+    </div>
+
+    <!--底部导航-->
+    <!-- <div class="foot">
+        <div class="leftBox"> -->
+    <!--主页-->
+    <!-- <span class="iconfont icon-secondhandhouse-copy house" (click)='platformRouterTurn("home")'></span> -->
+    <!--扫描二维码-->
+    <!-- <span class="iconfont icon-secondhandhouse-copy code" (click)='platformRouterTurn("code")'></span> -->
+    <!--维修资料-->
+    <!-- <span class="iconfont4 icon-14 maintenance" (click)='platformRouterTurn("maintenance")'></span> -->
+    <!--数据统计-->
+    <!-- <span (click)='platformRouterTurn("dataStatistics") ' class="iconfont4 icon-kongzhizhongxin controlCenterIcon"></span> -->
+    <!--同步异步-->
+    <!-- <span class="iconfont icon-rotate rotate" (click)='platformRouterTurn( "asyncPattern") '></span> -->
+    <!--锁屏-->
+    <!-- <span class="iconfont icon-lock lock" (click)='platformRouterTurn( "lockPattern") '></span> -->
+    <!--控制中心-->
+    <!-- <span class="iconfont icon-kujialeqiyezhan_shujutongji dataStatistics dashboardTool" (click)='dashboardTool(["controlCenter"],true,"controlCenter")'></span> -->
+    <!--工具箱-->
+    <!-- <span class="iconfont icon-gongjuxiang gongjuxiang" (click)='measureTool(["tool"],true,"measureTool")'></span> -->
+    <!-- </div> -->
+    <!--上下翻页-->
+    <!-- <div class="rightNav">
+            <span (click)='leftFlip() ' class="iconfont icon-leftarrow9f prev"></span>
+            <span (click)='rightFlip() ' class="iconfont icon-rightarrow9f next"></span>
+        </div>
+    </div> -->
+
+    <!-- 工具箱下面的子内容 -->
+    <ul class="tool">
+        <li style='background-color:rgb(65, 105, 225)' class="instrument1" [ngStyle]='{backgroundColor:this.appService.progressData.describeFlag===2||this.appService.progressData.describeFlag===13||this.appService.progressData.describeFlag===15||this.appService.progressData.describeFlag===17||this.appService.progressData.describeFlag===19||this.appService.progressData.describeFlag===21||this.appService.progressData.describeFlag===23||this.appService.progressData.describeFlag===25||this.appService.progressData.describeFlag===27||this.appService.progressData.describeFlag===29||this.appService.progressData.describeFlag===31||this.appService.progressData.describeFlag===33||
+    this.appService.progressData.describeFlag===35||this.appService.progressData.describeFlag===37||this.appService.progressData.describeFlag===39||this.appService.progressData.describeFlag===41?"rgb(65, 105, 225)":"#aaa"}'
+            (click)="toolShow('instrument')">
+            <div class="instrument">
+                <span class="bg"></span>
+                <span>诊断仪</span>
+            </div>
+        </li>
+        <li class="multimeters1" [ngStyle]='{backgroundColor:this.appService.progressData.describeFlag===15||this.appService.progressData.describeFlag===21||this.appService.progressData.describeFlag===27||this.appService.progressData.describeFlag===33||this.appService.progressData.describeFlag===39?"rgb(65, 105, 225)":"#aaa"}'
+            (click)="toolShow('multimeters')">
+            <div class="multimeters">
+                <span class="bg1"></span>
+                <span>万用表</span>
+            </div>
+        </li>
+        <li class="oscilloscope1" [ngStyle]='{backgroundColor:this.appService.progressData.describeFlag==21?"rgb(65, 105, 225)":"#aaa"}'
+            (click)="toolShow('oscilloscope')">
+            <div class="oscilloscope">
+                <img src="./assets/index/oscilloscope_ed.png" alt="">
+                <span>示波器</span>
+            </div>
+        </li>
+        <i (click)='platformRouterTurn(["tool"],false)'>X</i>
+    </ul>
+
+    <!-- 控制中心下面的子内容 -->
+    <ul class="controlCenter">
+        <li (click)="toolShow('dashboard',$event.target)">
+            <div class="dashboard1">
+                <img src="./assets/images/yibiaopan.png" alt="">
+                <span>仪表盘</span>
+            </div>
+        </li>
+        <li (click)="toolShow('pedal',$event.target)">
+            <div class="pedal">
+                <img src="./assets/images/caozuo.png" alt="">
+                <span>操纵杆</span>
+            </div>
+        </li>
+        <i (click)='platformRouterTurn(["controlCenter"],false) '>X</i>
+    </ul>
+
+    <!-- 校表动画 -->
+    <!-- <div class="xiaob">
+        <div class="alert">
+            <h1>
+            </h1>
+            <p>使用万用表前请先校表</p>
+            <button (click)="isPlay()">确认</button>
+        </div>
+    </div> -->
+    <!-- 校表动画 -->
+    <div *ngIf='this.appService.jiaoBiao' class="xiaob">
+        <div class="alert">
+            <h1>
+            </h1>
+            <p>使用万用表前请先校表</p>
+            <button (click)="isPlay()">确认</button>
+        </div>
+        <!-- <video src="../../../assets/video/xbdh.mp4" autoplay></video> -->
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<section class='AppText'>
+  <img src="./assets/images/task.png" alt="" (click)='isHide()'>
+  <div class='div' *ngIf="isDiv">
+    <p class='p' *ngFor='let item of data.arr'>{{ item }}</p>
+  </div>
+</section>

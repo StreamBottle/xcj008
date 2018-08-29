@@ -1,0 +1,22 @@
+<div id="navBox">
+    <ul style='position:relative;z-index:60;'>
+        <li (click)='pageShow(arr[0])' [ngClass]='arr[0]===this.appService.progressData.describeFlag ? "colorGreen": " "'>
+            <span [ngClass]='arr[0]===this.appService.progressData.describeFlag ? "spanColicGreen": " "'>维修工单</span>
+        </li>
+        <li (click)='pageShow(arr[1])' [ngClass]='arr[1]===this.appService.progressData.describeFlag? "colorGreen": " "'>
+            <span [ngClass]='arr[1]===this.appService.progressData.describeFlag ? "spanColicGreen": " "'>故障验证</span>
+        </li>
+        <li (click)='pageShow(arr[2])' [ngClass]='arr[2]===this.appService.progressData.describeFlag? "colorGreen": " "'>
+            <span [ngClass]='arr[2]===this.appService.progressData.describeFlag ? "spanColicGreen": " "'>故障分析</span>
+        </li>
+        <li (click)='pageShow(arr[3])' [ngClass]='arr[3]===this.appService.progressData.describeFlag? "colorGreen": " "'>
+            <span [ngClass]='arr[3]===this.appService.progressData.describeFlag ? "spanColicGreen": " "'>故障诊断</span>
+        </li>
+        <li (click)='pageShow(arr[4])' [ngClass]='arr[4]===this.appService.progressData.describeFlag? "colorGreen": " "'>
+            <span [ngClass]='arr[4]===this.appService.progressData.describeFlag ? "spanColicGreen": " "'>故障维修</span>
+        </li>
+        <li (click)='pageShow(arr[5])' [ngClass]='arr[5]===this.appService.progressData.describeFlag? "colorGreen": " "'>
+            <span [ngClass]='arr[5]===this.appService.progressData.describeFlag ? "spanColicGreen": " "'>检验交车</span>
+        </li>
+    </ul>
+</div>

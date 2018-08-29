@@ -1,0 +1,108 @@
+/*控制面板*/
+
+.gear-wrap {
+    position: absolute;
+    bottom: 48px;
+    left: 630px;
+    width: 290px;
+    height: 157px;
+    background: url(./images/gear_wrap.png) no-repeat;
+    background-size: 100%;
+    z-index: 100;
+}
+
+.gear-wrap .state-wrap {
+    position: absolute;
+    top: 23px;
+    left: 45px;
+    z-index: 4;
+}
+
+.gear-wrap .state-wrap span {
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000cff;
+    background: #e3e4e5;
+    box-shadow: #6d6a6a -1px -2px 2px inset;
+    margin-right: 0px;
+    &:nth-child(1) {
+        margin-left: 0px;
+    }
+}
+
+.gear-wrap .state-wrap span.active {
+    background: #666668;
+}
+
+.gear-switch {
+    position: absolute;
+    top: 43px;
+    left: 36px;
+    width: 100px;
+    height: 86px;
+    background: url(./images/gear_switch.png) no-repeat;
+    background-size: 100%;
+    transform: rotate(-44deg);
+    background-position: center;
+}
+
+.gear-accelerator {
+    position: absolute;
+    top: 41px;
+    left: 243px;
+    width: 20px;
+    height: 102px;
+}
+
+.gear-brake {
+    position: absolute;
+    top: 40px;
+    left: 165px;
+    width: 44px;
+    height: 31px;
+    background: url(./images/gear_brake.png) no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.gear-accelerator .accelerator {
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    width: 17px;
+    height: 45px;
+    background: url(./images/gear_accelerator.png) no-repeat;
+    background-size: 100%;
+}
+
+.data-show {
+    position: absolute;
+    top: 10px;
+    left: 220px;
+    width: 50px;
+    height: 25px;
+    font-size: .1rem;
+    color: #000;
+    text-align: center;
+}
+
+.close {
+    opacity: 1;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    width: 24px;
+    height: 40px;
+    font: 30px "microsoft yahei";
+    line-height: 40px;
+    color: #f1a703;
+    cursor: pointer;
+    text-align: center;
+    z-index: 999;
+}

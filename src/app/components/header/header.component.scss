@@ -1,0 +1,48 @@
+  .courseselect-head {
+    width: 100%;
+    height: 0.6rem;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 0.6rem;
+    font-size: 0.25rem;
+    background-color: #505050;
+    title {
+      display: block;
+      color: #fff;
+    }
+    .return-home {
+      float: left;
+      padding-left: 20px;
+      color: gray;
+    }
+  }
+
+  .search {
+    width: 100%;
+    height: 0.6rem;
+    padding: 0.1rem 0;
+    background-color: gray;
+    padding-left: 60px;
+    box-sizing: border-box;
+    position: relative;
+    .search-box {
+      width: 88%;
+      display: block;
+      /* margin: 0 auto; */
+      border-radius: 60px;
+      height: 100%;
+      border: 1px solid #000;
+      background-color: #fff;
+      padding-left: 30px;
+      font-size: 0.2rem;
+      /* padding-left: 20px; */
+    }
+    img {
+      float: right;
+      position: absolute;
+      right: 0.1rem;
+      bottom: 0px;
+      width: 0.45rem;
+      height: auto;
+    }
+  }

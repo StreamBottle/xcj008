@@ -1,0 +1,142 @@
+.structure-body {
+  width: 100%;
+  height: 340px;
+  top: 0px;
+  position: relative;
+  /*遮罩层*/
+  .mask-box {
+    span {
+      display: inline-block;
+      position: absolute;
+      background: rgba(0, 0, 0, 0);
+      cursor: pointer;
+    }
+    #mask1 {
+      width: 189px;
+      height: 182px;
+      top: 219px;
+      left: 297px;
+    }
+    #mask1:hover {
+      background: url(images/mask1.png);
+    }
+    #mask2 {
+      width: 179px;
+      height: 100px;
+      top: 275px;
+      left: 446px;
+    }
+    #mask2:hover {
+      background: url(images/mask2.png);
+    }
+    #mask3 {
+      width: 28px;
+      height: 169px;
+      top: 249px;
+      left: 641px;
+    }
+    #mask3:hover {
+      background: url(images/mask3.png);
+    }
+  }
+  /*弹出图片*/
+  .alert-wrap {
+    left: 0px;
+    top: 0px;
+    width: 86%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 70px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    .close {
+      opacity: 1;
+      position: absolute;
+      width: 50px;
+      right: 3px;
+      top: 3px;
+      color: #777777;
+      cursor: pointer;
+      z-index: 8;
+    }
+    .close:hover {
+      color: #000000;
+    }
+    .close:hover {
+      color: #000000;
+    }
+    img {
+      float: left;
+      width: 468px;
+      height: 300px;
+    }
+    .text-box1 {
+      float: right;
+      width: 270px;
+      height: 300px;
+      overflow-y: auto;
+      font-size: 15px;
+      display: inline-block;
+      line-height: 25px;
+    }
+    p {
+      color: #333333;
+      font-size: 15px;
+      display: inline-block;
+      line-height: 25px;
+      .dischargefont {
+        position: absolute;
+        left: 167px;
+        top: 325px;
+      }
+      .chargefont {
+        position: absolute;
+        left: 167px;
+        top: 325px;
+      }
+    }
+    .alert-wrap p span {
+      display: block;
+      text-indent: 2em;
+    }
+    .discharge {
+      position: relative;
+      left: 251px;
+      top: 110px;
+    }
+    .charge {
+      position: relative;
+      left: 123px;
+      top: 110px;
+    }
+  }
+  /*动画*/
+  .transformer {
+    position: absolute;
+    .transformer_rotate {
+      width: auto;
+      height: 97px;
+      position: absolute;
+      left: 24px;
+      top: 103px;
+    }
+    #wave-svg {
+      position: absolute;
+      top: 88px;
+      left: 257px;
+    }
+    .svg-wave-mask {
+      position: absolute;
+      top: 158px;
+      left: 257px;
+      width: 478px;
+      height: 60px;
+      overflow: hidden;
+    }
+    #wave-svg1 {
+      position: absolute;
+      left: -20px;
+    }
+  }
+}

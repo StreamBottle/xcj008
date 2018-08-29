@@ -1,0 +1,21 @@
+.content {
+		position: absolute;
+    left: 3px;
+    bottom: 85px;
+  img {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .text {
+    position:absolute;
+    left:0;
+    width:830px;
+    padding: 10px 16px;
+    margin-left: 50px;
+    background: #757575;
+    border-radius: 4px;
+    box-sizing:border-box;
+  }
+}

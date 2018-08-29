@@ -1,0 +1,14 @@
+<div class="text_button cursor-pointer" (click)="alertTextClick()" (mouseout)="alertTextMouseout()" (mouseover)="alertTextMouseover()"></div>
+
+<div class="alert-text " [ngClass]="{'opacity': popupsHidden}">
+  <div class="text-wrap">
+    <div class="text-right"></div>
+    <div>
+      <div id='Demo' class="ps-container ps-theme-default ps-active-y">
+        <div class="content" id="content">
+          <span *ngFor="let infoText of popupService.popupsData">{{infoText}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

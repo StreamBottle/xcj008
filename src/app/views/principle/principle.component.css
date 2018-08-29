@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/*原理页面 S===================================================================================================*/
+.principle-body {
+  width: 100%;
+  height: 380px;
+  position: relative;
+  background: url(./images/principle_wrap.png) no-repeat 100% center;
+  background-size: 100%;
+}
+
+.principle-body .hide {
+  display: none;
+}
+
+.principle-body .dynamo .fans span {
+  width: 48px;
+  height: 30px;
+  position: absolute;
+}
+
+.principle-body .dynamo .fans1 {
+  top: 98px;
+  left: 407px;
+}
+
+.principle-body .dynamo .fans2 {
+  top: 200px;
+  left: 349px;
+  transform: rotate(-122deg);
+}
+
+.principle-body .dynamo .fans3 {
+  top: 200px;
+  left: 462px;
+  transform: rotate(124deg);
+}
+
+.principle-body .dynamo .fan-grey {
+  background: url(./images/fan_grey.png) no-repeat;
+  background-size: 100%;
+}
+
+.principle-body .dynamo .fan-blue {
+  background: url(./images/fan_blue.png) no-repeat;
+  background-size: 100%;
+}
+
+.principle-body .dynamo .fan-red {
+  background: url(./images/fan_red.png) no-repeat;
+  background-size: 100%;
+}
+
+.principle-body .dynamo .fans-mask {
+  display: block;
+}
+
+.principle-body .dynamo .fans-mask span {
+  width: 48px;
+  height: 30px;
+  position: absolute;
+  background: url(./images/fan_red.png) no-repeat;
+  background-size: 100%;
+}
+
+.principle-body .dynamo .fans4 {
+  top: 98px;
+  left: 407px;
+}
+
+.principle-body .dynamo .fans5 {
+  top: 200px;
+  left: 349px;
+  transform: rotate(-122deg);
+}
+
+.principle-body .dynamo .fans6 {
+  top: 200px;
+  left: 462px;
+  transform: rotate(124deg);
+}
+
+.principle-body .dynamo .megnet {
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  top: 165px;
+  left: 390px;
+  background: url(./images/megnet.png) no-repeat;
+  background-size: 100%;
+}
+
+.principle-body .prin-line {
+  width: 2px;
+  height: 171px;
+  position: absolute;
+  top: 76px;
+  left: 56px;
+  background: #ffcb16;
+}
+
+/*原理页面 E===================================================================================================*/
+/*# sourceMappingURL=principle.component.css.map */

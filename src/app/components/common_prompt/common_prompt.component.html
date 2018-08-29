@@ -1,0 +1,13 @@
+<div style='width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: rgba(70,70,70,0.5);' *ngIf='this.commonPromptService.hiddenCommonPrompt'>
+  <div class='common-prompt-body'>
+
+    <div style='position: absolute;height: 0.7rem;text-align: center;line-height: 0.7rem;width: 100%;color:#fff;'>
+      <div *ngFor='let item of this.commonPromptService.messages'>
+        {{item.message}}
+      </div>
+    </div>
+    <div id='promptClose' style="position: absolute;width: 0.2rem;height: 0.2rem;cursor: pointer;right: 0.1rem;top: 0.05rem;"
+      (click)="closePrompt()">X</div>
+    <!-- <div id='promptEnsure' style='position:absolute;right:0.2rem;bottom:0.1rem;width:0.2rem;height:0.15rem;cursor:pointer;' (click)="closePrompt()"></div> -->
+  </div>
+</div>

@@ -1,0 +1,67 @@
+/*control---------------------------------------------------------------*/
+.center-control {
+    position: absolute;
+    bottom: -63px;
+    left: 0;
+
+    width: 115px;
+    height: 90px;
+}
+.center-control .center-control-button {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    margin-left: 4px;
+    width: 106px;
+    height: 26px;
+
+    line-height: 26px;
+    text-indent: 14px;
+
+    color: #fff;
+    
+}
+.center-control-button-up {
+    background: url(./images/lock_icon_up.png) no-repeat;
+}
+.center-control-button-down {
+    background: url(./images/lock_icon_down.png) no-repeat;
+}
+.center-control .center-control-panel {
+    position: relative;
+    top: 0;
+    left: 23px;
+
+    width: 56%;
+    height: 64px;
+
+    text-align: center;
+}
+.center-control .center-control-panel ul li {
+    display: inline-block;
+
+    margin: 3px;
+    border: #f1a703 solid 1px;
+    width: 55px;
+    height: 55px;
+
+    background: #ccc;
+}
+.center-control .center-control-panel ul li button {
+    width: 100%;
+    height: 100%;
+
+    font: 12px "microsoft yahei";
+
+    color: #000;
+}
+.center-control .center-control-panel ul li .door-switch {
+    background: url(./images/door_switch_icon.png) no-repeat center/100%;
+}
+.center-control .center-control-panel ul li.active button.door-switch {
+    background: url(./images/door_switch_icon_active.png) no-repeat center/100%;
+}
+
+
+

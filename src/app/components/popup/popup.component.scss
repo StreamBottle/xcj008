@@ -1,0 +1,35 @@
+.main .text_button {
+    width: 27px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: url(../../index/images/bg_wrap.png) -275px -40px no-repeat; }
+    .main .text_button:hover {
+      background-position: -274px -78px; }
+  .main .alert-text {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    padding: 60px 25px 10px 12px;
+    width: 277px;
+    height: 170px;
+    z-index: 3;
+    background: url(../../index/images/text_wrap.png) no-repeat; }
+    .main .alert-text #Demo {
+      width: 287px;
+      height: 125px;
+      position: relative;
+      overflow: hidden; }
+    .main .alert-text #Demo .content {
+      width: 264px;
+      height: auto;
+      padding: 10px;
+      margin-top: -10px;
+      color: #000000;
+      word-break: break-word;
+      white-space: normal; }
+      .main .alert-text #Demo .content span {
+        display: inline-block;
+        text-indent: 28px; }
+ 

@@ -1,0 +1,16 @@
+.common-prompt-body {
+  width: 2.6rem;
+  height: 0.7rem;
+  position: absolute;
+  font-size: 0.2rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgb(255, 102, 0);
+  /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXUAAADgCAYAAAD8IfaMAAAAGXRFW…fbI+UMvQh65/EOGjTqAIxOrlMHEHUARB0AUQdgaP4nwAB2XQioYYk2KAAAAABJRU5ErkJggg==) no-repeat; */
+  /* background-size: 100% 100%; */
+  border: 1px solid rgb(255, 102, 0);
+  border-radius: 0.1rem;
+}

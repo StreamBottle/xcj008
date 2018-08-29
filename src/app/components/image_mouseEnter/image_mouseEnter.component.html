@@ -1,0 +1,30 @@
+<div class='image-mouseEnter-parent'>
+  <div class="com-img" [ngStyle]="setStyle()" *ngIf="!(data.currentStyle?.display==='none')" halo [@halo]="data?.currentState?.animation?.animationOnID"
+    [@flyIn]="data?.currentState?.animation?.animationInID" [ficker1]="data?.currentState?.animation?.animationOnID">
+  </div>
+
+  <ng-template ngFor let-item [ngForOf]="data?.currentState?.mouseEnterElementArray">
+    <div class='target-element' (mouseenter)="targetElementMouseEnter(item,$event)" (mouseleave)="targetElementMouseout(item,$event)"
+      [ngStyle]='targetElementStyle(item)' *ngIf='item?.mouseEnterimg||item?.mouseEnterText'>
+      <div class='img-bg-tip' *ngIf='(this.appService.isImagemouseEnter||this.appService.isImagemouseEnter01)&&item?.imgPromptBgStyle'
+        [ngStyle]='imgPromptBg(item)'>
+        <img *ngIf='item?.mouseEnterimg&&this.appService.isImagemouseEnter' class='mouseenter-img' src="{{item?.mouseEnterimg}}"
+          [ngStyle]='setMouseEnterImgStyle(item)' alt=" ">
+        <img *ngIf='item?.mouseEnterimg01&&this.appService.isImagemouseEnter01' class='mouseenter-img01' src="{{item?.mouseEnterimg01}}"
+          [ngStyle]='setMouseEnterImgStyle(item)' alt=" ">
+      </div>
+      <span *ngIf='item?.mouseEnterText' class='mouseenter-text' [ngStyle]='setMouseEnterTextStyle(item)'>{{item.mouseEnterText}}</span>
+    </div>
+  </ng-template>
+
+  <!--弹窗-->
+  <!-- <div class="modal " *ngIf="modal ">
+  <div class="modal-dialog ">
+    <p>
+      您是否已经对【启动授权】的工作原理掌握的非常娴熟了呢？如果存有疑惑您可以点击下拉菜单中八个文字内容的任意一个进行单独的学习
+    </p>
+    <hr>
+    <button (click)="ready() ">单独点击</button>
+  </div>
+</div> -->
+</div>

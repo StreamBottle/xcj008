@@ -1,0 +1,5 @@
+<div class="com-jump" [ngStyle]="setStyle()" halo [halo]="data?.currentState?.animation?.animationOnID" *ngIf="!(data.currentStyle?.display==='none')">
+    <ng-template [ngIf]="!data?.textArray">
+        <span *ngFor="let item of data?.currentState?.textArray" [ngStyle]="setTextStyle(item)"><br *ngIf="item?.isLF">{{item?.content}}</span>
+    </ng-template>
+</div>

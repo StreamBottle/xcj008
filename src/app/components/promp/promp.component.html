@@ -1,0 +1,4 @@
+
+<div class="com-promp" [ngStyle]="setStyle()"  *ngIf="!(data.currentStyle?.display==='none')" [@flyIn]="data?.currentState?.animation?.animationOnID">
+    <span><em></em></span><p>{{data?.currentState?.text}}</p>
+</div>

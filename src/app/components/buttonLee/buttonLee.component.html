@@ -1,0 +1,34 @@
+<!-- 不放大 -->
+<div class='allowRotate-parent' *ngIf='data?.currentState.allowRotate'>
+  <div class='allowRotate-children'>
+    <!-- <div (click)='buttonLeeClick()' class="com-button" [ngStyle]="setStyle()" *ngIf="!(data.currentStyle?.display==='none')"
+      [@halo]="data?.currentState?.animation?.animationOnID" [@flyIn]="data?.currentState?.animation?.animationOnIDFlyInTextAfter">
+      {{data.currentStyle.innerHTML}}
+    </div> -->
+    <span (click)='buttonLeeClick()' *ngFor="let item of data?.currentState?.textArray" [@flyIn]="data?.currentState?.animation?.animationOnIDFlyIn"
+      [ngStyle]="setTextStyle(item)">
+      <br *ngIf="item?.isLF">{{item?.content}}</span>
+  </div>
+</div>
+
+<!-- 放大 -->
+<div class='unallowRotate-parent' *ngIf='data?.currentState.unallowRotate'>
+  <!-- <div class='unallowRotate-children' (click)='buttonLeeClick()' class="com-button" [ngStyle]="setStyle()" *ngIf="!(data.currentStyle?.display==='none')"
+    [@halo]="data?.currentState?.animation?.animationOnID" [@flyIn]="data?.currentState?.animation?.animationOnIDFlyInTextAfter">
+    {{data.currentStyle.innerHTML}}
+  </div> -->
+  <span (click)='buttonLeeClick()' *ngFor="let item of data?.currentState?.textArray" [@flyIn]="data?.currentState?.animation?.animationOnIDFlyIn"
+    [ngStyle]="setTextStyle(item)">
+    <br *ngIf="item?.isLF">{{item?.content}}</span>
+</div>
+
+
+<!-- 子元素状态 -->
+<div *ngIf='!data?.currentState.allowRotate&&!data?.currentState.unallowRotate&&!(data.currentStyle?.display==="none")'>
+  <div (click)='buttonLeeClick()' class="com-button" [ngStyle]="setStyle()" *ngIf="!(data.currentStyle?.display==='none')"
+    [@halo]="data?.currentState?.animation?.animationOnID" [@flyIn]="data?.currentState?.animation?.animationOnIDFlyInTextAfter">
+    {{data.currentStyle.innerHTML}}
+  </div>
+  <span *ngFor="let item of data?.currentState?.textArray" [@flyIn]="data?.currentState?.animation?.animationOnIDFlyIn" [ngStyle]="setTextStyle(item)">
+    <br *ngIf="item?.isLF">{{item?.content}}</span>
+</div>

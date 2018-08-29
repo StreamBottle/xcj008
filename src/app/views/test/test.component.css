@@ -1,0 +1,156 @@
+.test-body {
+  width: 100%;
+  height: 360px;
+  background: url(./images/test-bg.png);
+  background-size: 100%;
+}
+
+.test-body .hotareareal {
+  width: 70px;
+  height: 40px;
+  position: absolute;
+  left: 172px;
+  top: 269px;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.test-body .hotareatest {
+  width: 70px;
+  height: 40px;
+  background: #f00;
+  opacity: 0.3;
+  position: absolute;
+  left: 172px;
+  top: 269px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.test-body .hotareareal1 {
+  width: 80px;
+  height: 60px;
+  position: absolute;
+  left: 518px;
+  top: 46px;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.test-body .hotareatest1 {
+  width: 80px;
+  height: 60px;
+  background: #f00;
+  opacity: 0.3;
+  position: absolute;
+  left: 518px;
+  top: 46px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.test-body .alert-part {
+  width: 98px;
+  height: 40px;
+  position: absolute;
+  left: 166px;
+  top: 265px;
+  display: none;
+  z-index: 7;
+  background: url(./images/alert_part.png);
+  background-size: 100% 100%;
+}
+
+.test-body .alert-part1 {
+  width: 207px;
+  height: 208px;
+  background: url(./images/alert_part1.png);
+  position: absolute;
+  left: 485px;
+  top: 43px;
+  display: none;
+}
+
+.test-body .closeAlertPart {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  color: #f1a703;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 9;
+}
+
+.test-body .hot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background: url(./images/hot.png);
+  background-size: 100% 100%;
+}
+
+.test-body .hot1 {
+  left: 10px;
+  top: 16px;
+}
+
+.test-body .hot2 {
+  left: 32px;
+  top: 16px;
+}
+
+.test-body .hot3 {
+  left: 55px;
+  top: 16px;
+}
+
+.test-body .hot4 {
+  display: inline-block;
+  left: 454px;
+  top: -80px;
+}
+
+.test-body .hot4 b {
+  margin-left: -31px;
+  color: #f00;
+}
+
+.test-body .text {
+  position: absolute;
+  left: 464px;
+  top: -10px;
+  color: #f00;
+  font-size: 18px;
+}
+
+.test-body .hot5 {
+  left: 92px;
+  top: 52px;
+}
+
+.test-body .hot6 {
+  left: 115px;
+  top: 53px;
+}
+
+.test-body .hot7 {
+  left: 125px;
+  top: 73px;
+}
+
+.test-body .hot8 {
+  left: 136px;
+  top: 91px;
+}
+
+.test-body .hot9 {
+  left: 125px;
+  top: 110px;
+}
+
+.test-body .hot10 {
+  left: 113px;
+  top: 129px;
+}
+/*# sourceMappingURL=test.component.css.map */

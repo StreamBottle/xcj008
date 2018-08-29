@@ -1,0 +1,6 @@
+<div class="com-txt" [ngStyle]="setStyle()" [@flyIn]="data?.currentState?.animation?.animationInID" *ngIf="!(data.currentStyle?.display==='none')">
+    <ng-template [ngIf]="!data?.textArray">
+        <span *ngFor="let item of data?.currentState?.textArray" [ngStyle]="setTextStyle(item)"><br *ngIf="item?.isLF">{{item?.content}}</span>
+    </ng-template>
+    <!--<span *ngFor="let item of data?.textArray" [ngStyle]="setTextStyle(item)"><br *ngIf="item?.isLF">{{item?.content}}</span>-->
+</div>

@@ -1,0 +1,8 @@
+<div class="content">
+  <img (click)='isShow("text")' src="./assets/images/knowledge/aa.png" alt="">
+  <div *ngIf='this.isShowFlag' class="text">
+    <ng-template ngFor let-item [ngForOf]='this.dataArray'>
+      <span [ngStyle]='item.style'>{{item.text}}</span>
+    </ng-template>
+  </div>
+</div>

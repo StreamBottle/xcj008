@@ -1,0 +1,19 @@
+.com-button {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.com-button span {
+  letter-spacing: normal;
+}
+
+.com-button div {
+  display: none;
+}
+/*# sourceMappingURL=button.component.css.map */

@@ -1,0 +1,20 @@
+.com-jump {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.com-jump span {
+  letter-spacing: normal;
+}
+
+.com-jump div {
+  display: none;
+}
+/*# sourceMappingURL=jump.component.css.map */

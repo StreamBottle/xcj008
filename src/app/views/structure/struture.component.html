@@ -1,0 +1,76 @@
+<div class="structure-body">
+
+  <!-- <div class="mask-box">
+    <span id="mask1" (click)="showContent('stator')"></span>
+    <span id="mask2" (click)="showContent('rotor')"></span>
+    <span id="mask3" (click)="showContent('cell')"></span>
+
+  </div> -->
+  <!--弹出框，包含图片文字-->
+  <div class="alert-wrap" style='display:block;'>
+    <img [src]="structureServiceMdata.imgSrc">
+    <div class="text-box1" id="alert-wrap" style='width:0;height:0;display:none;'>
+      <p *ngFor="let text of structureServiceMdata.infoText">
+        <span>{{text}}</span>
+      </p>
+    </div>
+    <div class="transformer" style='display:block;'>
+      <img class="transformer_rotate" src="./assets/images/structure/transformer_center.png" alt="">
+      <svg width="170" height="100" id="wave-svg">
+        <path id="svg-wave1" d="M0 30 
+        C0 30 20 -30 40 30 
+        C40 30 60 90 80 30 
+        C80 30 100 -30 120 30 
+        C120 30 140 90 160 30 
+        C160 30 180 -30 200 30 " style='fill:none;stroke:#0a0ad8;stroke-width:2;'></path>
+
+      </svg>
+      <div class="svg-wave-mask">
+        <svg width="190" height="60" id="wave-svg1">
+          <path id="svg-wave2" d="M0 30 
+          C0 30 20 30 40 30 
+          C40 30 60 30 80 30 
+          C80 30 100 30 120 30 
+          C120 30 140 30 160 30 
+          C160 30 180 30 200 30 
+          
+          " style='fill:none;stroke:#d80911;stroke-width:2;'></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="alert-wrap" style='display:block;'>
+    <img [src]="structureServiceMdata.imgSrc">
+    <div class="text-box1" id="alert-wrap" style='width:0;height:0;display:none;'>
+      <p *ngFor="let text of structureServiceMdata.infoText">
+        <span>{{text}}</span>
+      </p>
+    </div>
+    <div class="transformer" style='display:block;'>
+      <img class="transformer_rotate" src="./assets/images/structure/transformer_center.png" alt="">
+      <svg width="150" height="60" id="wave-svg">
+        <path id="svg-wave1" d="M0 30
+      C0 30 15 -25 30 30         
+      C30 30 45 75 60 30          
+      C60 30 75 -25 90 30          
+      C90 30 105 75 120 30          
+      C120 30 145 -25 150 30" style='fill:none;stroke:#0a0ad8;stroke-width:2;'></path>
+
+      </svg>
+      <div class="svg-wave-mask">
+        <svg width="150" height="60" id="wave-svg1">
+          <path id="svg-wave2" d="M0 30
+          C0 30 15 75 30 30         
+          C30 30 45 -25 60 30          
+          C60 30 75 75 90 30          
+          C90 30 105 -25 120 30          
+          C120 30 145 75 150 30
+          C150 30 175 -25 180 30
+          " style='fill:none;stroke:#d80911;stroke-width:2;'></path>
+        </svg>
+      </div>
+    </div>
+  </div> -->
+</div>

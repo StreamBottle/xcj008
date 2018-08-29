@@ -1,0 +1,568 @@
+<div class="pad-question-body">
+    <ng-template [ngIf]='(currentChapter!=="skill"||currentChapter!=="exam")&&!childCatalog'>
+        <ng-container *ngTemplateOutlet="submitBtn"></ng-container>
+    </ng-template>
+    <div [attr.class]="childCatalog?'skillabc pad-question':'pad-question'">
+        <ng-template ngFor let-item let-itemIndex='index' [ngForOf]='currentQuestion'>
+            <ng-template [ngIf]='!childCatalog&&!item.catalog'>
+
+                <div *ngIf='(item.id).includes("animate01")' class="animate01" id='{{item.id}}' [attr.type]='item.type'>
+                    <span>{{item.description}}</span>
+                    <div class="dragLeft" style='float:left;'>
+                        <img src="{{item.url}}" *ngIf='item.url' style="width:500px;margin-bottom:0.1rem;" alt="">
+                    </div>
+                    <div class="dragRight" style='float:left;'>
+                        <ul>
+                            <li id="dragOne">氧传感器</li>
+                            <li id="dragTwo">氧传感器</li>
+                            <li id="dragThree">氧传感器</li>
+                            <li id="dragFour">氧传感器</li>
+                            <li id="dragFive">氧传感器</li>
+                        </ul>
+                    </div>
+                    <span style="clear:both;display:block;width:100%;"></span>
+                </div>
+
+
+                <!-- 填空选择题====目前填空只能输入数字，分了单选和多选 -->
+                <div class="tiaokong-select-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==10'>
+                    {{item.description}}
+                    <ng-template ngFor let-cont let-contIndex='index' [ngForOf]='item.question'>
+                        <div class="tiankong-quesiton" [replaceTianKongInput]='cont.option' *ngIf='cont.type=="9"'>
+                            <!-- {{itemIndex+1}}、 -->
+                            {{cont.description}}
+                        </div>
+                        <div class="select-question" *ngIf='cont.type==1||cont.type==2'>
+                            <!-- 单选 -->
+                            <ng-template [ngIf]='cont.type==1'>
+                                <span class="question-describe">{{cont.description}}</span>
+                                <form action="">
+                                    <ul class="">
+                                        <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.option'>
+                                            <li>
+                                                <label for="{{param.id}}">
+                                                    <input type="radio" id='{{param.id}}' (click)='answerQuestion($event.target)' name='a' [attr.isCheck]='false' [attr.isRight]='param.isRight'>
+                                                    <span></span>
+                                                    <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                        {{param.description}}
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ng-template>
+                                    </ul>
+                                </form>
+                            </ng-template>
+                            <!-- 多选 -->
+                            <ng-template [ngIf]='cont.type==2'>
+                                <span class="question-describe">{{cont.description}}</span>
+                                <form action="">
+                                    <ul class="">
+                                        <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.option'>
+                                            <li>
+                                                <label for="{{param.id}}">
+                                                    <input type="checkbox" id='{{param.id}}' (click)='answerQuestion($event.target)' name='{{paramIndex}}' [attr.isCheck]='false'
+                                                        [attr.isRight]='param.isRight'>
+                                                    <span></span>
+                                                    <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                        {{param.description}}
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ng-template>
+                                    </ul>
+                                </form>
+                            </ng-template>
+                        </div>
+                    </ng-template>
+                </div>
+
+                <!-- 表格选择题 -->
+                <div class="table-select-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==11'>
+                    {{item.description}}
+                    <ng-template ngFor let-cont let-contIndex='index' [ngForOf]='item.question'>
+                        <div class="table-question" *ngIf='cont.type=="3"'>
+                            <!-- {{itemIndex+1}}、 -->
+                            {{cont.description}}
+                            <img src="{{cont.url}}" *ngIf='cont.url' style="width:500px;margin-bottom:0.1rem;" alt="">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.question[0].td.td'>
+                                            <td [ngStyle]="{'width':(100/cont.question[0].td.td.length)/100+'%'}">{{param}}</td>
+                                        </ng-template>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.question'>
+                                        <tr *ngIf='paramIndex!==0'>
+                                            <ng-template ngFor let-ele let-eleIndex='index' [ngForOf]='param.td.td'>
+                                                <!-- <td *ngIf='eleIndex===0' replaceKongStringInput>{{ele}}</td> -->
+                                                <td [replaceKongStringInput]='param.option[eleIndex]?.id'>{{ele}}</td>
+                                            </ng-template>
+                                        </tr>
+                                    </ng-template>
+
+                                    <!-- <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.question'>
+                                        <tr *ngIf='paramIndex!==0'>
+                                            <ng-template ngFor let-ele let-eleIndex='index' [ngForOf]='param.td.td'>
+                                                <td *ngIf='eleIndex===0' replaceKongStringInput>{{ele}}</td>
+                                                <td *ngIf='eleIndex!==0' [replaceKongStringInput]='param.option[eleIndex-1]?.id'>{{ele}}</td>
+                                            </ng-template>
+                                        </tr>
+                                    </ng-template> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="select-question" *ngIf='cont.type==1||cont.type==2'>
+                            <!-- 单选 -->
+                            <ng-template [ngIf]='cont.type==1'>
+                                <span class="question-describe">{{cont.description}}</span>
+                                <form action="">
+                                    <ul class="">
+                                        <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.option'>
+                                            <li>
+                                                <label for="{{param.id}}">
+                                                    <input type="radio" id='{{param.id}}' name='a' (click)='answerQuestion($event.target)' [attr.isCheck]='false' [attr.isRight]='param.isRight'>
+                                                    <span></span>
+                                                    <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                        {{param.description}}
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ng-template>
+                                    </ul>
+                                </form>
+                            </ng-template>
+                            <!-- 多选 -->
+                            <ng-template [ngIf]='cont.type==2'>
+                                <span class="question-describe">{{cont.description}}</span>
+                                <form action="">
+                                    <ul class="">
+                                        <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.option'>
+                                            <li>
+                                                <label for="{{param.id}}">
+                                                    <input type="checkbox" id='{{param.id}}' (click)='answerQuestion($event.target)' name='{{paramIndex}}' [attr.isCheck]='false'
+                                                        [attr.isRight]='param.isRight'>
+                                                    <span></span>
+                                                    <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                        {{param.description}}
+                                                    </span>
+                                                </label>
+                                            </li>
+                                        </ng-template>
+                                    </ul>
+                                </form>
+                            </ng-template>
+                        </div>
+                    </ng-template>
+                </div>
+
+                <!-- 表格题 -->
+                <div class="table-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==3'>
+                    {{item.description}}
+                    <ng-template ngFor let-cont let-contIndex='index' [ngForOf]='item.question'>
+                        <div class="table-question" *ngIf='cont.type=="3"'>
+                            <!-- {{itemIndex+1}}、 -->
+                            {{cont.description}}
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.question[0].td.td'>
+                                            <td>{{param}}</td>
+                                        </ng-template>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='cont.question'>
+                                        <tr>
+                                            <ng-template ngFor let-ele let-eleIndex='index' [ngForOf]='param.td.td'>
+                                                <!-- <td *ngIf='eleIndex===0' replaceKongStringInput>{{ele}}</td> -->
+                                                <td [replaceKongStringInput]='param.option[eleIndex]?.id'>{{ele}}</td>
+                                            </ng-template>
+                                        </tr>
+                                    </ng-template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </ng-template>
+                </div>
+
+                <!-- 选择题 -->
+                <div class="select-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==2'>
+                    <!-- 多选 -->
+                    <span class="question-describe">
+                        <!-- {{itemIndex+1}}、 -->
+                        {{item.description}}
+                    </span>
+                    <div class="select-question-content">
+                        <img src="{{item.url}}" *ngIf='item.url' style="width:500px;float: left;" alt="">
+                        <form action="" [attr.class]='item.url ? "isHasImg" :""'>
+                            <ul class="">
+                                <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='item.option'>
+                                    <li *ngIf='param.way' style="height:auto;">
+                                        <ng-template [ngIf]='param.way=="0"'>
+                                            <span class="way0">
+                                                {{param.description}}
+                                            </span>
+                                        </ng-template>
+                                        <ng-template [ngIf]='param.way=="1"'>
+                                            <span class="way1">
+                                                {{param.description}}
+                                            </span>
+                                        </ng-template>
+                                    </li>
+                                    <!-- {{param.url}} -->
+                                    <li *ngIf='!param.way' [ngStyle]="{height: param.url ? 'auto' : 'auto' }">
+                                        <label for="{{param.id}}">
+                                            <ng-template [ngIf]='param.url'>
+                                                <div style="float:left;margin-right: 0.05rem;">
+                                                    <input type="checkbox" id='{{param.id}}' name='{{paramIndex}}' (click)='answerQuestion($event.target)' [attr.isCheck]='false'
+                                                        [attr.isRight]='param.isRight'>
+                                                    <span></span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==0'>
+                                                        A
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==1'>
+                                                        B
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==2'>
+                                                        C
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==3'>
+                                                        D
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==4'>
+                                                        E
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==5'>
+                                                        F
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==6'>
+                                                        G
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==7'>
+                                                        H
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==8'>
+                                                        I
+                                                    </span>
+                                                </div>
+
+                                                <div style="float:left;">
+                                                    <img src="{{param.url}}" *ngIf='param.url' style="width:50px;height:50px;display: block;" alt="">
+                                                    <span style="width: 100%;
+                                                    text-align: center;
+                                                    margin: 0 auto;
+                                                    display: block;
+                                                    height: 0;
+                                                    line-height: 0.1rem;">
+
+                                                        <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                            {{param.description}}
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </ng-template>
+                                            <ng-template [ngIf]='!param.url'>
+
+                                                <input type="checkbox" id='{{param.id}}' name='{{paramIndex}}' (click)='answerQuestion($event.target)' [attr.isCheck]='false'
+                                                    [attr.isRight]='param.isRight'>
+                                                <span></span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==0'>
+                                                    A
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==1'>
+                                                    B
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==2'>
+                                                    C
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==3'>
+                                                    D
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==4'>
+                                                    E
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==5'>
+                                                    F
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==6'>
+                                                    G
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==7'>
+                                                    H
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==8'>
+                                                    I
+                                                </span>
+                                                <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                    {{param.description}}
+                                                </span>
+                                            </ng-template>
+                                        </label>
+                                    </li>
+                                </ng-template>
+                            </ul>
+                        </form>
+                    </div>
+                    <span style="clear:both;display:block;"></span>
+                </div>
+
+                <!-- 选择题 -->
+                <div class="select-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==1'>
+                    <!-- 单选 -->
+                    <span class="question-describe">
+                        <!-- {{itemIndex+1}}、 -->
+                        {{item.description}}
+                    </span>
+                    <div class="select-question-content">
+                        <img src="{{item.url}}" *ngIf='item.url' style="width:500px;float: left;" alt="">
+                        <form action="" [attr.class]='item.url ? "isHasImg" :""'>
+                            <ul class="">
+                                <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='item.option'>
+                                    <li *ngIf='param.way' style="height:auto;">
+                                        <ng-template [ngIf]='param.way=="0"'>
+                                            <span class="way0">
+                                                {{param.description}}
+                                            </span>
+                                        </ng-template>
+                                        <ng-template [ngIf]='param.way=="1"'>
+                                            <span class="way1">
+                                                {{param.description}}
+                                            </span>
+                                        </ng-template>
+                                    </li>
+                                    <!-- {{param.url}} -->
+                                    <li *ngIf='!param.way' [ngStyle]="{height: param.url ? 'auto' : 'auto' }">
+                                        <label for="{{param.id}}">
+                                            <ng-template [ngIf]='param.url'>
+                                                <div style="float:left;margin-right: 0.05rem;">
+                                                    <input type="radio" id='{{param.id}}' name='a' (click)='answerQuestion($event.target)' [attr.isCheck]='false' [attr.isRight]='param.isRight'>
+                                                    <span></span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==0'>
+                                                        A
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==1'>
+                                                        B
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==2'>
+                                                        C
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==3'>
+                                                        D
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==4'>
+                                                        E
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==5'>
+                                                        F
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==6'>
+                                                        G
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==7'>
+                                                        H
+                                                    </span>
+                                                    <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==8'>
+                                                        I
+                                                    </span>
+                                                </div>
+                                                <div style="float:left;">
+                                                    <img src="{{param.url}}" *ngIf='param.url' style="width:50px;height:50px;display: block;" alt="">
+                                                    <span style="width: 100%;
+                                                        text-align: center;
+                                                        margin: 0 auto;
+                                                        display: block;
+                                                        height: 0;
+                                                        line-height: 0.1rem;">
+                                                        <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                            {{param.description}}
+                                                        </span>
+                                                    </span>
+
+                                                </div>
+                                            </ng-template>
+                                            <ng-template [ngIf]='!param.url'>
+                                                <input type="radio" id='{{param.id}}' name='a' (click)='answerQuestion($event.target)' [attr.isCheck]='false' [attr.isRight]='param.isRight'>
+                                                <span></span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==0'>
+                                                    A
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==1'>
+                                                    B
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==2'>
+                                                    C
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==3'>
+                                                    D
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==4'>
+                                                    E
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==5'>
+                                                    F
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==6'>
+                                                    G
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==7'>
+                                                    H
+                                                </span>
+                                                <span [ngStyle]="{float: param.url ? 'left' : 'left' }" *ngIf='paramIndex==8'>
+                                                    I
+                                                </span>
+                                                <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                                    {{param.description}}
+                                                </span>
+                                            </ng-template>
+                                        </label>
+                                    </li>
+                                </ng-template>
+                            </ul>
+                        </form>
+                    </div>
+                    <span style="clear:both;display:block;"></span>
+                </div>
+
+                <!-- 连线题 -->
+                <div class="ligature-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==6'>
+                    <span>{{item.description}}</span>
+                    <div class="ligature-question-content">
+                        <img src="{{item.url}}" *ngIf='item.url' style="width:500px;" alt="">
+                        <form action="" style="margin-top:50px;">
+                            <table>
+                                <ng-template ngFor let-param let-paramIndex=index [ngForOf]='item.question'>
+                                    <!-- 第一个tr是表头 -->
+                                    <tr *ngIf='paramIndex==0' id='{{param.id}}'>
+                                        <ng-template ngFor let-cont let-contIndex=index [ngForOf]='param.td.td'>
+                                            <td *ngIf='contIndex!=1'>{{cont}}</td>
+                                            <td *ngIf='contIndex==1' colspan="2">{{cont}}</td>
+                                        </ng-template>
+                                    </tr>
+                                    <tr *ngIf='paramIndex!=0'>
+                                        <ng-template ngFor let-cont let-contIndex=index [ngForOf]='param.td.td'>
+                                            <td (click)='ligatureSelect($event.target)' [attr.tdId]='param.id' currentPosition='left'>{{cont}}</td>
+                                            <td class="line-area line-area-left">
+                                                {{cont.id}}
+                                                <input id='{{param.id}}' [attr.currentAnswerId]='param.id' [attr.isCheck]="false" [attr.rightId]='param.option[0].id' currentPosition='left'
+                                                    type="radio" name='a'>
+                                                <span (click)='ligatureSelect($event.target)' [attr.tdId]='param.id' currentPosition='left'></span>
+                                            </td>
+                                        </ng-template>
+
+                                        <ng-template ngFor let-cont let-contIndex=index [ngForOf]='item.option'>
+                                            <td class="line-area" *ngIf='paramIndex-1==contIndex'>
+                                                <input currentPosition='right' id='{{cont.id}}' type="radio" name='b'>
+                                                <span (click)='ligatureSelect($event.target)' currentPosition='right' [attr.tdId]='cont.id'></span>
+                                            </td>
+                                            <td *ngIf='paramIndex-1==contIndex' [attr.tdId]='cont.id' (click)='ligatureSelect($event.target)' currentPosition='right'>{{cont.description}}</td>
+                                        </ng-template>
+                                    </tr>
+                                </ng-template>
+                            </table>
+                        </form>
+                    </div>
+                    <span style="clear:both;display:block;"></span>
+                </div>
+
+                <!-- 拖拽题 -->
+                <div class="draggable-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==7'>
+                    <span class="title">{{item.description}}</span>
+                    <div class="left">
+                        <ng-template ngFor let-param let-paramIndex=index [ngForOf]='item.question'>
+                            <div class="content-left">
+                                <div class="img-wrap">
+                                    <img src="{{param.url}}" alt="">
+                                </div>
+                                <span class="img-description" *ngIf='param.description'>{{param.description}}</span>
+                                <ng-template ngFor let-cont let-contIndex=index [ngForOf]='param.options'>
+                                    <div class="text-wrap">
+                                        <span [attr.isRight]='cont.isRight' questionType='dragQuestion' [attr.rightId]='cont.id' [attr.currentAnswerId]='param.id'
+                                            id='{{param.id}}'></span>
+                                    </div>
+                                </ng-template>
+                            </div>
+                        </ng-template>
+                    </div>
+                    <div class="right">
+                        <ng-template ngFor let-param let-paramIndex=index [ngForOf]='item.option'>
+                            <div class="content-right">
+                                <span id='{{param.id}}' [attr.isRight]='param.isRight'>{{param.description}}</span>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+                <span style="clear:both;width: 100%;display: block;" *ngIf='item.type==7'></span>
+
+                <!-- 简答题 -->
+                <div class="short-answer-question" id='{{item.id}}' [attr.type]='item.type' *ngIf='item.type==8'>
+                    <span class="title">{{item.description}}</span>
+                    <textarea name="" cols="113" rows="15" id='{{item.option[0].id}}' (keyup)="shortAnswer($event.target)"></textarea>
+                </div>
+            </ng-template>
+
+
+            <!-- 学校技能里边的题，单独出来的 -->
+            <ng-template [ngIf]='childCatalog&&item.catalog&&item.catalog==childCatalog'>
+                <!-- 选择题 -->
+                <div class="select-question" id='{{item.id}}' style="margin-top: 0.4rem;" [attr.type]='item.type' *ngIf='item.type==1'>
+                    <!-- 单选 -->
+                    <span class="question-describe">{{item.description}}</span>
+                    <form action="">
+                        <ul class="">
+                            <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='item.option'>
+                                <li>
+                                    <label for="{{param.id}}">
+                                        <input type="radio" id='{{param.id}}' name='a' (click)='answerQuestion($event.target);' [attr.isCheck]='false' [attr.isRight]='param.isRight'>
+                                        <span></span>
+                                        <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                            {{param.description}}
+                                        </span>
+                                    </label>
+                                </li>
+                            </ng-template>
+                        </ul>
+                    </form>
+                </div>
+
+
+                <!-- 选择题 -->
+                <div class="select-question" id='{{item.id}}' style="margin-top: 0.4rem;" [attr.type]='item.type' *ngIf='item.type==2'>
+                    <!-- 多选 -->
+                    <span class="question-describe">{{item.description}}</span>
+                    <form action="">
+                        <ul>
+                            <ng-template ngFor let-param let-paramIndex='index' [ngForOf]='item.option'>
+                                <li>
+                                    <label for="{{param.id}}">
+                                        <input type="checkbox" id='{{param.id}}' (click)='answerQuestion($event.target)' name='{{paramIndex}}' [attr.isCheck]='false'
+                                            [attr.isRight]='param.isRight'>
+                                        <span></span>
+                                        <span style="float: left;width: 90%;margin-left: 0.05rem;">
+                                            {{param.description}}
+                                        </span>
+                                    </label>
+                                </li>
+                            </ng-template>
+                        </ul>
+                    </form>
+                </div>
+            </ng-template>
+        </ng-template>
+        <ng-template [ngIf]='(currentChapter=="skill"||currentChapter=="exam")&&childCatalog'>
+            <ng-container *ngTemplateOutlet="submitBtn"></ng-container>
+        </ng-template>
+    </div>
+</div>
+
+<ng-template #submitBtn>
+    <div class='title_btn'>
+        <button class="submit-question" (click)='submitQuestion("已提交");'>提交</button>
+        <button class="submit-question save-question" (click)='submitQuestion("已保存");'>保存</button>
+    </div>
+    <ng-template [ngIf]='tipsBox'>
+        <div class="tipBox">{{ tipsBox }}</div>
+    </ng-template>
+</ng-template>

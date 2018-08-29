@@ -1,0 +1,67 @@
+<div class="oscilloscope-contain" [ngStyle]="{'display':oscilloscopeServiceMdata.oscilloscopeStatus ?'block':'none'}">
+    <!-- <div class="oscilloscope-contain" *ngIf="true"> -->
+    <!--<h1 style="color:red;position:absolute; ">Out1TestPS_x_Scope_x_x=={{oscilloscopeServiceMout.Out1TestPS_x_Scope_x_x}}</h1>-->
+    <div id="mask-oscilloscope" class="oscilloscope">
+        <div class="oscilloscope-body">
+            <div class="coe" (click)="oscilloscopeHide('oscilloscope');"></div>
+        </div>
+        <div class="oscilloscopeData" *ngIf="oscilloscopeServiceMdata.oscilloscope_test&&oscilloscopeServiceMdata.oscilloscopeRedPosition!='0'&&oscilloscopeServiceMdata.oscilloscopeBlackPosition!='0'">
+            <!-- <div class="oscilloscopeData"> -->
+
+            <!-- <svg width="212" height="172" id='oscilloscopeWaveform' version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path id="svg-wave1" d="M0 30 
+                  C0 30 20 -30 40 30
+                  C40 30 60 90 80 30 
+                  C80 30 100 -30 120 30 
+                  C120 30 140 90 160 30 
+                  C160 30 180 -30 200 30 " style='fill:none;stroke:#0a0ad8;stroke-width:2;'></path>
+        <path id="svg-wave2" d="M0 30 
+                  C0 30 20 30 40 30
+                  C40 30 60 30 80 30 
+                  C80 30 100 30 120 30 
+                  C120 30 140 30 160 30 
+                  C160 30 180 30 200 30 " style='fill:none;stroke:#0a0ad8;stroke-width:2;'></path>
+      </svg> -->
+            <div *ngIf='this.oscilloscopeService.Mdata.noZeroLine' style="position:absolute;top:30px;left:0px;width:208px;height:2px;background:blue;"></div>
+            <div *ngIf='this.oscilloscopeService.Mdata.zeroLine' style="position:absolute;top:90px;left:0px;width:208px;height:2px;background:blue;"></div>
+            <div class="text">
+                <p style="margin-top: -70px;
+        margin-left: -10px;">Vmax=</p>
+                <p style="margin-top: -70px;
+        margin-left: 90px;">Vmin=</p>
+                <p style="margin-top: -40px;margin-left: 10px;">CH1:20:00/div</p>
+                <p style="width: 102px;
+        margin-top: -40px;
+        margin-left: 107px;"> Time:
+                    <span class="time">20</span>
+                    <!-- <span class="time">{{oscilloscopeServiceMdata.Out1TestPS_x_XAxis_x_x}}</span> -->
+                    <!-- <span *ngIf="oscilloscopeServiceMdata.time=='1'">s</span> -->
+                    <span *ngIf="oscilloscopeServiceMdata.time=='0'">ms</span>
+                    <!-- <span *ngIf="oscilloscopeServiceMdata.time=='2'">us</span> -->
+                </p>
+            </div>
+
+        </div>
+        <!--<div id="oscilloscope-line" class="oscilloscope-pen"></div>-->
+    </div>
+    <!-- <div id="oscilloscope-left" class="oscilloscope-antenna-left" (click)="oscilloscope_pen(oscilloscopeServiceMdata.oscilloscope_Html);"></div> -->
+    <!-- <div id="oscilloscope-right" class="oscilloscope-antenna-right" (click)="oscilloscope_pen('engine')"></div> -->
+    <div id="oscilloscope-red" *ngIf="oscilloscopeServiceMdata.oscilloscope_pen" class="oscilloscope-red"></div>
+    <div id="oscilloscope-black" *ngIf="oscilloscopeServiceMdata.oscilloscope_pen" class="oscilloscope-black"></div>
+    <div id="oscilloscopeHot-red" *ngIf="oscilloscopeServiceMdata.oscilloscope_pen"></div>
+    <div id="oscilloscopeHot-black" *ngIf="oscilloscopeServiceMdata.oscilloscope_pen"></div>
+
+    <!--  <div id="oscilloscope_needle_hot" class="oscilloscope_needle_hot ui-draggable"  ></div>-->
+</div>
+<!-- <div id="oscilloscope-svg2" ng-controller="oscilloscopeCtrl" *ngIf="oscilloscopeServiceMdata.SvgStatus">
+  <svg version='1.1' xmlns='http://www.w3.org/2000/svg' id="oscilloscope-svg">
+    <path d='M357 325 C357 325 420 90 459 154' style='fill:none;stroke:#656261;stroke-width:4;' id='path_left' *ngIf="oscilloscopeServiceMdata.SvgLeftStatus"
+    />
+  </svg>
+</div>
+<div id="oscilloscope-svg" ng-controller="oscilloscopeCtrl" *ngIf="oscilloscopeServiceMdata.oscilloscopeStatus">
+  <svg width='1024' height='530' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+    <path d='M559 104 C559 104 610 80 650 150' style='fill:none;stroke:#656261;stroke-width:4;' id='path_right' *ngIf="oscilloscopeServiceMdata.SvgRightStatus&&oscilloscopeServiceMdata.oscilloscopeStatus"
+    />
+  </svg>
+</div> -->

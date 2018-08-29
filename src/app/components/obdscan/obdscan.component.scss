@@ -1,0 +1,1170 @@
+@charset "utf-8";
+.obdscanabs {
+    position: absolute;
+    z-index: 999;
+}
+
+.obdscan {
+    z-index: 25;
+    width: 403px;
+    height: 310px;
+    top: -420px;
+    left: -320px;
+    overflow: hidden;
+}
+
+.mask-obdscan {
+    /*z-index: 12;*/
+    width: 400px;
+    height: 310px;
+    left: 0px;
+    top: 0px;
+    background: url("./images/obdscan.png") no-repeat center/100%;
+}
+
+.obdscan .active {
+    margin-right: 10px;
+    cursor: pointer;
+    background: #f1a703;
+}
+
+.obdscan .inactive {
+    background: #dcdcdc;
+    overflow: hidden;
+}
+
+.power,
+.obdscan-return,
+.close {
+    opacity: 1;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1000;
+    line-height: 20px;
+}
+
+.obdscan .close {
+    width: 30px;
+    font-size: 30px;
+    color: orange;
+    right: 5px;
+    top: 5px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.obdscan .power {
+    top: 258px;
+    left: 57px;
+    width: 0.15rem;
+    height: 0.14rem;
+}
+
+.obdscan .obdscan-return {
+    right: 53px;
+    bottom: 26px;
+    width: 0.26rem;
+    height: 0.14rem;
+}
+
+.obdscan span {
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.obdscan .car {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    width: 80px;
+    height: 80px;
+    background-size: 50% 75%;
+    text-align: center;
+    padding-top: 5px;
+    background: #555f73 url(./images/qczd.png) center center no-repeat;
+}
+
+.obdscan .car:hover {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    width: 50px;
+    height: 46px;
+    text-align: center;
+    padding-top: 5px;
+    background: #f08200 url(./images/qczd.png) center center no-repeat;
+    background-size: 50% 75%;
+}
+
+.obdscan .sby {
+    position: absolute;
+    top: 120px;
+    left: 70px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 5px;
+    background-size: 50% 75%;
+    background: #555f73 url(./images/lsjl.png) center center no-repeat;
+}
+
+.obdscan .set {
+    position: absolute;
+    top: 20px;
+    left: 128px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 5px;
+    background-size: 50% 75%;
+    background: #555f73 url(./images/xtsz.png) center center no-repeat;
+}
+
+.obdscan .wxzd {
+    position: absolute;
+    top: 21px;
+    left: 230px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 5px;
+    background-size: 50% 75%;
+    background: #555f73 url(./images/wxzd.png) center center no-repeat;
+}
+
+.obdscan .help {
+    position: absolute;
+    top: 120px;
+    left: 180px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 5px;
+    background-size: 50% 75%;
+    background: #555f73 url(./images/sybz.png) center center no-repeat;
+}
+
+.obdscan .header,
+.header1,
+.header2,
+.body {
+    z-index: 999;
+}
+
+.obdscan .header1,
+.header2 {
+    height: 0.17rem;
+    line-height: 0.17rem;
+}
+
+.obdscan .header1 {
+    padding-left: 110px;
+    width: 100%;
+    font-size: 0.1rem;
+    background-position: 9px;
+    background: #fff url("./images/logo.png") 6px 2px no-repeat;
+    background-size: 0.4rem 0.15rem;
+}
+
+.obdscan .header2 {
+    left: 0px;
+    padding-left: 0px;
+    width: 100%;
+    top: 25px;
+    color: #fff;
+    background: #f6a520;
+    font-size: 0.08rem;
+}
+
+.obdscan .body {
+    top: 50px;
+    width: 219px;
+    height: 94px;
+    overflow: auto;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+// .obdscan .car-list li {
+//   padding-left: 0px;
+//   width: 219px;
+//   height: 21px;
+//   line-height: 21px;
+//   background: #ddd;
+//   font-size: 14px;
+// }
+.eregerer,
+.eregerer1 {
+    font-size: 14px;
+}
+
+.obdscan .obdscanInclude {
+    width: 330px;
+    height: 215px;
+    position: absolute;
+    left: 37px;
+    top: 41px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 15px;
+    background: #353535;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.obdscanInclude .obdscanContent ul {
+    // height: 2.6rem;
+    background-color: #fff;
+}
+
+.obdscanInclude .obdscanContent ul li div {
+    padding: 0 22px 0 10px;
+    width: 100%;
+    height: 0.14rem;
+    line-height: 0.14rem;
+    background: #ddd;
+    font-size: 0.08rem;
+}
+
+.dataList th,
+.dataList td {
+    font-size: 12px;
+}
+
+.obdscan .is-off {
+    width: 333px;
+    height: 216px;
+    position: absolute;
+    left: 35px;
+    top: 40px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 15px;
+    background: #353535;
+    z-index: 1000;
+}
+
+.obdscan-bottom-bell {
+    float: left;
+    width: 305px;
+    height: 24px;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    padding-left: 10px;
+    line-height: 24px;
+    background: #ddd;
+}
+
+.obdscan-bottom-bell .ac {
+    float: left;
+    width: 186px;
+    height: 24px;
+    text-decoration: none;
+}
+
+.obdscan-bottom-bell span {
+    float: left;
+    text-align: right;
+    width: 84px;
+    height: 24px;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+.pai {
+    width: 415px;
+    height: 270px;
+    background: #ddd;
+}
+
+.tab_menu {
+    clear: both;
+}
+
+.tab_menu li {
+    width: 135px;
+    font-size: 15px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    background: #aaa;
+    color: #fff;
+}
+
+.tab_menu li.hover {
+    background: #dfdfdf;
+}
+
+.tab_menu li.selected {
+    color: #000;
+    background: #ddd;
+}
+
+.tab_box {
+    clear: both;
+    height: 220px;
+}
+
+.tab_box>div>ul>li {
+    float: left;
+    width: 68px;
+    height: 52px;
+    text-align: center;
+}
+
+.tab_box .dihao {
+    height: 50px;
+    background: url(./images/dihao.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .tianyi {
+    height: 50px;
+    background: url(./images/tianyi.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .changcheng {
+    height: 50px;
+    background: url(./images/changcheng.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .dongnan {
+    height: 50px;
+    background: url(./images/dongnan.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .lufeng {
+    height: 50px;
+    background: url(./images/lufeng.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .xiali {
+    height: 50px;
+    background: url(./images/xiali.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .jinbei {
+    height: 50px;
+    background: url(./images/jinbei.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .qirui {
+    height: 50px;
+    background: url(./images/qirui.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .huachen {
+    height: 50px;
+    background: url(./images/huachen.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .jianghuai {
+    height: 50px;
+    background: url(./images/jianghuai.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .lingmu {
+    height: 50px;
+    background: url(./images/lingmu.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .yiqi {
+    height: 50px;
+    background: url(./images/yiqi.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .jili {
+    height: 50px;
+    background: url(./images/jili.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .dongfeng {
+    height: 50px;
+    background: url(./images/dongfeng.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .changfeng {
+    height: 50px;
+    background: url(./images/changfeng.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .byd {
+    height: 50px;
+    background: url(./images/byd.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .beijing {
+    height: 50px;
+    background: url(./images/beijing.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .zhongtai {
+    height: 50px;
+    background: url(./images/zhongtai.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .changan {
+    height: 50px;
+    background: url(./images/changan.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .jiangling {
+    height: 50px;
+    background: url(./images/jiangling.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .baojun {
+    height: 50px;
+    background: url(./images/baojun.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .hafei {
+    height: 50px;
+    background: url(./images/hafei.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .benchi {
+    height: 50px;
+    background: url(./images/benchi.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .kaidilake {
+    height: 50px;
+    background: url(./images/kaidilake.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .baoma {
+    height: 50px;
+    background: url(./images/baoma.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .baoshijie {
+    height: 50px;
+    background: url(./images/baoshijie.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .aeflmo {
+    height: 50px;
+    background: url(./images/aeflmo.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .biaozhi {
+    height: 50px;
+    background: url(./images/biaozhi.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .bieke {
+    height: 50px;
+    background: url(./images/bieke.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .dazhong {
+    height: 50px;
+    background: url(./images/dazhong.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .daoqi {
+    height: 50px;
+    background: url(./images/daoqi.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .xuetielong {
+    height: 50px;
+    background: url(./images/xuetielong.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .feiyate {
+    height: 50px;
+    background: url(./images/feiyate.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .leinuo {
+    height: 50px;
+    background: url(./images/leinuo.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .jiebao {
+    height: 50px;
+    background: url(./images/jiebao.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .kelaisile {
+    height: 50px;
+    background: url(./images/kelaisile.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .aodi {
+    height: 50px;
+    background: url(./images/aodi.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .fute {
+    height: 50px;
+    background: url(./images/fute.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .xuefolan {
+    height: 50px;
+    background: url(./images/xuefolan.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .luhu {
+    height: 50px;
+    background: url(./images/luhu.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .mingjue {
+    height: 50px;
+    background: url(./images/mingjue.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .mashaladi {
+    height: 50px;
+    background: url(./images/mashaladi.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .rongwei {
+    height: 50px;
+    background: url(./images/rongwei.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .sikeda {
+    height: 50px;
+    background: url(./images/sikeda.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .woerwo {
+    height: 50px;
+    background: url(./images/woerwo.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .lianhua {
+    height: 50px;
+    background: url(./images/lianhua.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .nisang {
+    height: 50px;
+    background: url(./images/nisang.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .dafa {
+    height: 50px;
+    background: url(./images/dafa.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .xiandai {
+    height: 50px;
+    background: url(./images/xiandai.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .fengtian {
+    height: 50px;
+    background: url(./images/fengtian.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .leisa {
+    height: 50px;
+    background: url(./images/leisa.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .mazida {
+    height: 50px;
+    background: url(./images/mazida.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .bentian {
+    height: 50px;
+    background: url(./images/bentian.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .qiya {
+    height: 50px;
+    background: url(./images/qiya.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .sanling {
+    height: 50px;
+    background: url(./images/sanling.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .sibalu {
+    height: 50px;
+    background: url(./images/sibalu.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+.tab_box .dongben {
+    height: 50px;
+    background: url(./images/dongben.png) center -7px no-repeat;
+    background-size: 50% 75%;
+    line-height: 70px;
+}
+
+
+/*.tab_box images{height:29px}*/
+
+.tk-1,
+.tk-5 {
+    width: 268px;
+    height: 55px;
+    top: 190px;
+    left: 127px;
+    background: url("./images/tk-1.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-1-zuo,
+.tk-5-zuo {
+    width: 16px;
+    height: 16px;
+    top: 28px;
+    left: 146px;
+    cursor: pointer;
+    background: url("./images/pylces/5.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-1-you,
+.tk-5-you {
+    width: 16px;
+    height: 16px;
+    top: 28px;
+    left: 244px;
+    cursor: pointer;
+    background: url("./images/pylces/4.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-1-cha,
+.tk-5-cha {
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url("./images/19.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-1-gun,
+.tk-5-gun {
+    width: 6px;
+    height: 14px;
+    top: 28px;
+    /*   left: 202px;*/
+    background: url("./images/pylces/2.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-1-text,
+.tk-5-text {
+    width: 128px;
+    height: 18px;
+    top: 27px;
+    left: 10px;
+    text-align: center;
+    line-height: 18px;
+    z-index: 1000;
+}
+
+.tk-2-text {
+    width: 128px;
+    height: 18px;
+    top: 27px;
+    left: 10px;
+    text-align: center;
+    line-height: 18px;
+    z-index: 1000;
+}
+
+.tk-3-text {
+    width: 128px;
+    height: 18px;
+    top: 27px;
+    left: 10px;
+    text-align: center;
+    line-height: 18px;
+    z-index: 1000;
+}
+
+.tk-4-text {
+    width: 100px;
+    height: 14px;
+    top: 57px;
+    left: 10px;
+    text-align: center;
+    line-height: 14px;
+    z-index: 1000;
+}
+
+.tk-2 {
+    width: 268px;
+    height: 69px;
+    top: 165px;
+    left: 127px;
+    background: url("./images/tk-2.png") no-repeat;
+    z-index: 1000;
+    /*display: none;*/
+}
+
+.draghandle .title {
+    top: 0px;
+    margin-left: 10px;
+    width: 252px;
+    height: 22px;
+    line-height: 26px;
+    color: #ffffff;
+}
+
+.tk-2-zuo {
+    width: 61px;
+    height: 14px;
+    top: 49px;
+    left: 10px;
+    cursor: pointer;
+    background: url("./images/krbcgq/zuo.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-2-you {
+    width: 62px;
+    height: 14px;
+    top: 49px;
+    left: 197px;
+    cursor: pointer;
+    background: url("./images/krbcgq/you.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-2-cha {
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url("./images/19.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-2-zhong {
+    width: 62px;
+    height: 14px;
+    top: 49px;
+    left: 106px;
+    cursor: pointer;
+    background: url("./images/krbcgq/zhong.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-3 {
+    width: 268px;
+    height: 55px;
+    top: 171px;
+    left: 127px;
+    background: url("./images/tk-3.png") no-repeat;
+    z-index: 1000;
+}
+
+.tk-3-zuo {
+    width: 52px;
+    height: 14px;
+    top: 30px;
+    left: 157px;
+    background: url("./images/tgdcf/zuo.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-3-you {
+    width: 52px;
+    height: 14px;
+    top: 30px;
+    left: 209px;
+    background: url("./images/tgdcf/you.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-3-cha {
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url("./images/19.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-4 {
+    width: 268px;
+    height: 80px;
+    top: 171px;
+    left: 127px;
+    background: url("./images/tk-4.png") no-repeat;
+    z-index: 1000;
+    /*display: none;*/
+}
+
+.tk-4-zuo {
+    width: 61px;
+    height: 14px;
+    top: 57px;
+    left: 136px;
+    background: url("./images/qgan/zuo.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-4-you {
+    width: 61px;
+    height: 14px;
+    top: 57px;
+    left: 199px;
+    background: url("./images/qgan/you.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-4-cha {
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url("./images/19.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-4-shu {
+    width: 61px;
+    height: 14px;
+    background: url("./images/qgan/9.png") no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btnwrap {
+    float: right;
+    margin: 2px 12px 0px 0px;
+}
+
+.confirm {
+    width: 37px;
+    height: 17px;
+    background: url("img/confirm.png") no-repeat;
+    border: none;
+}
+
+.cancel {
+    width: 37px;
+    height: 17px;
+    background: url("img/cancel.png") no-repeat;
+    border: none;
+}
+
+.hide {
+    display: none;
+}
+
+.sub-header {
+    color: #000000;
+    padding-left: 7px;
+    margin-left: -1px;
+    border-top: 1px solid #ffffff;
+    height: 27px;
+    line-height: 27px;
+    background: #a4a4a3;
+    width: 413px;
+}
+
+.action-box {
+    height: 55px;
+    line-height: 22px;
+    overflow: auto;
+    background: #d7d6d5;
+    border-top: 1px solid #fff;
+    padding-left: 6px;
+}
+
+
+/*for ie*/
+
+.obdscan .body {
+    border-radius: 0px 0px 13px 13px;
+}
+
+.obdscan .faultCode {
+    height: 2.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    ul {
+        width: 100%;
+        height: auto;
+        li {
+            width: 100%;
+            background-color: #ddd;
+            margin-bottom: 1px;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            span {
+                display: inline-block;
+                text-align: center;
+                font-size: 0.25rem;
+            }
+        }
+    }
+    button {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 1.4rem;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        text-align: center;
+        color: #fff;
+        background-color: #aaa;
+        font-size: 0.24rem;
+        border-radius: 0.04rem;
+        margin: 0.2rem 0.2rem;
+        float: right;
+    }
+}
+
+.obdscan .obdscan-dataStream {
+    overflow-y: auto;
+    overflow-x: hidden;
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            background-color: #ddd;
+            margin-bottom: 1px;
+            height: 0.5rem;
+            line-height: 0.5rem;
+            span {
+                display: inline-block;
+                text-align: center;
+                font-size: 0.08rem;
+            }
+            span:nth-child(1) {
+                width: 65%;
+                text-align: left;
+            }
+            span:nth-child(2) {
+                width: 15%;
+            }
+            span:nth-child(3) {
+                width: 15%;
+            }
+        }
+        li:first-child {
+            span:first-child {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.obdscan {
+    .fast-test {
+        overflow: scroll;
+        height: 0.72rem;
+        div {
+            // padding: 0 0.2rem;
+            span {
+                font-size: 0.08rem;
+            }
+            span:nth-child(1) {
+                float: left;
+            }
+            span:nth-child(2) {
+                float: right;
+            }
+        }
+    }
+    .clear-fault {
+        background-color: #fff;
+        height: 0.7rem;
+        width: 100%;
+        position: relative;
+        button {
+            float: right;
+            width: 1.4rem;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            text-align: center;
+            color: #fff;
+            background-color: #aaa;
+            font-size: 0.24rem;
+            border-radius: 0.04rem;
+            margin: 0.2rem 0.2rem;
+        }
+    }
+    .faultCode-cleared {
+        display: none;
+    }
+    .system-normal {
+        display: none;
+    }
+}
+
+.obdscan {
+    .obdscanContent {
+        .obdscan-content {
+            .dataStream {
+                div {
+                    span {
+                        text-align: center;
+                        float: inherit;
+                        clear: both;
+                        display: inline-block;
+                        width: 20%;
+                        padding-left: 0;
+                    }
+                    span:nth-child(1) {
+                        text-align: left;
+                        width: 56%;
+                        padding-left: 10px;
+                    }
+                }
+                div:nth-child(1) {
+                    span:nth-child(1) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .button-wrap-clearfaultcode {
+            width: 100%;
+            height: 0.6rem;
+            position: absolute;
+            top: 166px;
+            .button-clearcode {
+                font-size: 0.08rem;
+                padding: 10px 30px;
+                position: relative;
+                float: right;
+                margin-right: 0.1rem;
+                // margin-top: -.13rem;
+                background-color: #f08200;
+                color: #fff;
+            }
+        }
+    }
+}
