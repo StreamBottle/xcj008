@@ -68,8 +68,9 @@
         </div>
         <!-- 故障分析 -->
         <div class="fenxi" *ngIf="this.appService.progressData.describeFlag===14">
-            <fault-diagnosis [chapter]='"skill01"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]' (showRightAnswer)='faultDiagnosisShowAnswer($event)'
-                [operator]='faultDiagnosis.skill01FaultDiagnosis["operator"]' [answer]='faultDiagnosis.skill01FaultDiagnosis["answer"]'></fault-diagnosis>
+            <fault-diagnosis [chapter]='"skill01"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]'
+                (showRightAnswer)='faultDiagnosisShowAnswer($event)' [operator]='faultDiagnosis.skill01FaultDiagnosis["operator"]'
+                [answer]='faultDiagnosis.skill01FaultDiagnosis["answer"]'></fault-diagnosis>
         </div>
         <!-- 故障诊断 -->
         <!-- <div class="zhenduan" *ngIf="this.appService.progressData.describeFlag===15">
@@ -79,15 +80,18 @@
         </div> -->
         <!-- 故障维修 -->
         <div class="weixiu" *ngIf="this.appService.progressData.describeFlag===16">
-            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill01'" (repairFault)="isWeixiu($event)" (isSub)="isSub($event)"></pad-question>
+            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill01'" (repairFault)="isWeixiu($event)"
+                (isSub)="isSub($event)"></pad-question>
             <!-- <p class="p1"></p> -->
         </div>
         <!-- 检验交车 -->
         <div class="jiaoche" style="overflow: hidden;" *ngIf="this.appService.progressData.describeFlag===17">
             <div id="videos" style="height: 100%;overflow: hidden;position:relative;top:-250px">
-                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
-                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
             </div>
             <div class="fault">
@@ -145,8 +149,9 @@
         </div>
         <!-- 故障分析 -->
         <div class="fenxi" *ngIf="this.appService.progressData.describeFlag===20">
-            <fault-diagnosis [chapter]='"skill02"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]' (showRightAnswer)='faultDiagnosisShowAnswer($event)'
-                [operator]='faultDiagnosis.skill02FaultDiagnosis["operator"]' [answer]='faultDiagnosis.skill02FaultDiagnosis["answer"]'></fault-diagnosis>
+            <fault-diagnosis [chapter]='"skill02"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]'
+                (showRightAnswer)='faultDiagnosisShowAnswer($event)' [operator]='faultDiagnosis.skill02FaultDiagnosis["operator"]'
+                [answer]='faultDiagnosis.skill02FaultDiagnosis["answer"]'></fault-diagnosis>
         </div>
         <!-- 故障诊断 -->
         <!-- <div class="zhenduan" *ngIf="this.appService.progressData.describeFlag===21">
@@ -156,15 +161,18 @@
         </div> -->
         <!-- 故障维修 -->
         <div class="weixiu" *ngIf="this.appService.progressData.describeFlag===22">
-            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill02'" (repairFault)="isWeixiu($event)" (isSub)="isSub($event)"></pad-question>
+            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill02'" (repairFault)="isWeixiu($event)"
+                (isSub)="isSub($event)"></pad-question>
             <!-- <p class="p1"></p> -->
         </div>
         <!-- 故障交车 -->
         <div class="jiaoche" style="overflow: hidden;" *ngIf="this.appService.progressData.describeFlag===23">
             <div id="videos" style="height: 100%;overflow: hidden;position:relative;top:-250px">
-                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
-                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
             </div>
             <div class="fault">
@@ -223,8 +231,9 @@
         </div>
         <!-- 故障分析 -->
         <div class="fenxi moniChild" *ngIf="this.appService.progressData.describeFlag===26">
-            <fault-diagnosis [chapter]='"skill03"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]' (showRightAnswer)='faultDiagnosisShowAnswer($event)'
-                [operator]='faultDiagnosis.skill03FaultDiagnosis["operator"]' [answer]='faultDiagnosis.skill03FaultDiagnosis["answer"]'></fault-diagnosis>
+            <fault-diagnosis [chapter]='"skill03"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]'
+                (showRightAnswer)='faultDiagnosisShowAnswer($event)' [operator]='faultDiagnosis.skill03FaultDiagnosis["operator"]'
+                [answer]='faultDiagnosis.skill03FaultDiagnosis["answer"]'></fault-diagnosis>
         </div>
         <!-- 故障诊断 -->
         <div class="zhenduan moniChild" *ngIf="this.appService.progressData.describeFlag===27">
@@ -234,15 +243,18 @@
         </div>
         <!-- 故障维修 -->
         <div class="weixiu moniChild" *ngIf="this.appService.progressData.describeFlag===28">
-            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill03'" (repairFault)="isWeixiu($event)" (isSub)="isSub($event)"></pad-question>
+            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill03'" (repairFault)="isWeixiu($event)"
+                (isSub)="isSub($event)"></pad-question>
             <!-- <p class="p1"></p> -->
         </div>
         <!-- 故障交车 -->
         <div class="jiaoche moniChild" style="overflow: hidden;" *ngIf="this.appService.progressData.describeFlag===29">
             <div id="videos" style="height: 100%;overflow: hidden;position:relative;top:-250px">
-                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
-                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
             </div>
             <div class="fault">
@@ -300,8 +312,9 @@
         </div>
         <!-- 故障分析 -->
         <div class="fenxi" *ngIf="this.appService.progressData.describeFlag===32">
-            <fault-diagnosis [chapter]='"skill04"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]' (showRightAnswer)='faultDiagnosisShowAnswer($event)'
-                [operator]='faultDiagnosis.skill04FaultDiagnosis["operator"]' [answer]='faultDiagnosis.skill04FaultDiagnosis["answer"]'></fault-diagnosis>
+            <fault-diagnosis [chapter]='"skill04"' [rightAnswer]='[faultDiagnosisAnswerPic,appService.progressData.describeFlag]'
+                (showRightAnswer)='faultDiagnosisShowAnswer($event)' [operator]='faultDiagnosis.skill04FaultDiagnosis["operator"]'
+                [answer]='faultDiagnosis.skill04FaultDiagnosis["answer"]'></fault-diagnosis>
         </div>
         <!-- 故障诊断 -->
         <div class="zhenduan" *ngIf="this.appService.progressData.describeFlag===33">
@@ -311,15 +324,18 @@
         </div>
         <!-- 故障维修 -->
         <div class="weixiu" *ngIf="this.appService.progressData.describeFlag===34">
-            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill04'" (repairFault)="isWeixiu($event)" (isSub)="isSub($event)"></pad-question>
+            <pad-question [currentChapter]="'skill'" [childCatalog]="'skill04'" (repairFault)="isWeixiu($event)"
+                (isSub)="isSub($event)"></pad-question>
             <!-- <p class="p1"></p> -->
         </div>
         <!-- 故障交车 -->
         <div class="jiaoche" style="overflow: hidden;" *ngIf="this.appService.progressData.describeFlag===35">
             <div id="videos" style="height: 100%;overflow: hidden;position:relative;top:-250px">
-                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="jin" src="./assets/video/qianjin.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
-                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4" loop width="100%">
+                <video id="tui" src="./assets/video/houtui.mp4" poster="./assets/images/skill/poster.jpg" type="video/mp4"
+                    loop width="100%">
                 </video>
             </div>
             <div class="fault">
@@ -561,20 +577,21 @@
         <div *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
             class='oscilloscope-circuit'>
             <!-- 蓄电池热区 -->
-            <a class="batt-positive hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" ' title="蓄电池正极" wybredPosition="A"
-                wybblackPosition="A" rqPosition="2013" h-left="218" h-top="486" id='2'></a>
-            <a class="GND hot" id="1" title="GND" wybredPosition="GND" wybblackPosition="GND" rqPosition="2013" h-left="218" h-top="536"></a>
+            <a class="batt-positive hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" '
+                title="蓄电池正极" wybredPosition="A" wybblackPosition="A" rqPosition="2013" h-left="218" h-top="486" id='2'></a>
+            <a class="GND hot" id="1" title="GND" wybredPosition="GND" wybblackPosition="GND" rqPosition="2013" h-left="218"
+                h-top="536"></a>
         </div>
 
         <!-- 任务一中除蓄电池和可以断开的点以外的所有点（3个，90，95，80） -->
         <div *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
             class="breakNo">
-            <a class="N90 hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" ' title="N90" id='3' wybredPosition="N90"
-                wybblackPosition="N90" rqPosition="2013" h-left="198" h-top="386"></a>
-            <a class="N95 hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" ' title="N95" id="4" wybredPosition="N95"
-                wybblackPosition="N95" rqPosition="2013" h-left="236" h-top="386"></a>
-            <a class="N80 hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" ' title="N80" id="5" wybredPosition="N80"
-                wybblackPosition="N80" rqPosition="2013" h-left="273" h-top="386"></a>
+            <a class="N90 hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" ' title="N90"
+                id='3' wybredPosition="N90" wybblackPosition="N90" rqPosition="2013" h-left="198" h-top="386"></a>
+            <a class="N95 hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" ' title="N95"
+                id="4" wybredPosition="N95" wybblackPosition="N95" rqPosition="2013" h-left="236" h-top="386"></a>
+            <a class="N80 hot" *ngIf='this.multimeterService.Mdata.Mint.In1NER_Multi_Pass2Ohm_x_x !== "1" ' title="N80"
+                id="5" wybredPosition="N80" wybblackPosition="N80" rqPosition="2013" h-left="273" h-top="386"></a>
         </div>
 
         <!-- V插头插上 -->
@@ -584,11 +601,14 @@
                 class="V80 hot" title="V80" id='6' wybredPosition="V80" wybblackPosition="V80" rqPosition="2013" h-left="589"
                 h-top="398"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="626" h-top="398"></a>
+                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="626"
+                h-top="398"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="664" h-top="398"></a>
+                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="664"
+                h-top="398"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="704" h-top="398"></a>
+                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="704"
+                h-top="398"></a>
 
         </div>
         <!-- V插头拔下 -->
@@ -598,11 +618,14 @@
                 class="V80 hot" title="V80" id='6' wybredPosition="V80" wybblackPosition="V80" rqPosition="2013" h-left="590"
                 h-top="406"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="626" h-top="406"></a>
+                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="626"
+                h-top="406"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="664" h-top="406"></a>
+                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="664"
+                h-top="406"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="704" h-top="406"></a>
+                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="704"
+                h-top="406"></a>
 
         </div>
 
@@ -612,21 +635,21 @@
             <!-- T6-install插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013" h-left="590"
-                h-top="507"></a>
+                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013"
+                h-left="590" h-top="507"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013" h-left="625"
-                h-top="507"></a>
+                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013"
+                h-left="625" h-top="507"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-3 hot" title="T3" id="12" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013" h-left="664"
-                h-top="507"></a>
+                class="T6-Pin-3 hot" title="T3" id="12" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013"
+                h-left="664" h-top="507"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-4 hot" title="T4" id="13" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013" h-left="702"
-                h-top="507"></a>
-            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-5 hot" title="T5" id="14" wybredPosition="T5"
-                wybblackPosition="T5" rqPosition="2013" h-left="740" h-top="507"></a>
-            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-6 hot" title="T6" id="15" wybredPosition="T6"
-                wybblackPosition="T6" rqPosition="2013" h-left="778" h-top="507"></a>
+                class="T6-Pin-4 hot" title="T4" id="13" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013"
+                h-left="702" h-top="507"></a>
+            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-5 hot" title="T5" id="14"
+                wybredPosition="T5" wybblackPosition="T5" rqPosition="2013" h-left="740" h-top="507"></a>
+            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-6 hot" title="T6" id="15"
+                wybredPosition="T6" wybblackPosition="T6" rqPosition="2013" h-left="778" h-top="507"></a>
         </div>
 
         <!-- T6插头拔下 -->
@@ -635,21 +658,21 @@
             <!-- T6-uninstall插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013" h-left="590"
-                h-top="500"></a>
+                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013"
+                h-left="590" h-top="500"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013" h-left="625"
-                h-top="500"></a>
+                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013"
+                h-left="625" h-top="500"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-3 hot" title="T3" id="12" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013" h-left="663"
-                h-top="500"></a>
+                class="T6-Pin-3 hot" title="T3" id="12" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013"
+                h-left="663" h-top="500"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-4 hot" title="T4" id="13" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013" h-left="702"
-                h-top="500"></a>
-            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-5 hot" title="T5" id="14" wybredPosition="T5"
-                wybblackPosition="T5" rqPosition="2013" h-left="740" h-top="500"></a>
-            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-6 hot" title="T6" id="15" wybredPosition="T6"
-                wybblackPosition="T6" rqPosition="2013" h-left="778" h-top="500"></a>
+                class="T6-Pin-4 hot" title="T4" id="13" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013"
+                h-left="702" h-top="500"></a>
+            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-5 hot" title="T5" id="14"
+                wybredPosition="T5" wybblackPosition="T5" rqPosition="2013" h-left="740" h-top="500"></a>
+            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="T6-Pin-6 hot" title="T6" id="15"
+                wybredPosition="T6" wybblackPosition="T6" rqPosition="2013" h-left="778" h-top="500"></a>
         </div>
     </div>
     <div class="skill-circuit1" *ngIf='21===this.appService.progressData.describeFlag'>
@@ -677,15 +700,20 @@
                 class="V80 hot" title="V80" id='6' wybredPosition="V80" wybblackPosition="V80" rqPosition="2013" h-left="474"
                 h-top="250"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="510" h-top="250"></a>
+                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="510"
+                h-top="250"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="548" h-top="250"></a>
+                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="548"
+                h-top="250"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="587" h-top="250"></a>
+                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="587"
+                h-top="250"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V4 hot" title="V4" id="10" wybredPosition="V4" wybblackPosition="V4" rqPosition="2013" h-left="626" h-top="250"></a>
+                class="V4 hot" title="V4" id="10" wybredPosition="V4" wybblackPosition="V4" rqPosition="2013" h-left="626"
+                h-top="250"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V5 hot" title="V5" id="11" wybredPosition="V5" wybblackPosition="V5" rqPosition="2013" h-left="664" h-top="250"></a>
+                class="V5 hot" title="V5" id="11" wybredPosition="V5" wybblackPosition="V5" rqPosition="2013" h-left="664"
+                h-top="250"></a>
         </div>
         <!-- V插头拔下 -->
         <div *ngIf='skillService.V_Pin_Install==="0"' class="V-uninstall" (click)='pullInUnit($event.target);'>
@@ -694,15 +722,20 @@
                 class="V80 hot" title="V80" id='6' wybredPosition="V80" wybblackPosition="V80" rqPosition="2013" h-left="476"
                 h-top="241"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="512" h-top="241"></a>
+                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="512"
+                h-top="241"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="550" h-top="241"></a>
+                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="550"
+                h-top="241"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="590" h-top="241"></a>
+                class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="590"
+                h-top="241"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V4 hot" title="V4" id="10" wybredPosition="V4" wybblackPosition="V4" rqPosition="2013" h-left="628" h-top="241"></a>
+                class="V4 hot" title="V4" id="10" wybredPosition="V4" wybblackPosition="V4" rqPosition="2013" h-left="628"
+                h-top="241"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="V5 hot" title="V5" id="11" wybredPosition="V5" wybblackPosition="V5" rqPosition="2013" h-left="666" h-top="241"></a>
+                class="V5 hot" title="V5" id="11" wybredPosition="V5" wybblackPosition="V5" rqPosition="2013" h-left="666"
+                h-top="241"></a>
         </div>
 
         <!-- T6插头插上 -->
@@ -711,23 +744,23 @@
             <!-- T6-install插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-1 hot" title="T1" id="12" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013" h-left="478"
-                h-top="135"></a>
+                class="T6-Pin-1 hot" title="T1" id="12" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013"
+                h-left="478" h-top="135"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-2 hot" title="T2" id="13" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013" h-left="509"
-                h-top="135"></a>
+                class="T6-Pin-2 hot" title="T2" id="13" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013"
+                h-left="509" h-top="135"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-3 hot" title="T3" id="14" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013" h-left="547"
-                h-top="135"></a>
+                class="T6-Pin-3 hot" title="T3" id="14" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013"
+                h-left="547" h-top="135"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-4 hot" title="T4" id="15" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013" h-left="585"
-                h-top="135"></a>
+                class="T6-Pin-4 hot" title="T4" id="15" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013"
+                h-left="585" h-top="135"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-5 hot" title="T5" id="16" wybredPosition="T5" wybblackPosition="T5" rqPosition="2013" h-left="625"
-                h-top="135"></a>
+                class="T6-Pin-5 hot" title="T5" id="16" wybredPosition="T5" wybblackPosition="T5" rqPosition="2013"
+                h-left="625" h-top="135"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-6 hot" title="T6" id="17" wybredPosition="T6" wybblackPosition="T6" rqPosition="2013" h-left="662"
-                h-top="135"></a>
+                class="T6-Pin-6 hot" title="T6" id="17" wybredPosition="T6" wybblackPosition="T6" rqPosition="2013"
+                h-left="662" h-top="135"></a>
         </div>
 
         <!-- T6插头拔下 -->
@@ -736,35 +769,35 @@
             <!-- T6-uninstall插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-1 hot" title="T1" id="12" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013" h-left="480"
-                h-top="143"></a>
+                class="T6-Pin-1 hot" title="T1" id="12" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013"
+                h-left="480" h-top="143"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-2 hot" title="T2" id="13" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013" h-left="511"
-                h-top="143"></a>
+                class="T6-Pin-2 hot" title="T2" id="13" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013"
+                h-left="511" h-top="143"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-3 hot" title="T3" id="14" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013" h-left="549"
-                h-top="143"></a>
+                class="T6-Pin-3 hot" title="T3" id="14" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013"
+                h-left="549" h-top="143"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-4 hot" title="T4" id="15" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013" h-left="587"
-                h-top="143"></a>
+                class="T6-Pin-4 hot" title="T4" id="15" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013"
+                h-left="587" h-top="143"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-5 hot" title="T5" id="16" wybredPosition="T5" wybblackPosition="T5" rqPosition="2013" h-left="626"
-                h-top="143"></a>
+                class="T6-Pin-5 hot" title="T5" id="16" wybredPosition="T5" wybblackPosition="T5" rqPosition="2013"
+                h-left="626" h-top="143"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V~"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"||this.oscilloscopeService.Mdata.oscilloscopeStatus'
-                class="T6-Pin-6 hot" title="T6" id="17" wybredPosition="T6" wybblackPosition="T6" rqPosition="2013" h-left="664"
-                h-top="143"></a>
-            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-7 hot" title="T7" id="17" wybredPosition="T7"
-                wybblackPosition="T7" rqPosition="2013" h-left="479" h-top="123"></a>
-            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-8 hot" title="T8" id="18" wybredPosition="T8"
-                wybblackPosition="T8" rqPosition="2013" h-left="512" h-top="123"></a>
-            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-9 hot" title="T9" id="19" wybredPosition="T9"
-                wybblackPosition="T9" rqPosition="2013" h-left="550" h-top="123"></a>
-            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-10 hot" title="T10" id="20" wybredPosition="T10"
-                wybblackPosition="T10" rqPosition="2013" h-left="588" h-top="123"></a>
-            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-11 hot" title="T11" id="21" wybredPosition="T11"
-                wybblackPosition="T11" rqPosition="2013" h-left="626" h-top="123"></a>
-            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-12 hot" title="T12" id="22" wybredPosition="T12"
-                wybblackPosition="T12" rqPosition="2013" h-left="664" h-top="123"></a>
+                class="T6-Pin-6 hot" title="T6" id="17" wybredPosition="T6" wybblackPosition="T6" rqPosition="2013"
+                h-left="664" h-top="143"></a>
+            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-7 hot" title="T7" id="17"
+                wybredPosition="T7" wybblackPosition="T7" rqPosition="2013" h-left="479" h-top="123"></a>
+            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-8 hot" title="T8" id="18"
+                wybredPosition="T8" wybblackPosition="T8" rqPosition="2013" h-left="512" h-top="123"></a>
+            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-9 hot" title="T9" id="19"
+                wybredPosition="T9" wybblackPosition="T9" rqPosition="2013" h-left="550" h-top="123"></a>
+            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-10 hot" title="T10" id="20"
+                wybredPosition="T10" wybblackPosition="T10" rqPosition="2013" h-left="588" h-top="123"></a>
+            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-11 hot" title="T11" id="21"
+                wybredPosition="T11" wybblackPosition="T11" rqPosition="2013" h-left="626" h-top="123"></a>
+            <a *ngIf='this.oscilloscopeService.Mdata.oscilloscopeStatus' class="T6-Pin-12 hot" title="T12" id="22"
+                wybredPosition="T12" wybblackPosition="T12" rqPosition="2013" h-left="664" h-top="123"></a>
         </div>
     </div>
     <div class="skill-circuit2" *ngIf='27===this.appService.progressData.describeFlag'>
@@ -772,13 +805,15 @@
         <div *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
             class='oscilloscope-circuit'>
             <!-- 蓄电池热区 -->
-            <a class="GND hot" id="1" title="GND" wybredPosition="GND" wybblackPosition="GND" rqPosition="2013" h-left="217" h-top="540"></a>
+            <a class="GND hot" id="1" title="GND" wybredPosition="GND" wybblackPosition="GND" rqPosition="2013" h-left="217"
+                h-top="540"></a>
         </div>
 
         <!-- 任务三中除蓄电池和可以断开的点以外的所有点（3个，90，95，80） -->
         <div *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
             class="breakNo">
-            <a class="N95 hot" title="N95" id="4" wybredPosition="N95" wybblackPosition="N95" rqPosition="2013" h-left="434" h-top="190"></a>
+            <a class="N95 hot" title="N95" id="4" wybredPosition="N95" wybblackPosition="N95" rqPosition="2013" h-left="434"
+                h-top="190"></a>
         </div>
 
         <!-- V插头插上 -->
@@ -789,19 +824,24 @@
                 class="V80 hot" title="V80" id='6' wybredPosition="V80" wybblackPosition="V80" rqPosition="2013" h-left="714"
                 h-top="255"></a>
             <a *ngIf='(skillService.V_Pin_Install=="1"&&this.multimeterService.Mdata.multimeterScreenUnit==="V")||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="752" h-top="255"></a>
+                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="752"
+                h-top="255"></a>
             <a *ngIf='(skillService.V_Pin_Install=="1"&&this.multimeterService.Mdata.multimeterScreenUnit==="V")||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="790" h-top="255"></a>
+                class="V2 hot" title="V2" id="8" wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="790"
+                h-top="255"></a>
         </div>
         <!-- V插头拔下 -->
         <div *ngIf='skillService.V_Pin_Install==="0"' class="V-uninstall" (click)='pullInUnit($event.target);'>
             <div [halo]="'halo'"></div>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="V3 hot" title="V3" id='9' wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="714" h-top="237"></a>
+                class="V3 hot" title="V3" id='9' wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="714"
+                h-top="237"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="V4 hot" title="V4" id="10" wybredPosition="V4" wybblackPosition="V4" rqPosition="2013" h-left="751" h-top="237"></a>
+                class="V4 hot" title="V4" id="10" wybredPosition="V4" wybblackPosition="V4" rqPosition="2013" h-left="751"
+                h-top="237"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="V5 hot" title="V5" id="11" wybredPosition="V5" wybblackPosition="V5" rqPosition="2013" h-left="790" h-top="237"></a>
+                class="V5 hot" title="V5" id="11" wybredPosition="V5" wybblackPosition="V5" rqPosition="2013" h-left="790"
+                h-top="237"></a>
         </div>
 
         <!-- T6插头插上 -->
@@ -811,11 +851,11 @@
             <!-- T6-install插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='(skillService.T_Pin_Install==="1"&&this.multimeterService.Mdata.multimeterScreenUnit==="V")||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="T6-Pin-1 hot" title="T1" id="12" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013" h-left="830"
-                h-top="257"></a>
+                class="T6-Pin-1 hot" title="T1" id="12" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013"
+                h-left="830" h-top="257"></a>
             <a *ngIf='(skillService.T_Pin_Install==="1"&&this.multimeterService.Mdata.multimeterScreenUnit==="V")||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="T6-Pin-1 hot" title="T1" class="T6-Pin-2 hot" title="T2" id="13" wybredPosition="T2" wybblackPosition="T2"
-                rqPosition="2013" h-left="869" h-top="257"></a>
+                class="T6-Pin-1 hot" title="T1" class="T6-Pin-2 hot" title="T2" id="13" wybredPosition="T2"
+                wybblackPosition="T2" rqPosition="2013" h-left="869" h-top="257"></a>
         </div>
 
         <!-- T6插头拔下 -->
@@ -824,11 +864,11 @@
             <!-- T6-uninstall插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="T6-Pin-3 hot" title="T3" id="13" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013" h-left="830"
-                h-top="237"></a>
+                class="T6-Pin-3 hot" title="T3" id="13" wybredPosition="T3" wybblackPosition="T3" rqPosition="2013"
+                h-left="830" h-top="237"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.Mint.In1NER_Multi_Insulate_Ohm_x === "1"'
-                class="T6-Pin-4 hot" title="T4" id="14" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013" h-left="867"
-                h-top="237"></a>
+                class="T6-Pin-4 hot" title="T4" id="14" wybredPosition="T4" wybblackPosition="T4" rqPosition="2013"
+                h-left="867" h-top="237"></a>
         </div>
     </div>
     <div class="skill-circuit3" *ngIf='33===this.appService.progressData.describeFlag'>
@@ -838,13 +878,16 @@
             <!-- 蓄电池热区 -->
             <!-- <a class="batt-positive hot" title="蓄电池正极" wybredPosition="1" wybblackPosition="1" rqPosition="2013" h-left="28" h-top="471"
                 id='2'></a> -->
-            <a class="GND hot" id="1" title="GND" wybredPosition="GND" wybblackPosition="GND" rqPosition="2013" h-left="217" h-top="540"></a>
+            <a class="GND hot" id="1" title="GND" wybredPosition="GND" wybblackPosition="GND" rqPosition="2013" h-left="217"
+                h-top="540"></a>
         </div>
 
         <!-- 任务四中除蓄电池和可以断开的点以外的所有点（3个，90，95，80） -->
         <div *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="breakNo">
-            <a class="N95 hot" title="N95" id="3" wybredPosition="N95" wybblackPosition="N95" rqPosition="2013" h-left="938" h-top="211"></a>
-            <a class="N90 hot" title="N90" id="4" wybredPosition="N90" wybblackPosition="N90" rqPosition="2013" h-left="900" h-top="211"></a>
+            <a class="N95 hot" title="N95" id="3" wybredPosition="N95" wybblackPosition="N95" rqPosition="2013" h-left="938"
+                h-top="211"></a>
+            <a class="N90 hot" title="N90" id="4" wybredPosition="N90" wybblackPosition="N90" rqPosition="2013" h-left="900"
+                h-top="211"></a>
         </div>
         <!-- V插头插上 -->
         <div *ngIf='skillService.V_Pin_Install==="1"' class="V-install" (click)='pullOutUnit($event.target);'>
@@ -853,7 +896,8 @@
                 class="V80 hot" title="V80" id='6' wybredPosition="V80" wybblackPosition="V80" rqPosition="2013" h-left="900"
                 h-top="254"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="937" h-top="254"></a>
+                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="937"
+                h-top="254"></a>
         </div>
         <!-- V插头拔下 -->
         <div *ngIf='skillService.V_Pin_Install==="0"' class="V-uninstall" (click)='pullInUnit($event.target);'>
@@ -862,11 +906,12 @@
                 class="V80 hot" title="V80" id='6' wybredPosition="V80" wybblackPosition="V80" rqPosition="2013" h-left="901"
                 h-top="262"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="936" h-top="262"></a>
-            <a class="V2 hot" *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' title="V2" id='8' wybredPosition="V2" wybblackPosition="V2"
-                rqPosition="2013" h-left="900" h-top="242"></a>
-            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="V3 hot" title="V3" id="9" wybredPosition="V3" wybblackPosition="V3"
-                rqPosition="2013" h-left="936" h-top="242"></a>
+                class="V1 hot" title="V1" id="7" wybredPosition="V1" wybblackPosition="V1" rqPosition="2013" h-left="936"
+                h-top="262"></a>
+            <a class="V2 hot" *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' title="V2" id='8'
+                wybredPosition="V2" wybblackPosition="V2" rqPosition="2013" h-left="900" h-top="242"></a>
+            <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"' class="V3 hot" title="V3" id="9"
+                wybredPosition="V3" wybblackPosition="V3" rqPosition="2013" h-left="936" h-top="242"></a>
 
         </div>
 
@@ -876,11 +921,11 @@
             <!-- T6-install插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013" h-left="895"
-                h-top="343"></a>
+                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013"
+                h-left="895" h-top="343"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013" h-left="936"
-                h-top="343"></a>
+                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013"
+                h-left="936" h-top="343"></a>
         </div>
 
         <!-- T6插头拔下 -->
@@ -889,11 +934,11 @@
             <!-- T6-uninstall插头 -->
             <!-- T6插头热区 -->
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013" h-left="895"
-                h-top="334"></a>
+                class="T6-Pin-1 hot" title="T1" id="10" wybredPosition="T1" wybblackPosition="T1" rqPosition="2013"
+                h-left="895" h-top="334"></a>
             <a *ngIf='this.multimeterService.Mdata.multimeterScreenUnit==="V"||this.multimeterService.Mdata.multimeterScreenUnit==="Ω"'
-                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013" h-left="936"
-                h-top="334"></a>
+                class="T6-Pin-2 hot" title="T2" id="11" wybredPosition="T2" wybblackPosition="T2" rqPosition="2013"
+                h-left="936" h-top="334"></a>
         </div>
     </div>
 
@@ -963,24 +1008,28 @@
     <!-- 左侧点击箭头出现的内容 -->
     <div *ngIf='true' [@flyIn]="sceneLeftNavAnimation" class="scene-left-nav">
         <span (click)="ac($event,'left')">模拟训练 > </span>
-        <div class="left" style="width:710px;overflow-x: scroll;display:none;">
+        <div class="left" style="width:710px;display:none;">
             <ul style="width:10000px;">
                 <li [ngClass]="{'clickShow':
           this.appService.progressData.describeFlag>=12
           &&this.appService.progressData.describeFlag<=17
-          }" (click)="pageShow(12)">
+          }"
+                    (click)="pageShow(12)">
                     <span>任务一</span>
                 </li>
                 <li [ngClass]="{'clickShow':this.appService.progressData.describeFlag>=18
-            &&this.appService.progressData.describeFlag<=23}" (click)="pageShow(18)">
+            &&this.appService.progressData.describeFlag<=23}"
+                    (click)="pageShow(18)">
                     <span>任务二</span>
                 </li>
                 <li [ngClass]="{'clickShow':this.appService.progressData.describeFlag>=24
-            &&this.appService.progressData.describeFlag<=29}" (click)="pageShow(24)">
+            &&this.appService.progressData.describeFlag<=29}"
+                    (click)="pageShow(24)">
                     <span>任务三</span>
                 </li>
                 <li [ngClass]="{'clickShow':this.appService.progressData.describeFlag>=30
-            &&this.appService.progressData.describeFlag<=35}" (click)="pageShow(30)">
+            &&this.appService.progressData.describeFlag<=35}"
+                    (click)="pageShow(30)">
                     <span>任务四</span>
                 </li>
                 <!-- <li [ngClass]="{'clickShow':this.appService.progressData.describeFlag>=36
@@ -991,7 +1040,7 @@
         </div>
         <!-- <i></i> -->
         <!-- <span (click)="ac($event,'right')">实车训练 > </span>
-        <div class="right" style="width:350px;overflow-x: scroll;display:none;">
+        <div class="right" style="width:350px;display:none;">
             <ul style="width:10000px;">
                 <li [ngClass]="{'clickShow':this.appService.progressData.describeFlag>=36&&this.appService.progressData.describeFlag<=38}"
                     (click)="pageShow(36)">

@@ -39,9 +39,14 @@
         // console.log(window.getComputedStyle(document.body).fontSize)
         //字体大小：默认值是16px，每一个浏览器有可能不一样的
         var dw = 2048; //设计稿的宽
-        //在移动端就直接这样写就可以
-        $('html').css('fontSize', dw / (document.documentElement.clientWidth || document.body.clientWidth) *
-            100 + "px")
+        $('html').css('fontSize', 200 + "px")
+        //在PC端的时候加上屏幕大小改变的问题
+        window.onresize = function () {
+            // $('html').css('fontSize', 100 / (dw / (document.documentElement.clientWidth || document.body.clientWidth)) +
+            //     "px")
+            $('html').css('fontSize', 200 + "px")
+        }
+
         //在PC端的时候加上屏幕大小改变的问题
         // window.onresize = function () {
         //   $('html').css('fontSize', 100 / (dw / (document.documentElement.clientWidth || document.body.clientWidth)) +
@@ -63,7 +68,7 @@
 
 </head>
 
-<body style='height:700px;'>
+<body style='width:1024px;height:700px;border:1px solid #000;overflow:auto;margin:0 auto;'>
 
     <!-- <button style='position: absolute;left: 0;top: 260px;font-size: 18px;z-index: 100;background: red;' id="prev">prev</button>
     <button style='position: absolute;left: 0;top: 480px;font-size: 18px;z-index: 100;background: red;' id="next">next</button>
@@ -72,15 +77,15 @@
     <button style='position: absolute;left: 0px;top: 400px;font-size: 18px;z-index: 100;background: red;' id="measureTool">measureTool</button> -->
 
     <support-app>
-        <img src="./assets/images/index.jpg">
+        <img style="width:100%;height:100%;" src="./assets/images/index.jpg">
     </support-app>
 
 
 
     <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
-        <!-- Webpack Dev Server reload -->
-        <script src="/webpack-dev-server.js"></script>
-        <% } %>
+    <!-- Webpack Dev Server reload -->
+    <script src="/webpack-dev-server.js"></script>
+    <% } %>
 
 </body>
 <script>
