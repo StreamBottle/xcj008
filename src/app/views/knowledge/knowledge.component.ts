@@ -13,6 +13,76 @@ declare const $;
 	animations: [flyIn]
 })
 export class KnowledgeComponent implements OnInit, OnDestroy {
+	jgonetxt1 = [{
+		text: '通过高压接触器的动作来判断动力电池供电系统是否工作正常，动力电池供电系统故障的原因和分析在该章节已经介绍过，请参考该章节“点火开关转到ON档时整车不能上电”的故障分析内容。',
+		open: '',
+		style: {
+			display: 'block',
+			fontSize: "16px",
+			color: '#fff',
+			textIndent: '2em'
+		}
+	}];
+	jgonetxt2 = [{
+		text: '对控制模块电源、CAN网络检查时，首先可以通过诊断仪查看其通讯情况，如果模块内部有与故障相关的故障码，查找维修手册，按照手册的故障引导进行诊断。然后用万用表对整车控制模块进行检查，先检查其电源和接地电路，其次检查CAN网络电路，可以通过测量网络终端电阻，判断网络线路是否存在断路故障，通过测量电压判断网络线路是否存在短路故障，通过插拔单个模块来判断模块内部是否正常。',
+		open: '',
+		style: {
+			display: 'block',
+			fontSize: "16px",
+			color: '#fff',
+			textIndent: '2em'
+		}
+	}];
+	jgonetxt3 = [{
+		text: '对驱动电机电路故障检查时，可以利用万用表检查内部线圈的阻值，来判断电机是否发生短路、断路和虚接的故障。',
+		open: '',
+		style: {
+			display: 'block',
+			fontSize: "16px",
+			color: '#fff',
+			textIndent: '2em'
+		}
+	}];
+	jgonetxt4 = [{
+		text: '对电机转速位置传感器检查时，首先可以通过诊断仪查看是否有与故障相关的故障码，查找维修手册，按照手册的故障引导进行诊断。然后用万用表测量传感器线圈的阻值，来判断传感器线圈是否发生短路、断路的故障；测量传感器的电源和搭铁，判断传感器线路是否正常。',
+		open: '',
+		style: {
+			display: 'block',
+			fontSize: "16px",
+			color: '#fff',
+			textIndent: '2em'
+		}
+	}];
+	jgonetxt5 = [{
+		text: '对档位开关电路检查时，首先可以通过观察诊断仪数据流，或者通过挂挡，观察仪表档位指示是否和实际档位一致，如果不一致，用万用表对其电源、接地和信号电路进行检查。',
+		open: '',
+		style: {
+			display: 'block',
+			fontSize: "16px",
+			color: '#fff',
+			textIndent: '2em'
+		}
+	}];
+	jgonetxt6 = [{
+		text: '对制动开关电路检查时，首先可以通过观察踩刹车时制动灯是否工作来判断，也可以通过诊断仪的数据流功能来判断其是否正常，然后用万用表对其电源、接地和信号电路进行检查。',
+		open: '',
+		style: {
+			display: 'block',
+			fontSize: "16px",
+			color: '#fff',
+			textIndent: '2em'
+		}
+	}];
+	jgonetxt7 = [{
+		text: '对电机转速位置传感器检查时，首先可以通过诊断仪查看是否有与故障相关的故障码，查找维修手册，按照手册的故障引导进行诊断。然后用万用表测量传感器线圈的阻值，来判断传感器线圈是否发生短路、断路的故障；测量传感器的电源和搭铁，判断传感器线路是否正常。',
+		open: '',
+		style: {
+			display: 'block',
+			fontSize: "16px",
+			color: '#fff',
+			textIndent: '2em'
+		}
+	}];
 	abc: string = 'inactive';
 	@ViewChild('hua2') hua2;
 	@ViewChild('hua1') hua1;

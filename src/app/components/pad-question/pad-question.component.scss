@@ -3,6 +3,7 @@
     /* height: .4rem; */
     position: relative;
     margin-bottom: 0px;
+
     .submit-question {
         cursor: pointer; // font-size: 0.28rem;
         float: right;
@@ -12,6 +13,7 @@
         position: relative;
         right: .2rem;
     }
+
     .save-question {
         right: .4rem;
     }
@@ -28,32 +30,40 @@
     width: 100%;
     padding-left: .2rem;
     padding-right: .3rem; // 填空选择题
+
     .tiaokong-select-question {
         padding: 0.1rem 0;
         color: #5a6a8b;
         border-bottom: 1px solid #cacfd9;
         padding-bottom: 0.1rem;
+
         .tiankong-quesiton,
         .select-question {
             color: #5a6a8b;
         }
-    } // 表格和选择题
+    }
+
+    // 表格和选择题
     .table-select-question {
         border-bottom: 1px solid #cacfd9;
         padding-bottom: 0.1rem;
     }
+
     .table-select-question,
     .table-question {
         padding: 0.1rem 0;
         color: #5a6a8b;
         font-size: .08rem;
+
         .table-question {
             table {
                 border: 1px solid red;
                 border-collapse: collapse;
+
                 td {
                     padding: 5px 0px;
                 }
+
                 /*关键代码*/
                 thead {
                     tr {
@@ -66,6 +76,7 @@
                         }
                     }
                 }
+
                 tbody {
                     tr {
                         td {
@@ -77,36 +88,44 @@
             }
         }
     }
+
     .draggable-question {
         width: 100%;
         border-bottom: 1px solid #cacfd9;
         padding-bottom: 0.1rem;
+
         &>span.title {
             color: #000;
             clear: both;
             width: 100%;
             float: left;
         }
+
         .left {
             height: 100%;
             float: left;
+
             &>div {
                 float: left;
                 width: 3rem;
+
                 &>span.img-description {
                     width: 100%;
                     display: inline-block;
                     text-align: center;
                     margin-bottom: 0.3rem;
                 }
+
                 &>div.img-wrap {
                     text-align: center;
                     line-height: 4rem;
+
                     &>img {
                         vertical-align: middle;
                         display: inline-block;
                     }
                 }
+
                 &>div.text-wrap {
                     display: table;
                     vertical-align: middle;
@@ -114,6 +133,7 @@
                     width: 2rem;
                     border: 1px solid #000;
                     margin: 0 auto;
+
                     &>span {
                         text-align: center;
                         display: table-cell;
@@ -122,10 +142,12 @@
                     }
                 }
             }
+
             &>div:nth-child(2n) {
                 margin: 0 .5rem;
             }
         }
+
         .right {
             width: 3rem;
             height: 6rem;
@@ -133,6 +155,7 @@
             margin-left: 2rem;
             border: 1px solid #000;
             padding: 45px 50px;
+
             &>div {
                 display: table;
                 vertical-align: middle;
@@ -141,6 +164,7 @@
                 border: 1px solid #000;
                 margin: 0 auto;
                 margin-bottom: .1rem;
+
                 span {
                     text-align: center;
                     display: table-cell;
@@ -148,26 +172,32 @@
                     width: 2rem;
                 }
             }
+
             &>div:last-child {
                 margin-bottom: 0;
             }
         }
     }
+
     .ligature-question {
         padding: 0.1rem 0;
         color: #5a6a8b;
         position: relative;
         border-bottom: 1px solid #cacfd9;
         padding-bottom: 0.1rem;
+
         table {
             border-collapse: collapse;
+
             td {
                 border: 1px solid #000; // position: relative;
+
                 input {
                     width: 0; // height: 90%;
                     // position: absolute;
                     opacity: 0;
                     background-color: rgba(255, 255, 255, 0);
+
                     &+span {
                         // float: left;
                         border: 1px solid #fe6d32;
@@ -180,30 +210,37 @@
                     }
                 }
             }
+
             .line-area {
                 width: 0.6rem;
                 border: none;
             }
+
             tr {
                 td:nth-child(1) {
                     text-align: left;
                 }
+
                 td:nth-child(2) {
                     text-align: center; // padding-left: .2rem;
                 }
+
                 td:nth-child(3) {
                     text-align: center; // padding-right: .2rem;
                 }
+
                 td:nth-child(4) {
                     text-align: left;
                 }
             }
+
             tr:first-child {
                 td {
                     padding: 0;
                     text-align: center;
                 }
             }
+
             tr:last-child {
                 td {
                     border-bottom: 1px solid #000;
@@ -211,20 +248,26 @@
             }
         }
     }
+
     .short-answer-question {
         width: 100%;
         text-align: left;
         margin-top: 0.1rem;
         border-bottom: 1px solid #cacfd9;
         padding-bottom: 0.1rem;
+
         span.title {
             color: #5a6a8b;
             display: block;
         }
+
         textarea {
             border: 1px solid #000;
+            font-weight: bold;
+            color: blue;
         }
     }
+
     &>.select-question {
         color: #5a6a8b;
         padding: .1rem;
@@ -232,6 +275,7 @@
         padding-left: 0;
         border-bottom: 1px solid #cacfd9;
         padding-bottom: 0.1rem;
+
         .way1 {
             width: 0.15rem;
             line-height: .1rem;
@@ -244,14 +288,17 @@
             text-align: center;
             padding: 4px;
         }
+
         .isHasImg {
             float: left;
             margin-left: 50px;
             width: auto;
         }
     }
+
     form {
         width: 100%;
+
         ul {
             li {
                 // height: 0.2rem;
@@ -259,12 +306,15 @@
             }
         }
     }
+
     li {
         position: relative;
+
         label {
             font-weight: normal;
             width: 98%;
             display: inline-block;
+
             input {
                 width: 100%;
                 height: 90%;
@@ -272,6 +322,7 @@
                 top: -0.04rem;
                 opacity: 0;
                 background-color: rgba(255, 255, 255, 0);
+
                 &+span {
                     float: left;
                     border: 1px solid #fe6d32;
@@ -285,12 +336,14 @@
             }
         }
     }
+
     /*设置选中的input的样式*/
     /* + 是兄弟选择器,获取选中后的label元素*/
     input[ischeck="true"]+span {
         background-color: #fe6d32;
         border: 1px solid #fe6d32;
     }
+
     input[ischeck="true"]+span::after {
         position: absolute;
         content: "";
@@ -303,9 +356,11 @@
         border-left: none;
         transform: rotate(45deg);
     }
+
     .animate01 {
         border-bottom: 1px solid #cacfd9;
         padding-bottom: 0.1rem;
+
         .dragRight {
             ul {
                 li {

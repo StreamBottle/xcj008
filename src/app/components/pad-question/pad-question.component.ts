@@ -22,7 +22,7 @@ export class Replace$XCJ$Directive implements OnInit, AfterViewInit {
 				let input = document.createElement('input');
 				input.type = 'text';
 				input.id = this.replaceTianKongInput[mIndex].id;
-				input.style.cssText = `border-bottom: 1px solid #000;width: 0.7rem;text-align: center;`;
+				input.style.cssText = `border-bottom: 1px solid #000;width: 0.7rem;text-align: center;font-weight:bold;color:blue;`;
 				this.element.nativeElement.appendChild(input);
 			}
 		});
@@ -48,7 +48,7 @@ export class ReplaceKongStringDirective implements OnInit, AfterViewInit {
 			let input = document.createElement('input');
 			input.type = 'text';
 			input.id = this.replaceKongStringInput;
-			input.style.cssText = `width: 100%;height: 100%;text-align:center;font-size: .08rem;`;
+			input.style.cssText = `width: 100%;height: 100%;text-align:center;font-size: .08rem;font-weight:bold;color:blue;`;
 			this.element.nativeElement.appendChild(input);
 		} else if (this.element.nativeElement.innerText.trim() == '$alphanumeric$') {
 			this.element.nativeElement.innerText = '';
@@ -59,7 +59,7 @@ export class ReplaceKongStringDirective implements OnInit, AfterViewInit {
 			// 	$(this).val($(this).val().replace(/[^\w\.\/]/gi, ''));
 			// };
 			input.id = this.replaceKongStringInput;
-			input.style.cssText = `width: 100%;height: 100%;text-align:center;font-size: .08rem;`;
+			input.style.cssText = `width: 100%;height: 100%;text-align:center;font-size: .08rem;font-weight:bold;color:blue;`;
 			this.element.nativeElement.appendChild(input);
 		}
 	}

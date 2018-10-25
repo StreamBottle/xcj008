@@ -156,7 +156,11 @@ export class CoursePrepareService {
         }
         // $('.xiaob').show();
         this.appService.jiaoBiao = true;
-        this.multimeterService.Mdata.multimeterStatus = true;
+        setTimeout(() => {
+          $('.xiaob').show();
+          // this.multimeterService.Mdata.multimeterStatus = true;
+        }, 15)
+        // this.multimeterService.Mdata.multimeterStatus = true;
         $("." + str).css("display", "none");
         break;
       case "oscilloscope":
@@ -271,14 +275,14 @@ export class CoursePrepareService {
       knowledge_8: 'chapter02_03_page_03',
       knowledge_9: 'chapter02_03_page_04',
       knowledge_10: 'chapter02_03_page_05',
-      knowledge_11: 'chapter02_03_page_07',
-      knowledge_12: 'chapter02_03_page_08',
-      knowledge_13: 'chapter02_03_page_09',
-      knowledge_14: 'chapter02_03_page_10',
-      knowledge_15: 'chapter02_03_page_11',
-      knowledge_16: 'chapter02_03_page_12',
-      knowledge_17: 'chapter02_03_page_13',
-      knowledge_18: 'chapter02_03_page_14',
+      knowledge_11: 'chapter02_03_page_06',
+      knowledge_12: 'chapter02_03_page_07',
+      // knowledge_13: 'chapter02_03_page_09',
+      // knowledge_14: 'chapter02_03_page_10',
+      // knowledge_15: 'chapter02_03_page_11',
+      // knowledge_16: 'chapter02_03_page_12',
+      // knowledge_17: 'chapter02_03_page_13',
+      // knowledge_18: 'chapter02_03_page_14',
 
       skill_12: 'chapter03_01_page_01',
       skill_13: 'chapter03_01_page_02',
@@ -439,12 +443,12 @@ export class CoursePrepareService {
       knowledge_10: 'chapter02_03',
       knowledge_11: 'chapter02_03',
       knowledge_12: 'chapter02_03',
-      knowledge_13: 'chapter02_03',
-      knowledge_14: 'chapter02_03',
-      knowledge_15: 'chapter02_03',
-      knowledge_16: 'chapter02_03',
-      knowledge_17: 'chapter02_03',
-      knowledge_18: 'chapter02_03',
+      // knowledge_13: 'chapter02_03',
+      // knowledge_14: 'chapter02_03',
+      // knowledge_15: 'chapter02_03',
+      // knowledge_16: 'chapter02_03',
+      // knowledge_17: 'chapter02_03',
+      // knowledge_18: 'chapter02_03',
 
       skill_12: 'chapter03_01',
       skill_13: 'chapter03_01',
@@ -604,7 +608,7 @@ export class CoursePrepareService {
       if (count === 11 && isNext == 'left' && this.appService.OneNavState == 2) {
         this.appService.knowledgeIsPass = false;
         this.appService.OneNavState = 1;
-        count = 18;
+        count = 12;
       }
       if (count === 34 && isNext == 'left' && this.appService.OneNavState == 3) {
         this.appService.skillIsPass = false;
@@ -614,7 +618,7 @@ export class CoursePrepareService {
       if (count === 4 && (isNext == 'right' || isNext == 'init') && this.appService.OneNavState == 0) {
         this.appService.OneNavState = 1;
       }
-      if (count === 19 && (isNext == 'right' || isNext == 'init') && this.appService.OneNavState == 1) {
+      if (count === 13 && (isNext == 'right' || isNext == 'init') && this.appService.OneNavState == 1) {
         this.appService.skillIsPass = false;
         this.appService.OneNavState = 2;
         count = 12;
@@ -681,7 +685,7 @@ export class CoursePrepareService {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center 0px',
+          background: 'url("./assets/images/navBG.png") no-repeat center 0px',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -704,7 +708,7 @@ export class CoursePrepareService {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center 0px',
+          background: 'url("./assets/images/navBG.png") no-repeat center 0px',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -727,7 +731,7 @@ export class CoursePrepareService {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center 0px',
+          background: 'url("./assets/images/navBG.png") no-repeat center 0px',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -750,7 +754,7 @@ export class CoursePrepareService {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center 0px',
+          background: 'url("./assets/images/navBG.png") no-repeat center 0px',
           backgroundSize: "100%",
           color: "#292c33"
         })

@@ -12,6 +12,7 @@
     width: 100%;
     height: 95%;
     margin-top: 0.24rem;
+
     p {
         width: 96%;
         height: 20%;
@@ -21,54 +22,65 @@
         display: flex;
         align-items: center;
     }
+
     img {
-        width: 76%; // height: 80%;
+        // width: 76%; // height: 80%;
         display: block;
     }
-	
+
     .weixiu {
         width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+
         .chaixie,
         .anzhuang {
             font-size: 0.1rem;
             position: absolute;
+
             h4 {
                 font-size: 0.12rem;
                 font-weight: bold;
             }
+
             li {
                 line-height: 0.2rem;
                 text-indent: 1em;
             }
+
             li:first-child {
                 text-indent: 0;
             }
         }
+
         .chaixie {
             left: 0.5rem;
             top: 0.5rem;
         }
+
         .anzhuang {
             left: 0.5rem;
             bottom: 0.52rem;
         }
+
         img {
             width: 66%;
         }
     }
+
     .zhenduan {
         width: 100%;
         height: 100%;
+
         p {
             width: 94%;
             height: 10%;
             margin: 0 auto;
             position: relative;
             background: none;
+
             button {
                 width: 1rem;
                 display: none;
@@ -78,6 +90,7 @@
                 position: absolute;
                 text-align: left;
                 top: 19px;
+
                 span {
                     display: inline-block;
                     font-size: 0.10rem;
@@ -87,13 +100,16 @@
                 }
             }
         }
+
         .ulBox {
             width: 100%;
             height: 521px;
             position: relative;
+
             div {
                 width: 1.34rem;
                 position: absolute;
+
                 h4 {
                     width: 100%;
                     font-size: 0.12rem;
@@ -104,11 +120,13 @@
                     border: 0.01rem solid #7f7f7f;
                     color: #fff;
                 }
+
                 ul {
                     width: 100%;
                     /* height: 8.16rem; */
                     border-left: 0.01rem solid #7f7f7f;
                     border-right: 0.01rem solid #7f7f7f;
+
                     li {
                         font-size: 0.1rem;
                         height: 0.37rem;
@@ -116,6 +134,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
                         i {
                             width: 0.2rem;
                             height: 0.2rem;
@@ -127,6 +146,7 @@
                     }
                 }
             }
+
             video {
                 display: none;
                 width: 1280px;
@@ -134,6 +154,7 @@
                 z-index: 100;
                 position: absolute;
             }
+
             #close {
                 font-size: 38px;
                 width: 48px;
@@ -143,16 +164,21 @@
                 z-index: 1011;
             }
         }
-    } //接触式传感器原理
+    }
+
+    //接触式传感器原理
     .jcscgqyl {
         position: relative;
         display: block;
+
         div {
             width: 100%;
             text-align: center;
+
             img {
                 width: 60%;
             }
+
             button {
                 width: 0.7rem;
                 height: 0.3rem;
@@ -166,58 +192,72 @@
                 right: 0;
                 bottom: 0;
             }
+
             span {
                 position: absolute;
                 font-family: "UnidreamLED";
                 font-size: 0.2rem;
             }
+
             b {
                 font-size: 0.2rem;
                 position: absolute;
             }
         }
+
         @font-face {
             font-family: "UnidreamLED";
             src: local("UnidreamLED"), local("UnidreamLED"), url("./font/UnidreamLED.ttf") format("truetype"), url("./font/UnidreamLED.svg#UnidreamLED") format("svg"), url("./font/UnidreamLED.ttf") format("truetype"), url("./font/UnidreamLED.woff") format("woff");
         }
+
         .yuanli2 {
             width: 100%;
             height: 588px;
             position: relative;
+
             img {
                 position: absolute;
             }
+
             .img1 {
                 width: 2.4rem;
                 left: 0.37rem;
                 top: 0.44rem;
             }
+
             .img2 {
                 width: 60%;
                 left: 1rem;
                 top: .4rem;
             }
+
             .img3 {
                 width: 11%;
                 left: 1rem;
                 top: 1.02rem;
             }
         }
+
         .yuanli1 {
             .yuanli1Box {
                 width: 100%;
                 height: 3rem;
+
                 background: url("./images/1.png") no-repeat center {
                     size: 65%;
                 }
+
                 z-index: 1;
                 position: relative;
+
                 .zhizhen {
                     width: 17px;
                     height: 100px;
+
                     background: url(./images/zhen.png) no-repeat center {
                         size: 100%;
                     }
+
                     position: absolute;
                     left: 367px;
                     top: 140px;
@@ -225,6 +265,7 @@
                     transform: rotate(40deg);
                 }
             }
+
             #xuanzhuanBG {
                 width: 15%;
                 height: 134px;
@@ -234,12 +275,15 @@
                 right: 0px;
             }
         }
+
         .yuanli3 {
             width: 100%;
             height: 588px;
+
             background: url("./images/B.png") no-repeat 334px 78px {
                 size: 50%;
             }
+
             .xian {
                 width: 0px; // height: 730px; 
                 // background: url('./images/C.png') no-repeat center;
@@ -248,119 +292,165 @@
                 left: 392px;
                 top: 120px;
                 overflow: hidden;
+
                 img {
                     width: 398px;
                 }
             }
         }
     }
-	.ycybdjy2 {
-		width: 90%;
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
-		margin-left: 50px;
-		margin-top: 145px;
-		p{
-			text-indent: 0;
-		}
-		.ycybdjy2-div1{
-			width: 480px;
-			display: flex;
-			flex-direction: column;
-			.ycybdjy2-div2{
-				font-size: 0.12rem;
-				text-indent: 2em;
-			}
-		}
-		.ycybdjy2-div3{
-			width: 336px;
-			display: flex;
-			flex-direction: column;
-			.ycybdjy2-div2{
-				font-size: 0.12rem;
-				text-indent: 2em;
-			}
-		}
-	}
-	.fault{
-		ul{
-			font-size: 0.1rem;
-			margin-top: 20px;
-			margin-left: 72px;
-		}
-	}
-	.theory2{
-		div{
-			width: 85%;
-			font-size: 0.12rem;
-			text-indent: 2em;
-			margin-top: 20px;
-			margin-left: 72px;
-		}
-	}
+
+    .ycybdjy2 {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-top: 145px;
+
+        p {
+            text-indent: 0;
+        }
+
+        .ycybdjy2-div1 {
+            width: 480px;
+            display: flex;
+            flex-direction: column;
+
+            .ycybdjy2-div2 {
+                font-size: 0.12rem;
+                text-indent: 2em;
+            }
+        }
+
+        .ycybdjy2-div3 {
+            width: 336px;
+            display: flex;
+            flex-direction: column;
+
+            .ycybdjy2-div2 {
+                font-size: 0.12rem;
+                text-indent: 2em;
+            }
+        }
+    }
+
+    .fault {
+        ul {
+            font-size: 0.1rem;
+            margin-top: 20px;
+            margin-left: 72px;
+        }
+    }
+
+    .theory2 {
+        div {
+            width: 85%;
+            font-size: 0.12rem;
+            text-indent: 2em;
+            margin-top: 20px;
+            margin-left: 72px;
+        }
+    }
+
     .ycybdjyl {
         width: 100%;
         height: 100%;
-		.ycybdjyl-div1{
-			width: 85%;
-			margin: 0px 0 0 100px;
-			font-size: 0.12rem;
-			margin-bottom: 20px;
-		}
-    } // 异步电机结构
+
+        .ycybdjyl-div1 {
+            width: 85%;
+            margin: 0px 0 0 100px;
+            font-size: 0.12rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    // 异步电机结构
     .ycybdjjg {
         width: 100%;
         height: 100%;
+
         img {
             width: 67%;
         }
-		div{
-			width: 85%;
-			margin: 0px 0 0 100px;
-			font-size: 0.12rem;
-			text-indent: 2em;
-		}
-    } // 概述
+
+        div {
+            width: 85%;
+            margin: 0px 0 0 100px;
+            font-size: 0.12rem;
+            text-indent: 2em;
+        }
+    }
+
+    // 概述
     .gaishu {
         width: 85%;
         height: 100%;
-		margin: auto;
-		.gaishu-div1{
-			width: 100%;
-			display: flex;
-			justify-content: space-between;
-			.gaishu-p1{
-				height: 0;
-				margin: 50px 0 40px 0;
-				text-indent: 0;
-			}
-			.gaishu-p2{
-				font-weight: bold;
-				text-indent: 0;
-				width: 100%;
-				margin-bottom: 50px;
-			}
-			ul{
-				font-size: 0.12rem;
-				li{
-					margin-top: 20px;
-				}
-			}
-			.gaishu-ul1{
-				margin-left: 30px;
-				li{
-					list-style: disc;
-					text-indent: 1em;
-					margin: 0;
-				}
-			}
-		}
-    } // 同步电机结构模块
+        margin: auto;
+
+        .gaishu-div1 {
+            width: 100%;
+            // display: flex;
+            justify-content: space-between;
+
+            .gaishu-p1 {
+                height: 0;
+                margin: 50px 0 40px 0;
+                text-indent: 0;
+            }
+
+            .gaishu-p2 {
+                font-weight: bold;
+                text-indent: 0;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            .left {
+                float: left;
+                width: 50%;
+                margin-top: 20px;
+            }
+
+            .right {
+                float: right;
+                width: 50%;
+                height: 320px;
+
+                img {
+                    // height: 100%;
+                    position: relative;
+                    left: 10px;
+                }
+            }
+
+            ul {
+                font-size: 0.12rem;
+
+                li {
+                    margin-top: 20px;
+                }
+            }
+
+            .gaishu-ul1 {
+                margin-left: 30px;
+
+                li {
+                    list-style: disc;
+                    text-indent: 1em;
+                    margin: 0;
+                    line-height: 50px;
+                }
+            }
+        }
+    }
+
+    // 同步电机结构模块
     .yctbdjjg {
         width: 700px;
         height: 3700px;
         margin: 20px auto 0;
+
         p {
             width: 96%;
             margin: 0 auto;
@@ -369,11 +459,13 @@
             font-size: 0.36rem;
             font-weight: 400;
         }
+
         .yctbdjjg01-img {
             width: 70%;
             margin: 0 auto;
             display: block;
         }
+
         .weizhichuanganqi,
         .dingzixianquan,
         .zhuanzixianquan {
@@ -384,22 +476,27 @@
             font-weight: 400;
             padding: 8px 4px;
             cursor: pointer;
+
             &:hover {
                 background: orange;
             }
         }
+
         .weizhichuanganqi {
             left: 240px;
             top: 130px;
         }
+
         .dingzixianquan {
             left: 335px;
             top: 94px;
         }
+
         .zhuanzixianquan {
             left: 443px;
             top: 64px;
         }
+
         .yctbdjjgPrompt01,
         .yctbdjjgPrompt02,
         .yctbdjjgPrompt03 {
@@ -408,6 +505,7 @@
             width: 84%;
             height: 86%;
             background: #fff;
+
             .yctbdjjgPrompt01close,
             .yctbdjjgPrompt02close,
             .yctbdjjgPrompt03close {
@@ -418,6 +516,7 @@
                 background-color: #ccc;
                 cursor: pointer;
             }
+
             .yctbdjjgPrompt01close {
                 position: absolute;
                 right: -10px;
@@ -426,11 +525,13 @@
                 background-color: #ccc;
                 cursor: pointer;
             }
+
             .yctbdjjgPrompt03close {
                 right: 0px;
                 top: 10px;
             }
         }
+
         .yctbdjjgPrompt01 {
             p {
                 width: 96%;
@@ -441,6 +542,7 @@
                 font-weight: 400;
             }
         }
+
         .yctbdjjgPrompt02 {
             // position: absolute;
             // top: 60px;
@@ -448,15 +550,18 @@
             // background: #fff;
             // left: 70px;
             margin: 20px auto;
+
             .yctbdjjg-prompt02-01 {
                 width: 600px;
                 height: 260px;
             }
+
             .yctbdjjg-prompt02-02 {
                 float: right;
                 margin-right: 120px;
                 width: 330px;
             }
+
             p {
                 width: 96%;
                 margin: 0 auto;
@@ -466,24 +571,29 @@
                 font-weight: 400;
             }
         }
+
         .yctbdjjgPrompt03 {
             // position: absolute;
             // top: 60px;
             // left: 40px;
             width: 86%; // height: 86%;
+
             // background: #fff;
             .yctbdjjg-prompt03-01 {
                 width: 350px;
                 height: 300px;
                 float: left;
             }
+
             .yctbdjjg-prompt03-02 {
                 float: left;
                 margin: 20px 0px 0 60px;
                 width: 200px;
+
                 img {
                     width: 220px;
                 }
+
                 .Nji {
                     border-top: 10px solid blue;
                     height: 0;
@@ -492,6 +602,7 @@
                     left: 420px;
                     top: 250px;
                 }
+
                 .Sji {
                     border-top: 10px solid red;
                     height: 0;
@@ -500,6 +611,7 @@
                     left: 420px;
                     top: 270px;
                 }
+
                 .Nji-text {
                     width: 70px;
                     position: absolute;
@@ -507,12 +619,14 @@
                     top: 246px;
                     font-size: 14px;
                 }
+
                 .Sji-text {
                     position: absolute;
                     left: 460px;
                     top: 266px;
                     font-size: 15px;
                 }
+
                 .pic-text {
                     position: absolute;
                     left: 510px;
@@ -520,6 +634,7 @@
                     font-size: 18px;
                 }
             }
+
             p {
                 width: 96%;
                 margin: 0 auto;
@@ -529,11 +644,14 @@
                 font-weight: 400;
             }
         }
-    } // 同步电机原理模块
+    }
+
+    // 同步电机原理模块
     .yctbdjyl {
         width: 800px;
         height: 500px;
         margin: 0px auto 0;
+
         .xinfeng {
             position: absolute;
             left: 80px;
@@ -545,6 +663,7 @@
             width: 30px;
             height: 30px;
             cursor: pointer;
+
             .xinfeng-text-parent {
                 position: relative;
                 left: 40px;
@@ -558,10 +677,12 @@
                 border-radius: 5px;
                 background: rgb(102, 255, 255);
                 background-size: 100% 100%;
+
                 span {
                     display: block;
                 }
             }
+
             &:hover {
                 .xinfeng-text-parent {
                     display: block;
@@ -569,15 +690,19 @@
             }
         }
     }
-} // 左侧导航
+}
+
+// 左侧导航
 .arrowL {
     position: absolute;
     top: 180px;
     left: -40px;
     cursor: pointer;
+
     div {
         span {
             position: absolute;
+
             &:nth-child(1) {
                 top: 10px;
                 left: 48px;
@@ -588,6 +713,7 @@
                 border-right: 4px rgb(139, 233, 255) solid;
                 border-top: 4px rgb(139, 233, 255) solid;
             }
+
             &:nth-child(2) {
                 top: 10px;
                 left: 38px;
@@ -598,6 +724,7 @@
                 border-right: 4px rgb(0, 181, 226) solid;
                 border-top: 4px rgb(0, 181, 226) solid;
             }
+
             &:nth-child(3) {
                 top: 1px;
                 left: 38px;
@@ -605,6 +732,7 @@
                 height: 9px;
                 background: #fff;
             }
+
             &:nth-child(4) {
                 top: 24px;
                 left: 37px;
@@ -630,6 +758,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
     .close-scene-left-nav {
         position: absolute;
         top: -20px;
@@ -644,26 +773,31 @@
         border-radius: 50%;
         font-size: 20px;
         cursor: pointer;
+
         &:hover {
             background: rgba(0, 0, 0, 0.7);
         }
     }
+
     ul {
         width: 100%;
         height: 100%;
         align-items: center;
         display: flex;
         justify-content: flex-start;
+
         .clickShow {
             span {
                 color: #eb4e3d;
                 border: solid 0.01rem #eb4e3d;
             }
         }
+
         li {
             height: 100%;
             display: flex;
             align-items: center;
+
             span {
                 display: inline-block;
                 /* width: 1.14rem; */
@@ -676,6 +810,7 @@
                 transform: scale(.8);
                 /* line-height: 0.1rem; */
                 text-align: center;
+
                 &:hover {
                     cursor: pointer; // background: rgba(0, 0, 0, .7);
                 }

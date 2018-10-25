@@ -122,7 +122,7 @@ export class CoursePrepareComponent implements OnInit {
     }, 14000);
     // this.isClose();
   }
-  
+
   isClose() {
     $(".xiaob").hide();
     this.multimeterService.Mdata.multimeterStatus = true;
@@ -377,7 +377,7 @@ export class CoursePrepareComponent implements OnInit {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center',
+          background: 'url("./assets/images/navBG.png") no-repeat center',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -396,7 +396,7 @@ export class CoursePrepareComponent implements OnInit {
       this.appService.OneNavState === 2) {
       this.appService.knowledgeIsPass = false;
       this.router.navigate(["courseprepare/knowledge"]);
-      this.appService.progressData.describeFlag = 18;
+      this.appService.progressData.describeFlag = 12;
       this.appService.OneNavState = 1;
       console.log(this.appService.progressData.describeFlag, this.appService.OneNavState);
       $(".knowledge")
@@ -405,7 +405,7 @@ export class CoursePrepareComponent implements OnInit {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center',
+          background: 'url("./assets/images/navBG.png") no-repeat center',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -431,7 +431,7 @@ export class CoursePrepareComponent implements OnInit {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center',
+          background: 'url("./assets/images/navBG.png") no-repeat center',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -558,7 +558,7 @@ export class CoursePrepareComponent implements OnInit {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center',
+          background: 'url("./assets/images/navBG.png") no-repeat center',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -573,7 +573,7 @@ export class CoursePrepareComponent implements OnInit {
         });
     }
     console.log(this.appService.progressData.describeFlag, this.appService.OneNavState);
-    if (this.appService.progressData.describeFlag === 19 && this.appService.OneNavState === 1) {
+    if (this.appService.progressData.describeFlag === 13 && this.appService.OneNavState === 1) {
       this.appService.skillIsPass = false;
       this.router.navigate(["courseprepare/skill"]);
       this.appService.progressData.describeFlag = 12;
@@ -585,7 +585,7 @@ export class CoursePrepareComponent implements OnInit {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center',
+          background: 'url("./assets/images/navBG.png") no-repeat center',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -610,7 +610,7 @@ export class CoursePrepareComponent implements OnInit {
         })
         .parent("li")
         .css({
-          background: 'url("../../../assets/images/navBG.png") no-repeat center',
+          background: 'url("./assets/images/navBG.png") no-repeat center',
           backgroundSize: "100%",
           color: "#292c33"
         })
@@ -650,5 +650,11 @@ export class CoursePrepareComponent implements OnInit {
   // 消息提醒
   informationRemind() {
     this.remindContentShow = !this.remindContentShow;
+  }
+  //关闭交表动画
+  closeJB() {
+    this.appService.jiaoBiao = false;
+    this.multimeterService.Mdata.multimeterStatus = true;
+    this.multimeterService.Mdata.dragStart();
   }
 }
